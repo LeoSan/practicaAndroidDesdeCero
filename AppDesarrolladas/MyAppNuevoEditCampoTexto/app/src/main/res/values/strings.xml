@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyAppNuevoEditCampoTexto</string>
+    <string name="inpAPP">Practica Edit Text </string>
+    <string name="inpNombre">Nombre </string>
+    <string name="inpClave">Contraseña </string>
+    <string name="textBoton">Entrar </string>
+
+</resources>

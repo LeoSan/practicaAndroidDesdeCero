@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">appCalculadora</string>
+    <string name="textTituloTop">Calculadora</string>
+    <string name="textNumberA">Ingrese Primer numero </string>
+    <string name="textNumberB">Ingrese Segundo numero </string>
+    <string name="textRadioSuma">Suma</string>
+    <string name="textRadioResta">Resta</string>
+    <string name="textRadioMulti">Multiplicador</string>
+    <string name="textRadioDiv">Dividir</string>
+    <string name="textResul">Resultado</string>
+    <string name="textBoton">Calcular</string>
+</resources>

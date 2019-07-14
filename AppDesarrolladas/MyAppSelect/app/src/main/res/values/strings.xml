@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyAppSelect</string>
+    <string name="app_titulo">App Select</string>
+    <string name="app_valor1">Ingrese Valor 1</string>
+    <string name="app_valor2">Ingrese Valor 2</string>
+    <string name="app_resp">Resultado</string>
+    <string name="app_boton">Calcular</string>
+
+</resources>

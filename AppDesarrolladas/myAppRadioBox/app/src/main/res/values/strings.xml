@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">myAppRadioBox</string>
+    <string name="app_titulo">Calculadora Dual</string>
+    <string name="app_Valor1">Ingrese el valor 1</string>
+    <string name="app_Valor2">Ingrese el valor 2</string>
+    <string name="app_rb_suma">Suma</string>
+    <string name="app_rb_resta">Resta</string>
+    <string name="app_boton">Calcular</string>
+    <string name="app_resultado">Resultado ?</string>
+</resources>

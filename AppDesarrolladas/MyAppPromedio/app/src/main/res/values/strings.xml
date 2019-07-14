@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyAppPromedio</string>
+    <string name="text_view_resp_estatus">Estatus del alumno: </string>
+    <string name="text_view_mate">Matemàtica: </string>
+    <string name="text_view_fisi">Fisica: </string>
+    <string name="text_view_leng">Lenguaje: </string>
+    <string name="text_view_boton">Evaluaciòn</string>
+</resources>
