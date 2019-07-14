@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MiViewWeb</string>
+    <string name="inpNombre">Ingrese algun texto </string>
+    <string name="inpSugerido">leosan.github.io/</string>
+    <string name="btnSiguiente">Siguiente</string>
+    <string name="btnAtras">Atras</string>
+</resources>
