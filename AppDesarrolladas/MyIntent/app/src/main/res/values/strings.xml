@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyIntent</string>
+    <string name="textPaginaUno">Pagina Principal</string>
+    <string name="textBnSiguiente">Siguiente Pagina</string>
+    <string name="textPaginaDos">Pagina Secundaria</string>
+    <string name="textBnAtras">Atras Pagina</string>
+</resources>
