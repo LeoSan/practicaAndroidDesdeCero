@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MySharepreferenciasBuscador</string>
+
+    <string name="inpNombre">Ingrese Nombre </string>
+    <string name="inpDatos">Ingrese Datos.</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnBuscar">Buscar</string>
+</resources>
