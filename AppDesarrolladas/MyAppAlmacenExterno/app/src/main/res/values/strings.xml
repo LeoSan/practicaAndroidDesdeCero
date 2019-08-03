@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyAppAlmacenExterno</string>
+    <string name="appBuscar">Ingrese nombre Archivo</string>
+    <string name="appValores">Ingrese los valores </string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnConsultar">Consultar</string>
+</resources>
+

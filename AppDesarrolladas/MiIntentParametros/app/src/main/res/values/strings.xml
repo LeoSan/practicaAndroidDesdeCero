@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MiIntentParametros</string>
+    <string name="inpNombreI1">Nombre</string>
+    <string name="textNombreI2">Nombre segunda</string>
+    <string name="btnI1">Siguiente</string>
+    <string name="btnI2">Atras</string>
+</resources>
