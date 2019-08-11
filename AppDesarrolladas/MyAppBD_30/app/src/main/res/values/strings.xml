@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyAppBD_30</string>
+    <string name="text_Titulo">Primera App BD</string>
+    <string name="text_Codigo">Ingrese el còdigo</string>
+    <string name="text_Nombre">Ingrese el nombre del articulo</string>
+    <string name="text_Precio">Ingrese el precio </string>
+    <string name="text_btnRegistrar">Registrar</string>
+    <string name="text_btnBuscar">Buscar</string>
+    <string name="text_btnEliminar">Eliminar </string>
+    <string name="text_btnModificar">Modificar</string>
+</resources>
