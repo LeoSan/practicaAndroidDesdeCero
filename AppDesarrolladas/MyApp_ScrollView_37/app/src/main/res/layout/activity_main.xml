@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="415dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="417dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_Boton1" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_Boton2" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_Boton3" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_Boton4" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scrollFrutas"
+        android:layout_width="449dp"
+        android:layout_height="523dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFrutas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgLimon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8BC34A"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/limon" />
+
+            <ImageButton
+                android:id="@+id/imgDragon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/dragon" />
+
+            <ImageButton
+                android:id="@+id/imgKiwi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#039BE5"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/kiwi" />
+
+            <ImageButton
+                android:id="@+id/imgLechoza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/papaya" />
+
+            <ImageButton
+                android:id="@+id/imgNaranja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FDD835"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/naranja" />
+
+            <ImageButton
+                android:id="@+id/imgNose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3F0F1"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/nose" />
+
+            <ImageButton
+                android:id="@+id/imgAjo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D81B60"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/ajo" />
+
+            <ImageButton
+                android:id="@+id/imgGranada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/granada" />
+
+            <ImageButton
+                android:id="@+id/imgMango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4511E"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/mango" />
+
+            <ImageButton
+                android:id="@+id/imgPlatano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/platano" />
+
+            <ImageButton
+                android:id="@+id/imgManzanar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_dark"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/manzanar" />
+
+            <ImageButton
+                android:id="@+id/imgManzanav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_desc"
+                android:onClick="metodoSelccion"
+                app:srcCompat="@drawable/manzanav" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
