@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">GuiApp</string>
+    <string name="btnDescrip"> </string>
+    <string name="label_a"> Reto al saber </string>
+    <string name="label_b"> Alimenta tu curiosidad </string>
 
-    <string name="btnDescrip">Nula</string>
 </resources>

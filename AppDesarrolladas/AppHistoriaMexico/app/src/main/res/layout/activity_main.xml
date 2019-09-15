@@ -6,6 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="@style/btnMenu"
+        android:layout_width="229dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn1"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/maths"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/communication"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightbulb"
+            android:text="@string/btnDescrip" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="372dp"
         android:layout_height="524dp"
@@ -22,59 +64,37 @@
             <Button
                 android:id="@+id/btnGuia"
                 style="@style/btnMenu"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:background="@drawable/kiwi"
+                android:background="@drawable/grade"
                 android:onClick="vistaGuia"
                 android:text="@string/btnDescrip" />
+
+            <TextView
+                android:id="@+id/labelText_a"
+                style="@style/labelBasico_Interfaz_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_a" />
 
             <Button
                 android:id="@+id/btnPregunta"
                 style="@style/btnMenu"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:background="@drawable/kiwi"
+                android:background="@drawable/knowledge"
                 android:onClick="vistaPreguntas"
                 android:text="@string/btnDescrip" />
+
+            <TextView
+                android:id="@+id/labelText_b"
+                style="@style/labelBasico_Interfaz_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_b" />
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="408dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/kiwi"
-            android:text="@string/btnDescrip"
-            style="?android:attr/buttonBarStyle" />
-
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/kiwi"
-            android:text="@string/btnDescrip"
-            style="?android:attr/buttonBarStyle" />
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/kiwi"
-            android:text="@string/btnDescrip"
-            style="?android:attr/buttonBarStyle" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
