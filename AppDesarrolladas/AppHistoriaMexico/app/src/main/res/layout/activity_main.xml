@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -49,19 +50,26 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="372dp"
-        android:layout_height="524dp"
+        android:layout_width="375dp"
+        android:layout_height="599dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.783">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelText_a"
+                style="@style/labelBasico_Interfaz_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_a" />
 
             <Button
                 android:id="@+id/btnGuia"
@@ -74,11 +82,11 @@
                 android:text="@string/btnDescrip" />
 
             <TextView
-                android:id="@+id/labelText_a"
+                android:id="@+id/labelText_b"
                 style="@style/labelBasico_Interfaz_A"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_a" />
+                android:layout_height="35dp"
+                android:text="@string/label_b" />
 
             <Button
                 android:id="@+id/btnPregunta"
@@ -90,12 +98,6 @@
                 android:onClick="vistaPreguntas"
                 android:text="@string/btnDescrip" />
 
-            <TextView
-                android:id="@+id/labelText_b"
-                style="@style/labelBasico_Interfaz_A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_b" />
         </LinearLayout>
     </ScrollView>
 
