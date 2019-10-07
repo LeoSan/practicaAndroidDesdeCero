@@ -3,5 +3,7 @@
     <string name="btnDescrip"> </string>
     <string name="label_a"> Reto al saber </string>
     <string name="label_b"> Alimenta tu curiosidad </string>
+    <string name="labelCategorias"> Categorias </string>
+    <string name="labelApoyo"> Apoyo </string>
 
 </resources>
