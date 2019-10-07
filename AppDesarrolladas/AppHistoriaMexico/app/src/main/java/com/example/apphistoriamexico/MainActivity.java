@@ -32,5 +32,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente);
     }
 
+    //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
+    public void vistaApoyo (View view){
+        Intent interfaz = new Intent(this,MainApoyo.class);
+        startActivity(interfaz);
+    }
+
 
 }

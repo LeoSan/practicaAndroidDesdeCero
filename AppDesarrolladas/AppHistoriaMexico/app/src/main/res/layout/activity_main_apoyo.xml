@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
     tools:context=".MainApoyo">
 
     <LinearLayout
@@ -70,12 +71,88 @@
 
             <TextView
                 android:id="@+id/textView"
+                style="@style/tituloApoyo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/labelCaso1" />
 
             <EditText
                 android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso2" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso3" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso4" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso5" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso6" />
+
+            <EditText
+                android:id="@+id/editText6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

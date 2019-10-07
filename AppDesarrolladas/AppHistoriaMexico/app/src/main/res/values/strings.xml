@@ -6,4 +6,12 @@
     <string name="labelCategorias"> Categorias </string>
     <string name="labelApoyo"> Apoyo </string>
 
+<!-- Label Interfaz Apoyo -->
+    <string name="labelCaso1"> Método Repetición Espaciada </string>
+    <string name="labelCaso2"> Método De Comprensión </string>
+    <string name="labelCaso3"> Método De Prioridad </string>
+    <string name="labelCaso4"> Método De Posición Cereal </string>
+    <string name="labelCaso5"> Método De Interferencia </string>
+    <string name="labelCaso6"> Método De Los Opuestos </string>
+
 </resources>

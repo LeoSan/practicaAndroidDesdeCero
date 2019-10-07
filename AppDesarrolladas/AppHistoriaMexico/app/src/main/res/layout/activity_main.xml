@@ -46,6 +46,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/lightbulb"
+            android:onClick="vistaApoyo"
             android:text="@string/btnDescrip" />
     </LinearLayout>
 
