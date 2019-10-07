@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
+import android.view.ViewGroup;
+
 public class MainGuia extends AppCompatActivity {
 
     //Declaracion de Variables
@@ -49,6 +51,13 @@ public class MainGuia extends AppCompatActivity {
 
                 // Forma para anexar un evento al boton
                 botonCategoria.setOnClickListener(interfazEstdudio);
+                botonCategoria.setBackgroundResource(R.drawable.arte);
+
+                botonCategoria.setHeight(150);
+                botonCategoria.setWidth(150);
+
+                //Defino la Id al Boton
+                botonCategoria.setId(datosCategoria.getInt(1));
 
                 // Forma para anexar el boton al contenedor
                 contenedor.addView(botonCategoria);
