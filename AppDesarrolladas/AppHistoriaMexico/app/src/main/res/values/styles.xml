@@ -33,15 +33,17 @@
     </style>
 
     <!-- Estilo Interfaz Apoyo -->
-
     <style name="tituloApoyo">
-        <!-- Customize your theme here. -->
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textSize">20dp</item>
     </style>
 
-
+    <style name="parrafoApoyo">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">18dp</item>
+    </style>
 
 
 
