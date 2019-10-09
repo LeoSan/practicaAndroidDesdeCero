@@ -41,10 +41,29 @@
 
     <style name="parrafoApoyo">
         <item name="android:layout_marginTop">5dp</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">18dp</item>
+   </style>
+
+    <!-- Estilo Interfaz Contacto -->
+    <style name="labelTituloContacto">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:gravity">center</item>
     </style>
 
+
+
+
+
+    <!-- Estilo Generales de Interfaces  -->
+    <style name="labelInformacion">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 
 </resources>

@@ -31,12 +31,13 @@
             android:text="@string/btnDescrip" />
 
         <Button
-            android:id="@+id/btn2"
+            android:id="@+id/btnConatcto"
             style="?android:attr/buttonBarStyle"
             android:layout_width="3dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/communication"
+            android:onClick="vistaContacto"
             android:text="@string/btnDescrip" />
 
         <Button
@@ -75,8 +76,8 @@
             <Button
                 android:id="@+id/btnGuia"
                 style="@style/btnMenu"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="186dp"
+                android:layout_height="158dp"
                 android:layout_gravity="center"
                 android:background="@drawable/grade"
                 android:onClick="vistaGuia"
@@ -92,8 +93,8 @@
             <Button
                 android:id="@+id/btnPregunta"
                 style="@style/btnMenu"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="188dp"
+                android:layout_height="164dp"
                 android:layout_gravity="center"
                 android:background="@drawable/knowledge"
                 android:onClick="vistaPreguntas"

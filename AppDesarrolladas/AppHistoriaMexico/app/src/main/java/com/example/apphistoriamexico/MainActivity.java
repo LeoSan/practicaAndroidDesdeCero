@@ -26,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente);
     }
 
+
+    //Apunta al Activity de Contacto (Enviar Correo)
+    public void vistaContacto(View view){
+        Intent siguiente = new Intent(this,MainContacto.class);
+        startActivity(siguiente);
+    }
+
     //Apunta al Activity de Preguntas (Aqui se realizaran las preguntas)
     public void vistaPreguntas (View view){
         Intent siguiente = new Intent(this,MainGuia.class);
@@ -39,4 +46,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
+}//fin de la clase

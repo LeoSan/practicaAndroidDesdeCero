@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
+    tools:context=".MainContacto">
+
+    <LinearLayout
+        android:id="@+id/contBtnsOpcion"
+        style="@style/btnMenu"
+        android:layout_width="304dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnApoyo"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/communication"
+            android:text="@string/btnDescrip" />
+
+        <TextView
+            android:id="@+id/labelCategorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            tools:text="@string/labelContacto" />
+
+        <Button
+            android:id="@+id/btnCategoria"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/grade"
+            android:onClick="vistaInterfazPrincipal"
+            android:text="@string/btnDescrip" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/camposInterfazContacto"
+        android:layout_width="395dp"
+        android:layout_height="464dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelInformacionContacto"
+                style="@style/labelInformacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelInformacionContacto" />
+
+            <TextView
+                android:id="@+id/labelTituloContacto"
+                style="@style/labelTituloContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelTituloContacto" />
+
+            <EditText
+                android:id="@+id/inpNombreContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/labelNombreContacto"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inpAsuntoContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/labelAsuntoContacto"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inpMsjContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/labelMsjContacto"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textBtnContacto" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
