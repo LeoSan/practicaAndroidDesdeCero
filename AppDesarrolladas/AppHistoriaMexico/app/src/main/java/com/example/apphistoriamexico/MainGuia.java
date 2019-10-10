@@ -30,6 +30,11 @@ public class MainGuia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_guia);
 
+        //Metodo de cambiar nombre de la App y el Icono en cada Activity
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+
         contBtnCategorias = (LinearLayout)findViewById(R.id.contBtnCategorias);
 
         //Obtener los valores de categoria

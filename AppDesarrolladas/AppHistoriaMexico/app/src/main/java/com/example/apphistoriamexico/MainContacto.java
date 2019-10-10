@@ -1,23 +1,22 @@
 package com.example.apphistoriamexico;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.View;
 
-public class MainApoyo extends AppCompatActivity {
+public class MainContacto extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_apoyo);
+        setContentView(R.layout.activity_main_contacto);
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
     }
-
 
     //Eventos
 //Redirect-> Redirecciona a la interfaz Principal
@@ -27,7 +26,4 @@ public class MainApoyo extends AppCompatActivity {
     }
 
 
-}// fin de la clase Principal
-
-
-
+}//fin de la clase
