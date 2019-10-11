@@ -3,6 +3,7 @@ package com.example.apphistoriamexico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.StrictMode;
@@ -39,6 +40,7 @@ public class MainContacto extends AppCompatActivity {
     private EditText inpNombreContacto, inpAsuntoContacto, inpMsjContacto, inpCorreoContacto;
     private Button enviar;
     Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +50,11 @@ public class MainContacto extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         //Forma para comunicarme con la interfaz
-        inpNombreContacto = (EditText) findViewById(R.id.inpNombreContacto);
+        //inpNombreContacto = (EditText) findViewById(R.id.inpNombreContacto);
         inpAsuntoContacto = (EditText) findViewById(R.id.inpAsuntoContacto);
         inpMsjContacto = (EditText) findViewById(R.id.inpMsjContacto);
-        inpCorreoContacto = (EditText) findViewById(R.id.inpCorreoContacto);
+        //   inpCorreoContacto = (EditText) findViewById(R.id.inpCorreoContacto);
         enviar = (Button) findViewById(R.id.idEnviarCorreo);
-
-        //Variables constantes
-        correo = "cuenca623@hotmail.com";
-        password = "h0tm41l_0102=*";
 
         //Declaro listener
         //Impementamos el metodo para el boton
@@ -64,74 +62,105 @@ public class MainContacto extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                //agregamos politicas
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
 
+                // Forma Intent
+               // mandarMail();
 
-                //Creamos nuestro objeto de propiesades
-                Properties ObjProps = new Properties();
-                ObjProps.put("mail.smpt.host", "smtp.live.com");
-              //  ObjProps.put("mail.smpt.socketFactory.port", "587"); // solo para gmail
-              //  ObjProps.put("mail.smpt.socketFactory.class", "javax.net.ssl.SSLSocketFactory"); // Solo para gmail
-                ObjProps.put("mail.smpt.auth", "true");
-               //  ObjProps.put("mail.smpt.port", "587"); // Solo para gmail
-                ObjProps.put("mail.smpt.starttls.enable", "true"); //Esto es en caso de gamil
+                mandarMailSmtp();
 
-                try {
-
-
-                    Session session = Session.getInstance(ObjProps,
-                            new javax.mail.Authenticator() {
-                                protected PasswordAuthentication getPasswordAuthentication() {
-                                    return new PasswordAuthentication(correo, password);
-                                }
-                            });
-
-                    if (session != null){
-
-
-                        //Aqui creamos pracaticamente el cuerpo del correo
-                        MimeMessage message = new MimeMessage(session);
-                        message.setFrom(new InternetAddress(correo));
-                        message.setSubject("Prueba Correo Android");  // ojo leo todo
-                        message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( inpCorreoContacto.getText().toString())  );
-                        message.setContent( inpMsjContacto.getText().toString(), "text/html charset=utf-8" );
-
-                        // aqui enviamos el correo
-
-                        Transport transport = session.getTransport("smtp"); //Esto en caso de hotmail
-                        transport.connect("smtp.live.com", 587, correo, password );
-                        transport.sendMessage(message, message.getAllRecipients());
-                        transport.close();
-
-
-                        //Transport.send(message); // esto es en caso de gmail
-
-                    }
-
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-
-
-            }
+            }// fin del onlic interno
         });
     }//fin del onCreate
 
 
+    private void mandarMail(){
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.setData(Uri.parse("mailto:"));
+        email.setType("text/plain");
+
+        String[] CC = {"cuenca623@gmail.com"};
+        //email.putExtra(Intent.EXTRA_EMAIL, inpCorreoContacto.getText().toString());
+        email.putExtra(Intent.EXTRA_CC, CC);
+        email.putExtra(Intent.EXTRA_SUBJECT, inpAsuntoContacto.getText().toString());
+        email.putExtra(Intent.EXTRA_TEXT, inpMsjContacto.getText().toString());
+
+        try {
+            startActivity(Intent.createChooser(email, "send email"));
+            finish();
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "No tienes ningún gestor de correo instalado", Toast.LENGTH_SHORT).show();
+        }
+    }//fin del metodo
 
 
+    private void mandarMailSmtp(){
+
+        //Variables constantes
+        correo   = "cuenca623@hotmail.com";
+        password = "h0tm41l_0102=*";
+
+        //agregamos politicas
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        //Creamos nuestro objeto de propiesades
+        Properties ObjProps = new Properties();
+        ObjProps.put("mail.smtp.host", "smtp.live.com");
+        ObjProps.put("mail.smtp.auth", "true");
+        ObjProps.put("mail.smtp.starttls.enable", true); //Esto es en caso de gamil
+        ObjProps.put("mail.smtp.port", "25");
+        ObjProps.put("mail.smtp.ssl.enable", true);
 
 
-//Eventos
+        // iniciamos session
+        try {
+            Session session = Session.getInstance(ObjProps,
+                    new javax.mail.Authenticator() {
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication(correo, password);
+                        }
+                    });
+
+            session.setDebug(true);
+
+            if (session != null){
+
+                System.out.println("Entro a la seccion");
+
+                //Aqui creamos pracaticamente el cuerpo del correo
+                MimeMessage message = new MimeMessage(session);
+
+                message.setSubject( inpAsuntoContacto.getText().toString() );
+                message.setContent( inpMsjContacto.getText().toString(), "text/html charset=utf-8" );
+                message.setFrom(new InternetAddress(correo));
+                message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( "cuenca623@gmail.com" , false));
+                //message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( inpCorreoContacto.getText().toString())  );
+
+                // aqui enviamos el correo
+
+                Transport transport = session.getTransport("smtp"); //Esto en caso de hotmail
+                transport.connect("smtp.live.com", 587, correo, password );
+                transport.sendMessage(message, message.getAllRecipients());
+                transport.close();
+
+                System.out.println("Envio");
+
+            }else{
+                System.out.println("Fallo la conexion");
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }// fin del metodo
+
+    //Eventos
 //Redirect-> Redirecciona a la interfaz Principal
     public void vistaInterfazPrincipal (View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
         Toast.makeText(this, "Cambio", Toast.LENGTH_SHORT).show();
     }
-
-
 
 }// fin de la clase
