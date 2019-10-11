@@ -1,2 +1,2 @@
-include ':app', ':mail', ':additionnal', ':activation'
+include ':app', ':mail'
 rootProject.name='AppHistoriaMexico'
