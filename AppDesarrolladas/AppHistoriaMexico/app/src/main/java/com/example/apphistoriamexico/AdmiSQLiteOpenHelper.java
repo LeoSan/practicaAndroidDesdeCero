@@ -15,7 +15,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
     // Tabla de categoria
         BasesDeDatos.execSQL("Create table t_categoria(id int primary Key, nom_categoria text, desp_categoria text, activo int)");
-        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, 'Curiosidades ', 'curiosidad ', 1), (2, 'Comida', 'comida', 1),(3, 'Cine', 'cine', 1),(4, 'Musica / Arte', 'arte', 1),(5, 'Deporte', 'deporte', 1),(6, 'Prehispánica', 'deporte', 1),(7, 'Nueva España', 'deporte', 1),(8, 'Independencia ', 'deporte ', 1),(9, 'Revolución', 'deporte', 1),(10, 'Historia Comtemponranea', 'deporte', 1),(11, 'Geografía', 'deporte', 1),(12, 'Legislación Política ', 'deporte', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, 'Curiosidades ', 'curiosidad', 1), (2, 'Comida', 'comida', 1),(3, 'Cine', 'cine', 1),(4, 'Musica / Arte', 'arte', 1),(5, 'Deporte', 'deporte', 1),(6, 'Prehispánica', 'deporte', 1),(7, 'Nueva España', 'deporte', 1),(8, 'Independencia ', 'deporte ', 1),(9, 'Revolución', 'deporte', 1),(10, 'Historia Comtemponranea', 'deporte', 1),(11, 'Geografía', 'geografia', 1),(12, 'Legislación Política ', 'legislacion', 1)");
 
 // tabla de complemento
 //        BasesDeDatos.execSQL("Create table t_complemento(id int primary Key, co_pregunta int, complemento text, activo int)");

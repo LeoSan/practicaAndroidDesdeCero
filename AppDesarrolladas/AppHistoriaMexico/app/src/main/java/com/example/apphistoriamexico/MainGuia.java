@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 //Librerias para la BD
 import android.content.Intent;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
 
@@ -16,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Libreria para imagen dinamica
+import android.content.res.Resources;
 
 import android.view.ViewGroup;
 
@@ -59,13 +62,18 @@ public class MainGuia extends AppCompatActivity {
                 TextView  textCategoria = new TextView ( getApplicationContext() );
 
                 //Text View -> Anexo nombre de la categoria
-                textCategoria.setText( datosCategoria.getString(2) );
+                textCategoria.setText( datosCategoria.getString(1) );
 
                 // Forma para anexar un evento al ImageView
                 botonCategoria.setOnClickListener(interfazEstdudio);
                 // Atributo "setImageResource" Anexar Imagen
-               // nombreLogo = "R.drawable." + datosCategoria.getString(3);
-                botonCategoria.setImageResource(R.drawable.arte);
+                nombreLogo =  datosCategoria.getString(2);
+
+                Resources res = getApplicationContext().getResources();
+                int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
+                botonCategoria.setImageResource(resId);
+
+              //  botonCategoria.setImageResource(R.drawable.arte);
 
                 // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
                 LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
@@ -75,9 +83,9 @@ public class MainGuia extends AppCompatActivity {
                 textCategoria.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton
-                botonCategoria.setId(datosCategoria.getInt(1));
+                botonCategoria.setId( datosCategoria.getInt(1) );
 
-                // AddView -> Permite agregar los compornentes al contenedor
+                // AddView -> Permite agregar los al contenedor
                 contenedor.addView(botonCategoria);
                 contenedor.addView(textCategoria);
                 contenedor.setGravity(Gravity.CENTER);
