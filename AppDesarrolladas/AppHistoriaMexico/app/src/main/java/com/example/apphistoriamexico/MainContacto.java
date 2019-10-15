@@ -36,7 +36,7 @@ import static android.widget.Toast.*;
 
 public class MainContacto extends AppCompatActivity {
 
-    private String correo, password;
+    private String correo, password, cuerpoCorreoSmtp;
     private EditText inpNombreContacto, inpAsuntoContacto, inpMsjContacto, inpCorreoContacto;
     private Button enviar;
     Session session;
@@ -50,25 +50,25 @@ public class MainContacto extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         //Forma para comunicarme con la interfaz
-        //inpNombreContacto = (EditText) findViewById(R.id.inpNombreContacto);
+        inpNombreContacto = (EditText) findViewById(R.id.inpNombreContacto);
         inpAsuntoContacto = (EditText) findViewById(R.id.inpAsuntoContacto);
         inpMsjContacto = (EditText) findViewById(R.id.inpMsjContacto);
-        //   inpCorreoContacto = (EditText) findViewById(R.id.inpCorreoContacto);
+        inpCorreoContacto = (EditText) findViewById(R.id.inpCorreoContacto);
         enviar = (Button) findViewById(R.id.idEnviarCorreo);
 
         //Declaro listener
         //Impementamos el metodo para el boton
         enviar.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
+                @Override
+                public void onClick(View view) {
 
                 // Forma Intent
-               // mandarMail();
+                   // mandarMail();
+                // Forma con Servidor SMTP
+                     mandarMailSmtp();
 
-                mandarMailSmtp();
-
-            }// fin del onlic interno
+                }// fin del onlic interno
         });
     }//fin del onCreate
 
@@ -97,7 +97,7 @@ public class MainContacto extends AppCompatActivity {
 
         //Variables constantes
         correo   = "cuenca623@hotmail.com";
-        password = "h0tm41l_0102=*";
+        password = "MnleoHot1234*";
 
         //agregamos politicas
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -105,15 +105,18 @@ public class MainContacto extends AppCompatActivity {
 
         //Creamos nuestro objeto de propiesades
         Properties ObjProps = new Properties();
-        ObjProps.put("mail.smtp.host", "smtp.live.com");
+        ObjProps.setProperty("mail.transport.protocol", "smtp");
+        ObjProps.setProperty("mail.smtp.host", "smtp.live.com");
         ObjProps.put("mail.smtp.auth", "true");
-        ObjProps.put("mail.smtp.starttls.enable", true); //Esto es en caso de gamil
-        ObjProps.put("mail.smtp.port", "25");
-        ObjProps.put("mail.smtp.ssl.enable", true);
-
+        ObjProps.put("mail.smtp.port", "587");
+        ObjProps.setProperty("mail.smtp.quitwait", "false");
+        ObjProps.put("mail.smtp.starttls.enable", "true");
+        ObjProps.put("mail.smtp.user", correo);
+        ObjProps.put("mail.smtp.password", password);
 
         // iniciamos session
         try {
+
             Session session = Session.getInstance(ObjProps,
                     new javax.mail.Authenticator() {
                         protected PasswordAuthentication getPasswordAuthentication() {
@@ -121,20 +124,23 @@ public class MainContacto extends AppCompatActivity {
                         }
                     });
 
+            //Prmite ver el debug del correo
             session.setDebug(true);
 
             if (session != null){
 
-                System.out.println("Entro a la seccion");
+                System.out.println("---------------- Entro a la seccion -------------------------------");
 
                 //Aqui creamos pracaticamente el cuerpo del correo
                 MimeMessage message = new MimeMessage(session);
 
+                cuerpoCorreoSmtp = "<b> Nombre Usuario </b> -> <i>" + inpNombreContacto.getText().toString() + " </i> <br><br> <b> Correo Usuario : </b> <i>" +inpCorreoContacto.getText().toString() + " </i>  <br><br><br>  <b>Mensaje :</b>  " + inpMsjContacto.getText().toString();
+
                 message.setSubject( inpAsuntoContacto.getText().toString() );
-                message.setContent( inpMsjContacto.getText().toString(), "text/html charset=utf-8" );
+                message.setContent( cuerpoCorreoSmtp, "text/html;charset=utf-8");
                 message.setFrom(new InternetAddress(correo));
-                message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( "cuenca623@gmail.com" , false));
-                //message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( inpCorreoContacto.getText().toString())  );
+                message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse( "cuenca623@gmail.com", false));
+
 
                 // aqui enviamos el correo
 
@@ -143,10 +149,16 @@ public class MainContacto extends AppCompatActivity {
                 transport.sendMessage(message, message.getAllRecipients());
                 transport.close();
 
-                System.out.println("Envio");
+                System.out.println("-- Fin del proceso  Envio correo  ---");
+
+                Toast.makeText(this, "Envio exitoso del correo", Toast.LENGTH_SHORT).show();
+
+                finish();
+
 
             }else{
                 System.out.println("Fallo la conexion");
+                Toast.makeText(this, "Valida tu correo, por favor.", Toast.LENGTH_SHORT).show();
             }
 
         }catch (Exception e){

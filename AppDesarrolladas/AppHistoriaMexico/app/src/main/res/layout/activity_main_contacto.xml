@@ -80,14 +80,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/labelTituloContacto" />
 
-            <!--   <EditText
+               <EditText
                    android:id="@+id/inpNombreContacto"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:ems="10"
                    android:hint="@string/labelNombreContacto"
                    android:inputType="textPersonName" />
-           -->
+
             <EditText
                 android:id="@+id/inpAsuntoContacto"
                 android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:hint="@string/labelAsuntoContacto"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName" />
-            <!--
+
                 <EditText
                     android:id="@+id/inpCorreoContacto"
                     android:layout_width="match_parent"
@@ -104,8 +104,8 @@
                     android:ems="10"
                     android:hint="@string/labelCorreoContacto"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName" />
-            -->
+                    android:inputType="textEmailAddress" />
+
             <EditText
                 android:id="@+id/inpMsjContacto"
                 android:layout_width="match_parent"

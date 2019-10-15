@@ -35,11 +35,11 @@
     <!-- Label Interfaz Contacto -->
 
     <string name="labelTituloContacto"> Datos para enviar correo:   </string>
-    <string name="labelNombreContacto"> Nombre:   </string>
-    <string name="labelCorreoContacto"> Correo: </string>
-    <string name="labelAsuntoContacto">Asunto:  </string>
-    <string name="labelMsjContacto">Mensaje:  </string>
-    <string name="textBtnContacto">Enviar Correo  </string>
+    <string name="labelNombreContacto"> Tu  Nombre:   </string>
+    <string name="labelCorreoContacto"> Tu Correo: </string>
+    <string name="labelAsuntoContacto"> Asunto:  </string>
+    <string name="labelMsjContacto"> Mensaje:  </string>
+    <string name="textBtnContacto"> Enviar Correo  </string>
 
 
 </resources>
