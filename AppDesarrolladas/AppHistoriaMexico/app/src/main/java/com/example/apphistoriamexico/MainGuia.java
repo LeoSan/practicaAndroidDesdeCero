@@ -107,14 +107,14 @@ public class MainGuia extends AppCompatActivity {
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
 
         public void onClick(View view){
-            //todo Mosca aqui tengo una falla leo .(No logro capturar la id de la categoria )
+            //todo Mosca aqui tengo una falla  .(No logro capturar la id de la categoria )
             ImageView objBoton = (ImageView) view;
             Toast.makeText(getApplicationContext(), "Se preciono el " + objBoton.getId(), Toast.LENGTH_LONG ).show();
            //Intancio el Objeto Intent que necesito
             Intent enviar = new Intent( view.getContext(), MainNivelesReto.class);
-            //Metodo que me permite enviar variables a otro Activity
-            enviar.putExtra("IdCategoria", "123");
-            //Inicio
+            //Metodo que me permite crear variable
+            enviar.putExtra("IdCategoria", "1");
+            //Activa la intent y envia el objeto con la variable.
             startActivity(enviar);
         }
     };

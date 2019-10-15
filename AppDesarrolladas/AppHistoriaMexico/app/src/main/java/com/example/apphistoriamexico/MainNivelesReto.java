@@ -18,17 +18,16 @@ public class MainNivelesReto extends AppCompatActivity {
 
     //Declaracion de Variables
     LinearLayout contLinearBtnsNiveles;
+    TextView labelTituloNiveles;
+    Cursor categoriaId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_niveles_reto);
 
-        //Capturo parametros Intent
-        String IdCategoria = getIntent().getStringExtra("IdCategoria");
-        Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
-
-
+        //Comunicación con la interfaz
+        labelTituloNiveles = (TextView)findViewById(R.id.labelTituloNiveles);
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
@@ -37,10 +36,18 @@ public class MainNivelesReto extends AppCompatActivity {
         contLinearBtnsNiveles = (LinearLayout)findViewById(R.id.contLinearBtnsNiveles);
 
         //Botones-> Genero los Botones de los Niveles
-        agregarBotones(getNiveles(), contLinearBtnsNiveles);
+        agregarBotones( getNiveles(), contLinearBtnsNiveles );
 
+        // Titulo Dinamico
+        //Capturo parametros Intent
+        String IdCategoria = getIntent().getStringExtra("IdCategoria");
+        Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
+        categoriaId = getCategoriaId( IdCategoria );
+        if ( categoriaId.moveToFirst() ){//Muestra los valores encontrados en la consulta
+            labelTituloNiveles.setText( categoriaId.getString(1) );
+        }
 
-    }
+    }//Final del onCreate
 
 
     //Metodos interfaz
@@ -123,6 +130,16 @@ public class MainNivelesReto extends AppCompatActivity {
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor DatosNiveles = BasesDeDatos.rawQuery("SELECT id,  nom_nivel, icono, activo FROM t_niveles WHERE activo = 1", null);
         return DatosNiveles;
+    }
+
+    //Metodo Devuelve un cursos con los valores de la categoria
+    public Cursor getCategoriaId( String idCategoria){
+        //Consulta Los niveles de aprendizaje
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        Cursor categoriaId = BasesDeDatos.rawQuery("SELECT id, nom_categoria, desp_categoria FROM t_categoria WHERE activo = 1 AND id =" + idCategoria, null);
+        return categoriaId;
     }
 
 }// fin de la clase
