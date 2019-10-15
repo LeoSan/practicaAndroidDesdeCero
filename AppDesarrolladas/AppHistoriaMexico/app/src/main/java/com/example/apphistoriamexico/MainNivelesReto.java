@@ -2,48 +2,42 @@ package com.example.apphistoriamexico;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//Librerias para la BD
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.content.res.Resources;
 import android.database.Cursor;
-
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//Libreria para imagen dinamica
-import android.content.res.Resources;
-
-import android.view.ViewGroup;
-
-public class MainGuia extends AppCompatActivity {
+public class MainNivelesReto extends AppCompatActivity {
 
     //Declaracion de Variables
-    LinearLayout contBtnCategorias;
-
+    LinearLayout contLinearBtnsNiveles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_guia);
+        setContentView(R.layout.activity_main_niveles_reto);
 
         //Capturo parametros Intent
-        String idTipoActividad = getIntent().getStringExtra("idActividad");
-        Toast.makeText(this, "idTipoActividad" + idTipoActividad, Toast.LENGTH_LONG).show();
+        String IdCategoria = getIntent().getStringExtra("IdCategoria");
+        Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
+
 
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
-        contBtnCategorias = (LinearLayout)findViewById(R.id.contBtnCategorias);
+        //Layout -> Componentes Dimamicos.
+        contLinearBtnsNiveles = (LinearLayout)findViewById(R.id.contLinearBtnsNiveles);
 
-        //Obtener los valores de categoria
-        agregarBotones(getCategorias(), contBtnCategorias);
+        //Botones-> Genero los Botones de los Niveles
+        agregarBotones(getNiveles(), contLinearBtnsNiveles);
 
 
     }
@@ -59,63 +53,51 @@ public class MainGuia extends AppCompatActivity {
             String nombreLogo = "";
 
             do{
-
                 //Instancio el Imagen View y Texto
-                ImageView botonCategoria = new ImageView( getApplicationContext() );
-                TextView  textCategoria = new TextView ( getApplicationContext() );
+                ImageView botonNiveles = new ImageView( getApplicationContext() );
+                TextView textNiveles = new TextView ( getApplicationContext() );
 
                 //Text View -> Anexo nombre de la categoria
-                textCategoria.setText( datosCursor.getString(1) );
+                textNiveles.setText( datosCursor.getString(1) );
 
                 // Forma para anexar un evento al ImageView
-                botonCategoria.setOnClickListener(interfazEstdudio);
+                botonNiveles.setOnClickListener(interfazEstdudio);
                 // Atributo "setImageResource" Anexar Imagen
                 nombreLogo =  datosCursor.getString(2);
 
                 Resources res = getApplicationContext().getResources();
                 int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
-                botonCategoria.setImageResource(resId);
-
-              //  botonCategoria.setImageResource(R.drawable.arte);
+                botonNiveles.setImageResource(resId);
 
                 // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
                 LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
-                botonCategoria.setLayoutParams(paramImageViewBoton);
+                botonNiveles.setLayoutParams(paramImageViewBoton);
 
                 LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 150);
-                textCategoria.setLayoutParams(paramTextViewBoton);
+                textNiveles.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton
-                botonCategoria.setId( datosCursor.getInt(1) );
+                botonNiveles.setId( datosCursor.getInt(1) );
 
                 // AddView -> Permite agregar los al contenedor
-                contenedor.addView(botonCategoria);
-                contenedor.addView(textCategoria);
+                contenedor.addView(botonNiveles);
+                contenedor.addView(textNiveles);
                 contenedor.setGravity(Gravity.CENTER);
 
             }while( datosCursor.moveToNext() );
 
         }else{
-            Toast.makeText(this, "Error, Falla en la  Bases de datos en la tabla categorias. ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error, Falla en la  Bases de datos en la tabla niveles . ", Toast.LENGTH_LONG).show();
         }
 
     }
 
-    //Eventos
 
     //OnClic -> Para el arbol de pensamientos
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
-
-        public void onClick(View view){
-            //todo Mosca aqui tengo una falla leo .(No logro capturar la id de la categoria )
-            ImageView objBoton = (ImageView) view;
+        public void onClick(View v){
+            ImageView objBoton = (ImageView) v;
             Toast.makeText(getApplicationContext(), "Se preciono el " + objBoton.getId(), Toast.LENGTH_LONG ).show();
-           //Intancio el Objeto Intent que necesito
-            Intent enviar = new Intent( view.getContext(), MainNivelesReto.class);
-            //Metodo que me permite enviar variables a otro Activity
-            enviar.putExtra("IdCategoria", "123");
-            //Inicio
-            startActivity(enviar);
         }
     };
 
@@ -127,22 +109,20 @@ public class MainGuia extends AppCompatActivity {
     }
 
     //Redirect-> Redirecciona a la interfaz Principal
-    public void vistaInterfazPrincipal (View view){
-        Intent interfaz = new Intent(this,MainActivity.class);
+    public void vistaInterfazCategoria (View view){
+        Intent interfaz = new Intent(this,MainGuia.class);
         startActivity(interfaz);
     }
 
-    // Metodos Conexion Bases de Datos
-
 
     //Metodo Devuelve un cursos con los valores de la categoria
-    public Cursor getCategorias(){
-        //Consulta Categoria
+    public Cursor getNiveles(){
+        //Consulta Los niveles de aprendizaje
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
-        Cursor DatosCategoria = BasesDeDatos.rawQuery("SELECT id, nom_categoria, desp_categoria FROM t_categoria WHERE activo = 1 ORDER BY id ASC", null);
-        return DatosCategoria;
+        Cursor DatosNiveles = BasesDeDatos.rawQuery("SELECT id,  nom_nivel, icono, activo FROM t_niveles WHERE activo = 1", null);
+        return DatosNiveles;
     }
 
-}
+}// fin de la clase

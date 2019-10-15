@@ -32,13 +32,11 @@
 
         <TextView
             android:id="@+id/labelCategorias"
+            style="@style/labelTituloInterfaces"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/labelApoyo"
-            android:textSize="24sp"
-            tools:text="@string/labelApoyo" />
+            android:text="@string/labelApoyo" />
 
         <Button
             android:id="@+id/btnCategoria"

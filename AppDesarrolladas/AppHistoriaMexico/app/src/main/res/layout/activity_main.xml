@@ -56,7 +56,6 @@
         android:layout_height="599dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
         app:layout_constraintVertical_bias="0.0">
@@ -66,6 +65,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btnGuia"
+                style="@style/btnMenu"
+                android:layout_width="171dp"
+                android:layout_height="162dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grade"
+                android:onClick="vistaGuia"
+                android:text="@string/btnDescrip" />
+
             <TextView
                 android:id="@+id/labelText_a"
                 style="@style/labelBasico_Interfaz_A"
@@ -74,13 +83,13 @@
                 android:text="@string/label_a" />
 
             <Button
-                android:id="@+id/btnGuia"
+                android:id="@+id/btnPregunta"
                 style="@style/btnMenu"
-                android:layout_width="186dp"
-                android:layout_height="158dp"
+                android:layout_width="182dp"
+                android:layout_height="163dp"
                 android:layout_gravity="center"
-                android:background="@drawable/grade"
-                android:onClick="vistaGuia"
+                android:background="@drawable/knowledge"
+                android:onClick="vistaPreguntas"
                 android:text="@string/btnDescrip" />
 
             <TextView
@@ -89,16 +98,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:text="@string/label_b" />
-
-            <Button
-                android:id="@+id/btnPregunta"
-                style="@style/btnMenu"
-                android:layout_width="188dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
-                android:background="@drawable/knowledge"
-                android:onClick="vistaPreguntas"
-                android:text="@string/btnDescrip" />
 
         </LinearLayout>
     </ScrollView>

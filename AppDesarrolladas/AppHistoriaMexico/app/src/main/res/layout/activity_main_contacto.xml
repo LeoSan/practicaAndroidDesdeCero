@@ -31,12 +31,11 @@
 
         <TextView
             android:id="@+id/labelCategorias"
+            style="@style/labelTituloInterfaces"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/labelContacto"
-            android:textSize="24sp" />
+            android:text="@string/labelContacto" />
 
         <Button
             android:id="@+id/btnCategoria"

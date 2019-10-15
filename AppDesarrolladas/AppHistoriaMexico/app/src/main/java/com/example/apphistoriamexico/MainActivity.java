@@ -23,19 +23,22 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Guia (Cuestionario)
     public void vistaGuia (View view){
         Intent siguiente = new Intent(this,MainGuia.class);
+        //Metodo que me permite enviar variables a otro Activity
+        siguiente.putExtra("idActividad", "2");
         startActivity(siguiente);
     }
 
+    //Apunta al Activity de Preguntas (Reto al Saber)
+    public void vistaPreguntas (View view){
+        Intent siguiente = new Intent(this,MainGuia.class);
+        //Metodo que me permite enviar variables a otro Activity
+        siguiente.putExtra("idActividad", "1");
+        startActivity(siguiente);
+    }
 
     //Apunta al Activity de Contacto (Enviar Correo)
     public void vistaContacto(View view){
         Intent siguiente = new Intent(this,MainContacto.class);
-        startActivity(siguiente);
-    }
-
-    //Apunta al Activity de Preguntas (Aqui se realizaran las preguntas)
-    public void vistaPreguntas (View view){
-        Intent siguiente = new Intent(this,MainGuia.class);
         startActivity(siguiente);
     }
 
