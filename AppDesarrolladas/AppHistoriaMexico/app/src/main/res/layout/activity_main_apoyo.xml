@@ -63,7 +63,7 @@
         <LinearLayout
             android:id="@+id/idLayouApoyo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -126,7 +126,7 @@
 
             <TextView
                 android:id="@+id/parrafoTipsApoyo4"
-                style="@style/tituloApoyo"
+                style="@style/parrafoApoyo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/parrafoTipsApoyo4" />
@@ -140,7 +140,7 @@
 
             <TextView
                 android:id="@+id/parrafoTipsApoyo5"
-                style="@style/tituloApoyo"
+                style="@style/parrafoApoyo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/parrafoTipsApoyo5" />
@@ -154,10 +154,27 @@
 
             <TextView
                 android:id="@+id/parrafoTipsApoyo6"
-                style="@style/tituloApoyo"
+                style="@style/parrafoApoyo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/parrafoTipsApoyo6" />
+
+            <TextView
+                android:id="@+id/tituloTipsApoyo7"
+                style="@style/tituloApoyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelCaso7" />
+
+            <WebView
+                android:id="@+id/idWebViewApoyo"
+                android:layout_width="335dp"
+                android:layout_height="449dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" />
 
         </LinearLayout>
     </ScrollView>

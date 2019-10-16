@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainApoyo extends AppCompatActivity {
+    WebView wv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,13 @@ public class MainApoyo extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        //Declaro elobjeto que comtendra la funcionalidad del componente webview
+        wv1 = (WebView)findViewById(R.id.idWebViewApoyo);
+        //recuperamos Valores
+        String URL = "https://www.youtube.com/watch?v=JysHlMS_Vjs";
+        //definimos que navegador abrir - Este metodo hace que se abra la pagina en nuestra aplicacion
+        wv1.setWebViewClient(new WebViewClient());
+        wv1.loadUrl(URL);
     }
 
 

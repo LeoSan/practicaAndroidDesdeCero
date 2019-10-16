@@ -9,8 +9,8 @@
 
     <!-- Mensaje de ayuda o explicativos  -->
 
-    <string name="labelInformacionApoyo"> Este apartado te resumo los tipos de métodos para aprender, sabemos que usamos nuestra memoría para enmtender y retener información, es importante para tu examen que puedas usar todas las herramientas necesarias por la cantidad de información.  </string>
-    <string name="labelInformacionContacto"> En este apartado podras ayudar a la cuminidad mandando sugerencias, observaciones o incluso si deseas agregar alguna pregunta que no este en este cuestionario, la información cae en nuestro correo y nuestro equipo la validará y la anexara a la herramienta.  </string>
+    <string name="labelInformacionApoyo"> Este apartado te resumo los tipos de métodos para aprender, sabemos que usamos nuestra memoria para entender y retener información, es importante para tu examen puedas usar todas las herramientas necesarias por la cantidad de información que se estudia. </string>
+    <string name="labelInformacionContacto"> En este apartado podras ayudar a la comunidad mandando sugerencias, observaciones o incluso si deseas agregar alguna pregunta que no este en este cuestionario, la información que nos suministres, será validada y nuestro equipo la validará y la anexara a la herramienta. </string>
 
 
     <!-- Label Interfaz Apoyo -->
@@ -22,13 +22,14 @@
             <string name="labelCaso4"> Método De Posición Cereal </string>
             <string name="labelCaso5"> Método De Interferencia </string>
             <string name="labelCaso6"> Método De Los Opuestos </string>
+            <string name="labelCaso7"> Video Informativo. </string>
 
             <!-- Parrafo Tips Apoyo  -->
-            <string name="parrafoTipsApoyo1">Es el método que permite aprender de manera rapida, pero debes ser constante debido qué el cerebro borra al final del día, todo aquello que no necesitamos. Se recomienda repasar en intervalos de 1 lección 15 min, descanso de 10 min, Luego repite el Estudio por un tiempo de 30 min.</string>
-            <string name="parrafoTipsApoyo2">Permite lograr una mayor retención, pero se debe realizar el esfuerzo en comprender el problema, debes asociar y leer toda la información para crear una comprensión con  tus propias palabras es decir tu reflexión de los hechos.</string>
+            <string name="parrafoTipsApoyo1">Es el método que permite aprender de manera rápida, pero debes ser constante debido qué el cerebro borra al final del día, todo aquello que no necesitamos. Se recomienda repasar en intervalos de 1 lección 15 min, descanso de 10 min, Luego repite el Estudio por un tiempo de 30 min.</string>
+            <string name="parrafoTipsApoyo2">Permite lograr una mayor retención, pero se debe realizar el esfuerzo en comprender el problema, debes asociar y leer toda la información para crear una comprensión con  tus propias palabras es decir tu reflexión de los hechos, podras usar la imaginación para recrear historias y eventos, es el método más popular..</string>
             <string name="parrafoTipsApoyo3">Con este método tú serás el organizador de tus estudios, podras darle prioridad de aprender lo más fácil y dejar de último lo más difícil, tu dirección es saber que necesitas aprender y memorizar.</string>
-            <string name="parrafoTipsApoyo4">Este método consiste en organizar lo que necesitas aprender y de memorizar, se sugiere el uso de fichas, es cereal porque tu estableces el orden de las fichas, podrás colocarla arriba, abajo, delante, arás. Tu cerebro generará un patrón facilitando el aprendizaje. . </string>
-            <string name="parrafoTipsApoyo5">Como su nombre lo indica interfiere itencionalmente tu rutina de estudios, es decir si estudiaste 20 minutos, relajate con otra actividad luego vuelve a repasar otros 20 minutos,  luego que el cerebro entra en su estado de relajación podras retener mas información. </string>
+            <string name="parrafoTipsApoyo4">Este método consiste en organizar lo que necesitas aprender y de memorizarla en orden, se sugiere el uso de fichas, es cereal porque tú estableces el orden de las fichas, podrás colocarla arriba, abajo, delante, arás. Tu cerebro generará un patrón facilitando el aprendizaje.</string>
+            <string name="parrafoTipsApoyo5">Como su nombre lo indica interfiere intencionalmente tu rutina de estudios, es decir si estudiaste 20 minutos, relajate con otra actividad luego vuelve a repasar otros 20 minutos, el cerebro entra en su estado de relajación podras retener más información. Es un método muy dinámico algo complejo pero no imposible de realizar, ponte retos y premiate por cada avance que logres.</string>
             <string name="parrafoTipsApoyo6">Permite memorizar estudiando dos temas diferentes u opuestos, logrando la asociación entre opuestos. Si olvidas un tema recordaras el otro tema, muy usado por los estudiantes de medicina en su aprendizaje. </string>
 
 

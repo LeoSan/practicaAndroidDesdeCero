@@ -76,7 +76,7 @@ public class MainGuia extends AppCompatActivity {
                 int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
                 botonCategoria.setImageResource(resId);
 
-              //  botonCategoria.setImageResource(R.drawable.arte);
+              //botonCategoria.setImageResource(R.drawable.arte);
 
                 // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
                 LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
@@ -86,7 +86,7 @@ public class MainGuia extends AppCompatActivity {
                 textCategoria.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton
-                botonCategoria.setId( datosCursor.getInt(1) );
+                botonCategoria.setId( datosCursor.getInt(0) );
 
                 // AddView -> Permite agregar los al contenedor
                 contenedor.addView(botonCategoria);
@@ -107,13 +107,14 @@ public class MainGuia extends AppCompatActivity {
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
 
         public void onClick(View view){
-            //todo Mosca aqui tengo una falla  .(No logro capturar la id de la categoria )
+            //Genero el boton para poder setear sus elementos
             ImageView objBoton = (ImageView) view;
-            Toast.makeText(getApplicationContext(), "Se preciono el " + objBoton.getId(), Toast.LENGTH_LONG ).show();
-           //Intancio el Objeto Intent que necesito
-            Intent enviar = new Intent( view.getContext(), MainNivelesReto.class);
+            //Intancio el Objeto Intent que necesito enviar la información
+            Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
+            //Debo realizar un parse de entero a string
+            String cadena = Integer.toString( objBoton.getId() );
             //Metodo que me permite crear variable
-            enviar.putExtra("IdCategoria", "1");
+            enviar.putExtra("IdCategoria", cadena  );
             //Activa la intent y envia el objeto con la variable.
             startActivity(enviar);
         }

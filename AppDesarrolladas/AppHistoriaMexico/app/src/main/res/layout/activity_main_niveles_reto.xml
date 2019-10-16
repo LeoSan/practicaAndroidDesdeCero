@@ -68,7 +68,15 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp" />
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/labelTipoCategoria"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D" />
+        </LinearLayout>
     </ScrollView>
 
 

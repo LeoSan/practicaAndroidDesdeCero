@@ -18,7 +18,7 @@ public class MainNivelesReto extends AppCompatActivity {
 
     //Declaracion de Variables
     LinearLayout contLinearBtnsNiveles;
-    TextView labelTituloNiveles;
+    TextView labelTituloNiveles, labelTipoCategoria;
     Cursor categoriaId;
 
     @Override
@@ -28,6 +28,9 @@ public class MainNivelesReto extends AppCompatActivity {
 
         //Comunicación con la interfaz
         labelTituloNiveles = (TextView)findViewById(R.id.labelTituloNiveles);
+        labelTipoCategoria = (TextView)findViewById(R.id.labelTipoCategoria);
+
+
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
@@ -44,7 +47,7 @@ public class MainNivelesReto extends AppCompatActivity {
         Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
         categoriaId = getCategoriaId( IdCategoria );
         if ( categoriaId.moveToFirst() ){//Muestra los valores encontrados en la consulta
-            labelTituloNiveles.setText( categoriaId.getString(1) );
+            labelTipoCategoria.setText( categoriaId.getString(1) );
         }
 
     }//Final del onCreate
