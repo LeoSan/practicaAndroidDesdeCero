@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
-    tools:context=".MainNivelesReto">
+    tools:context=".MainRetoSaber">
 
     <LinearLayout
-        android:id="@+id/contBtnsOpcionNivelesReto"
+        android:id="@+id/contBtnsOpcionRetoSaber"
         style="@style/btnMenu"
         android:layout_width="327dp"
         android:layout_height="64dp"
@@ -28,7 +28,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/grade"
-            android:onClick="vistaInterfazCategoria"
+            android:onClick="vistaInterfazNiveles"
             android:text="@string/btnDescrip" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/labelTituloNiveles" />
+            android:text="@string/labelTituloRetoSaber" />
 
         <Button
             android:id="@+id/btnApoyo"
@@ -52,14 +52,14 @@
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/contScrollNiveles"
+        android:id="@+id/contScrollRetoSaber"
         android:layout_width="360dp"
         android:layout_height="537dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionNivelesReto"
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionRetoSaber"
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
@@ -76,8 +76,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFF8D" />
+
+            <TextView
+                android:id="@+id/labelCategoria"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D" />
+
+            <TextView
+                android:id="@+id/idPregunta"
+                style="@style/labelPreguntaRetoSaber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelPreguntaDesp" />
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

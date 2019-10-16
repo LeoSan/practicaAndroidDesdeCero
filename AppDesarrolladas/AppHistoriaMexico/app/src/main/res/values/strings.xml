@@ -15,38 +15,42 @@
 
     <!-- Label Interfaz Apoyo -->
 
-            <!-- Titulos Tips Apoyo  -->
-            <string name="labelCaso1"> Método Repetición Espaciada </string>
-            <string name="labelCaso2"> Método De Comprensión </string>
-            <string name="labelCaso3"> Método De Prioridad </string>
-            <string name="labelCaso4"> Método De Posición Cereal </string>
-            <string name="labelCaso5"> Método De Interferencia </string>
-            <string name="labelCaso6"> Método De Los Opuestos </string>
-            <string name="labelCaso7"> Video Informativo. </string>
+    <!-- Titulos Tips Apoyo  -->
+    <string name="labelCaso1"> Método Repetición Espaciada </string>
+    <string name="labelCaso2"> Método De Comprensión </string>
+    <string name="labelCaso3"> Método De Prioridad </string>
+    <string name="labelCaso4"> Método De Posición Cereal </string>
+    <string name="labelCaso5"> Método De Interferencia </string>
+    <string name="labelCaso6"> Método De Los Opuestos </string>
+    <string name="labelCaso7"> Video Informativo. </string>
 
-            <!-- Parrafo Tips Apoyo  -->
-            <string name="parrafoTipsApoyo1">Es el método que permite aprender de manera rápida, pero debes ser constante debido qué el cerebro borra al final del día, todo aquello que no necesitamos. Se recomienda repasar en intervalos de 1 lección 15 min, descanso de 10 min, Luego repite el Estudio por un tiempo de 30 min.</string>
-            <string name="parrafoTipsApoyo2">Permite lograr una mayor retención, pero se debe realizar el esfuerzo en comprender el problema, debes asociar y leer toda la información para crear una comprensión con  tus propias palabras es decir tu reflexión de los hechos, podras usar la imaginación para recrear historias y eventos, es el método más popular..</string>
-            <string name="parrafoTipsApoyo3">Con este método tú serás el organizador de tus estudios, podras darle prioridad de aprender lo más fácil y dejar de último lo más difícil, tu dirección es saber que necesitas aprender y memorizar.</string>
-            <string name="parrafoTipsApoyo4">Este método consiste en organizar lo que necesitas aprender y de memorizarla en orden, se sugiere el uso de fichas, es cereal porque tú estableces el orden de las fichas, podrás colocarla arriba, abajo, delante, arás. Tu cerebro generará un patrón facilitando el aprendizaje.</string>
-            <string name="parrafoTipsApoyo5">Como su nombre lo indica interfiere intencionalmente tu rutina de estudios, es decir si estudiaste 20 minutos, relajate con otra actividad luego vuelve a repasar otros 20 minutos, el cerebro entra en su estado de relajación podras retener más información. Es un método muy dinámico algo complejo pero no imposible de realizar, ponte retos y premiate por cada avance que logres.</string>
-            <string name="parrafoTipsApoyo6">Permite memorizar estudiando dos temas diferentes u opuestos, logrando la asociación entre opuestos. Si olvidas un tema recordaras el otro tema, muy usado por los estudiantes de medicina en su aprendizaje. </string>
+    <!-- Parrafo Tips Apoyo  -->
+    <string name="parrafoTipsApoyo1">Es el método que permite aprender de manera rápida, pero debes ser constante debido qué el cerebro borra al final del día, todo aquello que no necesitamos. Se recomienda repasar en intervalos de 1 lección 15 min, descanso de 10 min, Luego repite el Estudio por un tiempo de 30 min.</string>
+    <string name="parrafoTipsApoyo2">Permite lograr una mayor retención, pero se debe realizar el esfuerzo en comprender el problema, debes asociar y leer toda la información para crear una comprensión con  tus propias palabras es decir tu reflexión de los hechos, podras usar la imaginación para recrear historias y eventos, es el método más popular..</string>
+    <string name="parrafoTipsApoyo3">Con este método tú serás el organizador de tus estudios, podras darle prioridad de aprender lo más fácil y dejar de último lo más difícil, tu dirección es saber que necesitas aprender y memorizar.</string>
+    <string name="parrafoTipsApoyo4">Este método consiste en organizar lo que necesitas aprender y de memorizarla en orden, se sugiere el uso de fichas, es cereal porque tú estableces el orden de las fichas, podrás colocarla arriba, abajo, delante, arás. Tu cerebro generará un patrón facilitando el aprendizaje.</string>
+    <string name="parrafoTipsApoyo5">Como su nombre lo indica interfiere intencionalmente tu rutina de estudios, es decir si estudiaste 20 minutos, relajate con otra actividad luego vuelve a repasar otros 20 minutos, el cerebro entra en su estado de relajación podras retener más información. Es un método muy dinámico algo complejo pero no imposible de realizar, ponte retos y premiate por cada avance que logres.</string>
+    <string name="parrafoTipsApoyo6">Permite memorizar estudiando dos temas diferentes u opuestos, logrando la asociación entre opuestos. Si olvidas un tema recordaras el otro tema, muy usado por los estudiantes de medicina en su aprendizaje. </string>
 
 
     <!-- Label Interfaz Contacto -->
 
-        <!-- Titulos Campos Formulario   -->
-        <string name="labelTituloContacto"> Datos para enviar correo:   </string>
-        <string name="labelNombreContacto"> Tu  Nombre:   </string>
-        <string name="labelCorreoContacto"> Tu Correo: </string>
-        <string name="labelAsuntoContacto"> Asunto:  </string>
-        <string name="labelMsjContacto"> Mensaje:  </string>
-        <string name="textBtnContacto"> Enviar Correo  </string>
+    <!-- Titulos Campos Formulario   -->
+    <string name="labelTituloContacto"> Datos para enviar correo:   </string>
+    <string name="labelNombreContacto"> Tu  Nombre:   </string>
+    <string name="labelCorreoContacto"> Tu Correo: </string>
+    <string name="labelAsuntoContacto"> Asunto:  </string>
+    <string name="labelMsjContacto"> Mensaje:  </string>
+    <string name="textBtnContacto"> Enviar Correo  </string>
 
 
-    <!-- Label Interfaz Niveles del Reto al Saber  -->
-
+    <!-- Label Interfaz Niveles  -->
     <string name="labelTituloNiveles"> Niveles </string>
+
+
+    <!-- Label Interfaz Reto al Saber  -->
+    <string name="labelTituloRetoSaber"> Si Sabes. </string>
+    <string name="labelPreguntaDesp"> Cargando pregunta ... </string>
 
 
 </resources>

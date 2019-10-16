@@ -28,7 +28,7 @@ public class MainNivelesReto extends AppCompatActivity {
 
         //Comunicación con la interfaz
         labelTituloNiveles = (TextView)findViewById(R.id.labelTituloNiveles);
-        labelTipoCategoria = (TextView)findViewById(R.id.labelTipoCategoria);
+        labelTipoCategoria = (TextView)findViewById(R.id.labelNivel);
 
 
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
@@ -44,7 +44,7 @@ public class MainNivelesReto extends AppCompatActivity {
         // Titulo Dinamico
         //Capturo parametros Intent
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
-        Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
         categoriaId = getCategoriaId( IdCategoria );
         if ( categoriaId.moveToFirst() ){//Muestra los valores encontrados en la consulta
             labelTipoCategoria.setText( categoriaId.getString(1) );
@@ -87,7 +87,7 @@ public class MainNivelesReto extends AppCompatActivity {
                 textNiveles.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton
-                botonNiveles.setId( datosCursor.getInt(1) );
+                botonNiveles.setId( datosCursor.getInt(0) );
 
                 // AddView -> Permite agregar los al contenedor
                 contenedor.addView(botonNiveles);
@@ -107,7 +107,17 @@ public class MainNivelesReto extends AppCompatActivity {
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
         public void onClick(View v){
             ImageView objBoton = (ImageView) v;
-            Toast.makeText(getApplicationContext(), "Se preciono el " + objBoton.getId(), Toast.LENGTH_LONG ).show();
+            //Toast.makeText(getApplicationContext(), "Nivel " + objBoton.getId() + " | Categoria -> " + getIntent().getStringExtra("IdCategoria") , Toast.LENGTH_LONG ).show();
+            //Intancio el Objeto Intent que necesito enviar la información
+            Intent enviar = new Intent( v.getContext(), MainRetoSaber.class );
+            //Debo realizar un parse de entero a string
+            String idNivel = Integer.toString( objBoton.getId() );
+            //Metodo que me permite crear variable
+            enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
+            enviar.putExtra("IdNivel", idNivel  );
+            enviar.putExtra("IdContador", "0"  );
+            //Activa la intent y envia el objeto con la variable.
+            startActivity(enviar);
         }
     };
 
@@ -144,5 +154,7 @@ public class MainNivelesReto extends AppCompatActivity {
         Cursor categoriaId = BasesDeDatos.rawQuery("SELECT id, nom_categoria, desp_categoria FROM t_categoria WHERE activo = 1 AND id =" + idCategoria, null);
         return categoriaId;
     }
+
+
 
 }// fin de la clase

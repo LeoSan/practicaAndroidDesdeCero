@@ -72,5 +72,19 @@
     </style>
 
 
+    <!-- Label Interfaz Reto al Saber  -->
+
+    <style name="labelPreguntaRetoSaber">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPregunta</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+
+
+
 
 </resources>
