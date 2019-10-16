@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyAppMultiLenguaje_43</string>
+    <string name="app_label">Login</string>
+    <string name="app_usuario">User</string>
+    <string name="app_clave">Password</string>
+    <string name="app_button">Login</string>
+    <string name="app_labelDerecho">All Reserved  </string>
+</resources>
