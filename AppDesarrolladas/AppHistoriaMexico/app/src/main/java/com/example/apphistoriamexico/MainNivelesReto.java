@@ -84,6 +84,7 @@ public class MainNivelesReto extends AppCompatActivity {
                 botonNiveles.setLayoutParams(paramImageViewBoton);
 
                 LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 150);
+                paramTextViewBoton.setMargins(0,0, 0, 40);
                 textNiveles.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton

@@ -30,13 +30,13 @@ public class MainRetoSaber extends AppCompatActivity {
 
         // Recibo parametros
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
-        String IdNivel = getIntent().getStringExtra("IdNivel");
-        String Contador = getIntent().getStringExtra("IdContador");
+        String IdNivel     = getIntent().getStringExtra("IdNivel");
+        String Contador    = getIntent().getStringExtra("IdContador");
 
         Toast.makeText(getApplicationContext(), "Nivel " + IdNivel + " | Contador -> " + Contador , Toast.LENGTH_LONG ).show();
 
         //Elementos Dinamicos.
-        setNomNiveles(IdNivel, Contador);
+        setNomNiveles(IdNivel, Contador, IdCategoria);
         setNomCategoria(IdCategoria);
     }
 
@@ -88,9 +88,9 @@ public class MainRetoSaber extends AppCompatActivity {
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
-        Cursor consultaId = BasesDeDatos.rawQuery("SELECT id FROM t_preguntas WHERE co_categoria = " + idCategoria + " AND  co_nivel = " + idNivel + " AND activo = 1 ", null);
+        Cursor consultaIdPreguntas = BasesDeDatos.rawQuery("SELECT id FROM t_preguntas WHERE co_categoria = 1 AND co_nivel = 1 AND activo = 1 ", null);
         // BasesDeDatos.close();
-        return consultaId;
+        return consultaIdPreguntas;
     }
 
     //Metodo Devuelve un cursor con la Pregunta Unica
@@ -105,12 +105,15 @@ public class MainRetoSaber extends AppCompatActivity {
     }
 
 
-    // Elementos Dinámicos
+    // Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+
+
     // Establecer texto en los nivles
-    public void setNomNiveles (String IdNivel, String  Contador){
+    public void setNomNiveles (String IdNivel, String  Contador, String IdCategoria){
+
         nivelesId = getNivelId( IdNivel );
         if ( nivelesId.moveToFirst() ){//Muestra los valores encontrados en la consulta
-            labelNivel.setText( nivelesId.getString(1) + " - Preguntas : "+Contador+" / 19  " );
+            labelNivel.setText( nivelesId.getString(1) + " - Preguntas : "+Contador+" /  19 " );
         }
 
     }

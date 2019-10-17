@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
-    tools:context=".MainNivelesReto">
+    tools:context=".MainNivelesReto"
+    tools:layout_editor_absoluteY="81dp">
 
     <LinearLayout
         android:id="@+id/contBtnsOpcionNivelesReto"
@@ -51,16 +52,41 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="343dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionNivelesReto">
+
+        <TextView
+            android:id="@+id/labelNivel"
+            style="@style/labelTituloInterfaces"
+            android:layout_width="313dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFF8D"
+            android:gravity="center" />
+
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/contScrollNiveles"
-        android:layout_width="360dp"
-        android:layout_height="537dp"
+        android:layout_width="348dp"
+        android:layout_height="307dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionNivelesReto"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:id="@+id/contLinearBtnsNiveles"
@@ -68,14 +94,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp" >
+            android:padding="10dp">
 
-            <TextView
-                android:id="@+id/labelNivel"
-                style="@style/labelTituloInterfaces"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFF8D" />
         </LinearLayout>
     </ScrollView>
 

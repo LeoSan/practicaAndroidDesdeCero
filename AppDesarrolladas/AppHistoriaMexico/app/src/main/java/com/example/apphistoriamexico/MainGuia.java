@@ -83,6 +83,7 @@ public class MainGuia extends AppCompatActivity {
                 botonCategoria.setLayoutParams(paramImageViewBoton);
 
                 LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 150);
+                paramTextViewBoton.setMargins(0,0, 0, 20);
                 textCategoria.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton

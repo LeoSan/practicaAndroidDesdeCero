@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
     tools:context=".MainContacto">
+
     <LinearLayout
         android:id="@+id/contBtnsOpcion"
         style="@style/btnMenu"
@@ -49,29 +50,50 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="370dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion">
+
+        <TextView
+            android:id="@+id/labelInformacionContacto"
+            style="@style/labelInformacion"
+            android:layout_width="324dp"
+            android:layout_height="111dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/labelInformacionContacto" />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/camposInterfazContacto"
-        android:layout_width="395dp"
-        android:layout_height="464dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="303dp"
+        android:layout_height="324dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/labelInformacionContacto"
-                style="@style/labelInformacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/labelInformacionContacto" />
 
             <TextView
                 android:id="@+id/labelTituloContacto"
@@ -79,13 +101,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/labelTituloContacto" />
 
-               <EditText
-                   android:id="@+id/inpNombreContacto"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:ems="10"
-                   android:hint="@string/labelNombreContacto"
-                   android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/inpNombreContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/labelNombreContacto"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/inpAsuntoContacto"
@@ -96,30 +119,36 @@
                 android:importantForAutofill="no"
                 android:inputType="textPersonName" />
 
-                <EditText
-                    android:id="@+id/inpCorreoContacto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/labelCorreoContacto"
-                    android:importantForAutofill="no"
-                    android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/inpCorreoContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/labelCorreoContacto"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress" />
 
             <EditText
                 android:id="@+id/inpMsjContacto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="@string/labelMsjContacto"
                 android:importantForAutofill="no"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:paddingBottom="50dp" />
 
             <Button
                 android:id="@+id/idEnviarCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
                 android:text="@string/textBtnContacto" />
+
         </LinearLayout>
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
