@@ -4,4 +4,11 @@
     <color name="colorPrimaryDark">#FBC02D</color>
     <color name="colorAccent">#607D8B</color>
     <color name="colorPregunta">#74b9ff</color>
+
+    <!-- Estilo Color Bton Reto al Saber-->
+    <color name="colorSinCalificar">#4F627968</color>
+    <color name="colorCalificar">#794527A0</color>
+    <color name="colorAprobada">#558B2F</color>
+    <color name="colorReprobada">#66D32F2F</color>
+
 </resources>

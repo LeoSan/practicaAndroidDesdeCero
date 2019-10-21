@@ -53,14 +53,13 @@
 
     <ScrollView
         android:id="@+id/contScrollRetoSaber"
-        android:layout_width="360dp"
-        android:layout_height="537dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="331dp"
+        android:layout_height="527dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionRetoSaber"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.37">
 
         <LinearLayout
             android:id="@+id/contLinearBtnsNiveles"
@@ -68,7 +67,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp" >
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/labelNivel"
@@ -85,11 +84,43 @@
                 android:background="#FFFF8D" />
 
             <TextView
-                android:id="@+id/idPregunta"
+                android:id="@+id/labelPregunta"
                 style="@style/labelPreguntaRetoSaber"
+                android:layout_width="338dp"
+                android:layout_height="108dp"
+                android:text="@string/labelPreguntaDesp" />
+
+            <Button
+                android:id="@+id/btnOpcion1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/labelPreguntaDesp" />
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btnOpcion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btnOpcion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btnOpcion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/idCalificar"
+                style="@style/btnPregRetoSaber_sin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelBtns" />
+
         </LinearLayout>
     </ScrollView>
 

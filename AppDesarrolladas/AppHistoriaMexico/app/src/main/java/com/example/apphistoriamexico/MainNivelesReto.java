@@ -116,7 +116,11 @@ public class MainNivelesReto extends AppCompatActivity {
             //Metodo que me permite crear variable
             enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
             enviar.putExtra("IdNivel", idNivel  );
-            enviar.putExtra("IdContador", "0"  );
+            // todo Debe de pensar una forma de recibir variables actualizadas y enviarlas
+            enviar.putExtra("iContador", "0"  );
+            enviar.putExtra("IndicePreg", "0"  );
+
+
             //Activa la intent y envia el objeto con la variable.
             startActivity(enviar);
         }

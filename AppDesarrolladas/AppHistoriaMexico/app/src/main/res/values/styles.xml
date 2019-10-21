@@ -70,20 +70,51 @@
         <item name="android:textSize">24dp</item>
         <item name="android:gravity">center</item>
     </style>
+    labelPreguntaRetoSaber
 
 
     <!-- Label Interfaz Reto al Saber  -->
 
     <style name="labelPreguntaRetoSaber">
         <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
         <item name="android:textSize">18dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@color/colorPregunta</item>
         <item name="android:padding">10dp</item>
     </style>
 
+    <style name="btnPregRetoSaber_sin">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorSinCalificar</item>
+        <item name="android:padding">10dp</item>
+    </style>
 
+    <style name="btnPregRetoSaber_calificar">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorCalificar</item>
+        <item name="android:padding">10dp</item>
+    </style>
 
+    <style name="btnPregRetoSaber_aprobada">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorAprobada</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="btnPregRetoSaber_reprobada">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorReprobada</item>
+        <item name="android:padding">10dp</item>
+    </style>
 
 
 

@@ -51,6 +51,10 @@
     <!-- Label Interfaz Reto al Saber  -->
     <string name="labelTituloRetoSaber"> Si Sabes. </string>
     <string name="labelPreguntaDesp"> Cargando pregunta ... </string>
+    <string name="labelBtns"> Calificar </string>
+    <string name="labelBtns_aprobado"> Aprobada </string>
+    <string name="labelBtns_reprobado"> !! Chalee !!  </string>
+    <string name="labelBtns_continuar"> Continuar  </string>
 
 
 </resources>
