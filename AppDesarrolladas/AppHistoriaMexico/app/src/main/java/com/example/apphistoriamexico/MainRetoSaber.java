@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,9 +15,9 @@ import android.widget.Toast;
 
 public class MainRetoSaber extends AppCompatActivity {
 
-    TextView labelNivel, labelCategoria, labelPregunta;
+    TextView labelNivel, labelCategoria, labelPregunta, idRespValidar;
     Cursor categoriaId, nivelesId,  listPreguntas;
-    Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4;
+    Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4, btnCalificar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,14 @@ public class MainRetoSaber extends AppCompatActivity {
         labelNivel      = (TextView)findViewById(R.id.labelNivel);
         labelCategoria  = (TextView)findViewById(R.id.labelCategoria);
         labelPregunta  = (TextView)findViewById(R.id.labelPregunta);
+        idRespValidar  = (TextView)findViewById(R.id.idRespValidar);
 
         //botones opciones
         btnOpcion1  = (Button)findViewById(R.id.btnOpcion1);
         btnOpcion2  = (Button)findViewById(R.id.btnOpcion2);
         btnOpcion3  = (Button)findViewById(R.id.btnOpcion3);
         btnOpcion4  = (Button)findViewById(R.id.btnOpcion4);
+        btnCalificar = (Button)findViewById(R.id.btnCalificar);
 
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -48,10 +52,7 @@ public class MainRetoSaber extends AppCompatActivity {
         setNomCategoria(IdCategoria);
         getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
 
-        // Integer.parseInt(Contador)
-        // practica
-
-    }
+    }// fin del onCreate
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
@@ -144,7 +145,6 @@ public class MainRetoSaber extends AppCompatActivity {
         String[ ] sRespuesta = new  String[19];
         String[ ] sComplemento = new  String[3];
 
-
         try {
 
             if (consultaId != null) {
@@ -152,7 +152,7 @@ public class MainRetoSaber extends AppCompatActivity {
                 int indice = 0;
 
                 do {
-                    //Asignamos el valor en nuestras variables para usarlos en lo que necesitemos
+                    // todo Asignamos el valor en nuestras variables para usarlos en lo que necesitemos
                     iPregunta[indice] = consultaId.getInt(consultaId.getColumnIndex("id"));
                     sPreguntas[indice] = consultaId.getString(consultaId.getColumnIndex("pregunta"));
                     sRespuesta[indice] = consultaId.getString(consultaId.getColumnIndex("respuesta"));
@@ -160,18 +160,23 @@ public class MainRetoSaber extends AppCompatActivity {
 
                 } while ( consultaId.moveToNext() );
 
-
                 //Establecer Pregunta y Respuestas Dinamico todo
                 labelPregunta.setText(  sPreguntas[ Integer.parseInt( IndicePreg ) ] );
                 int numero = (int)( Math.random()*4+1 );
+
+                //todo aqui las preguntas complementarias
+                sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
 
                 if ( numero  == 1 ){
                     btnOpcion1.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion1.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion2.setText(  "Opcion 1" );
-                    btnOpcion3.setText(  "Opcion 2" );
-                    btnOpcion4.setText(  "Opcion 3" );
+                    btnOpcion2.setText(  sComplemento[0] );
+                    btnOpcion2.setId( 0 );
+                    btnOpcion3.setText(  sComplemento[1] );
+                    btnOpcion3.setId( 0 );
+                    btnOpcion4.setText(  sComplemento[2] );
+                    btnOpcion4.setId( 0 );
 
                 }
 
@@ -179,9 +184,12 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion2.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion2.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  "Opcion 1" );
-                    btnOpcion3.setText(  "Opcion 2" );
-                    btnOpcion4.setText(  "Opcion 3" );
+                    btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion3.setText(  sComplemento[1] );
+                    btnOpcion3.setId( 0 );
+                    btnOpcion4.setText(  sComplemento[3] );
+                    btnOpcion4.setId( 0 );
 
                 }
 
@@ -189,19 +197,24 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion3.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion3.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  "Opcion 1" );
-                    btnOpcion2.setText(  "Opcion 2" );
-                    btnOpcion4.setText(  "Opcion 3" );
-
+                    btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion2.setText(  sComplemento[1] );
+                    btnOpcion2.setId( 0 );
+                    btnOpcion4.setText(  sComplemento[2] );
+                    btnOpcion4.setId( 0 );
                 }
 
                 if ( numero  == 4 ){
                     btnOpcion4.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion4.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  "Opcion 1" );
-                    btnOpcion2.setText(  "Opcion 2" );
-                    btnOpcion3.setText(  "Opcion 3" );
+                    btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion2.setText(  sComplemento[1] );
+                    btnOpcion2.setId( 0 );
+                    btnOpcion3.setText(  sComplemento[2] );
+                    btnOpcion3.setId( 0 );
 
                 }
 
@@ -223,7 +236,7 @@ public class MainRetoSaber extends AppCompatActivity {
     }
 
 
-    //////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
 
 
     // Establecer texto en los nivles
@@ -265,6 +278,85 @@ public class MainRetoSaber extends AppCompatActivity {
         //BasesDeDatos.close();
         return consultaId;
     }
+
+    //Metodo Clic Evaluar -> Todo Evaluar Respuesta Reto al saber
+    public void evaluarRespuesta_1(View view){
+        int valdiar = btnOpcion1.getId();
+        btnOpcion1.setBackgroundColor(Color.rgb(70, 218, 100));
+        idRespValidar.setText( Integer.toString( valdiar ) );
+
+        // opciones
+        btnOpcion2.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion3.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion4.setBackgroundColor(Color.rgb(208, 215, 211));
+        Toast.makeText(this, "Puedes cambiar de opción y luego calificas para continuar", Toast.LENGTH_SHORT).show();
+
+        // Muestro Boton de Calificar
+        btnCalificar.setVisibility(View.VISIBLE);
+
+    }
+
+    public void evaluarRespuesta_2(View view){
+
+        int valdiar = btnOpcion2.getId();
+        btnOpcion2.setBackgroundColor(Color.rgb(70, 218, 100));
+        idRespValidar.setText( Integer.toString( valdiar ) );
+
+        // opciones
+        btnOpcion1.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion3.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion4.setBackgroundColor(Color.rgb(208, 215, 211));
+
+        // Muestro Boton de Calificar
+        btnCalificar.setVisibility(View.VISIBLE);
+    }
+
+    public void evaluarRespuesta_3(View view){
+
+        int valdiar = btnOpcion3.getId();
+        btnOpcion3.setBackgroundColor(Color.rgb(70, 218, 100));
+        idRespValidar.setText( Integer.toString( valdiar ) );
+
+        // opciones
+        btnOpcion1.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion2.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion4.setBackgroundColor(Color.rgb(208, 215, 211));
+
+        // Muestro Boton de Calificar
+        btnCalificar.setVisibility(View.VISIBLE);
+
+    }
+
+    public void evaluarRespuesta_4(View view){
+
+        int valdiar = btnOpcion4.getId();
+        btnOpcion4.setBackgroundColor(Color.rgb(70, 218, 100));
+        idRespValidar.setText( Integer.toString( valdiar ) );
+
+        // opciones
+        btnOpcion1.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion2.setBackgroundColor(Color.rgb(208, 215, 211));
+        btnOpcion3.setBackgroundColor(Color.rgb(208, 215, 211));
+
+        // Muestro Boton de Calificar
+        btnCalificar.setVisibility(View.VISIBLE);
+    }
+
+    public void evaluarRespuestaGeneral(View view){
+
+        // La Respuesta siempre va ser  un numero entero y mayor a cero
+        String IdResp  = (String) idRespValidar.getText();
+
+        if ( (Integer.parseInt( IdResp ) ) > 0 ){
+            Toast.makeText(this, "Respuesta Correcta", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Respuesta InCorrecta", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+
 
 
 

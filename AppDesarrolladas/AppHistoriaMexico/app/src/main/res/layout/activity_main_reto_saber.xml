@@ -94,32 +94,45 @@
                 android:id="@+id/btnOpcion1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="evaluarRespuesta_1"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/btnOpcion2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="evaluarRespuesta_2"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/btnOpcion3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="evaluarRespuesta_3"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/btnOpcion4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="evaluarRespuesta_4"
                 android:text="Button" />
 
             <Button
-                android:id="@+id/idCalificar"
+                android:id="@+id/btnCalificar"
                 style="@style/btnPregRetoSaber_sin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/labelBtns" />
+                android:onClick="evaluarRespuestaGeneral"
+                android:text="@string/labelBtns"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/idRespValidar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@string/btnDescrip" />
 
         </LinearLayout>
     </ScrollView>
