@@ -54,6 +54,15 @@ public class MainRetoSaber extends AppCompatActivity {
         //Elementos Dinamicos.
         setNomNiveles(IdNivel, iContador, IdCategoria);
         setNomCategoria(IdCategoria);
+
+        // todo Test
+        System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
+        System.out.println( "  IdCategoria " + IdCategoria );
+        System.out.println( "  IdNivel " + IdNivel );
+        System.out.println( "  iContador " + iContador );
+        System.out.println( "  IndicePreg " + IndicePreg );
+
+
         getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
 
     }// fin del onCreate
@@ -160,12 +169,17 @@ public class MainRetoSaber extends AppCompatActivity {
                     iPregunta[indice] = consultaId.getInt(consultaId.getColumnIndex("id"));
                     sPreguntas[indice] = consultaId.getString(consultaId.getColumnIndex("pregunta"));
                     sRespuesta[indice] = consultaId.getString(consultaId.getColumnIndex("respuesta"));
-                    indice ++;
+                    indice++;
+                   // System.out.println( "  -------------------------------------  INDICE ->"+indice+" ------------------------------------------------------ "  );
 
                 } while ( consultaId.moveToNext() );
 
                 //Establecer Pregunta y Respuestas Dinamico todo
                 labelPregunta.setText(  sPreguntas[ Integer.parseInt( IndicePreg ) ] );
+
+                System.out.println( "  -------------------------------------  INDICE -> 1 ------------------------------------------------------ " + sPreguntas[ 1 ] );
+
+
                 int numero = (int)( Math.random()*4+1 );
 
                 //todo aqui las preguntas complementarias
@@ -400,7 +414,7 @@ public class MainRetoSaber extends AppCompatActivity {
         interfaz.putExtra("IdCategoria", "1"  );
         interfaz.putExtra("IdNivel", "1" );
         interfaz.putExtra("iContador", "1"  );
-        interfaz.putExtra("IndicePreg", "2"  );
+        interfaz.putExtra("IndicePreg", "0"  );
         //Activa la intent y envia el objeto con la variable.
         startActivity(interfaz);
     }

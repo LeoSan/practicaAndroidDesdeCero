@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyAppActionBar_44</string>
+
+    <string name="app_item1"> Accion 1 </string>
+    <string name="app_item2"> Accion 2 </string>
+    <string name="app_item3"> Accion 3 </string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApp_ActionBoton</string>
+    <string name="app_item1">Item 1</string>
+    <string name="app_item2">Item 2</string>
+    <string name="app_itemBuscar">Buscar</string>
+    <string name="app_itemCompartir">Compartir </string>
+</resources>
