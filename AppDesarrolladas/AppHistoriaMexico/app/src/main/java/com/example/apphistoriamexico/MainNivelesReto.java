@@ -117,7 +117,7 @@ public class MainNivelesReto extends AppCompatActivity {
             enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
             enviar.putExtra("IdNivel", idNivel  );
             // todo Debe de pensar una forma de recibir variables actualizadas y enviarlas
-            enviar.putExtra("iContador", "0"  );
+            enviar.putExtra("iContador", "1"  );
             enviar.putExtra("IndicePreg", "0"  );
 
 

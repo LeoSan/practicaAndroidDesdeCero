@@ -7,9 +7,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,12 +19,16 @@ public class MainRetoSaber extends AppCompatActivity {
 
     TextView labelNivel, labelCategoria, labelPregunta, idRespValidar;
     Cursor categoriaId, nivelesId,  listPreguntas;
-    Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4, btnCalificar;
+    Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4, btnCalificar, btnContinuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_reto_saber);
+
+        //Metodo de cambiar nombre de la App y el Icono en cada Activity
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         //Inicio relaciones con la interfaz
         labelNivel      = (TextView)findViewById(R.id.labelNivel);
@@ -36,16 +42,14 @@ public class MainRetoSaber extends AppCompatActivity {
         btnOpcion3  = (Button)findViewById(R.id.btnOpcion3);
         btnOpcion4  = (Button)findViewById(R.id.btnOpcion4);
         btnCalificar = (Button)findViewById(R.id.btnCalificar);
+        btnContinuar = (Button)findViewById(R.id.btnContinuar);
 
-        //Metodo de cambiar nombre de la App y el Icono en cada Activity
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         // Recibo parametros
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
         String IdNivel     = getIntent().getStringExtra("IdNivel");
-        String iContador    = getIntent().getStringExtra("iContador");
-        String IndicePreg    = getIntent().getStringExtra("IndicePreg");
+        String iContador   = getIntent().getStringExtra("iContador");
+        String IndicePreg  = getIntent().getStringExtra("IndicePreg");
 
         //Elementos Dinamicos.
         setNomNiveles(IdNivel, iContador, IdCategoria);
@@ -289,7 +293,7 @@ public class MainRetoSaber extends AppCompatActivity {
         btnOpcion2.setBackgroundColor(Color.rgb(208, 215, 211));
         btnOpcion3.setBackgroundColor(Color.rgb(208, 215, 211));
         btnOpcion4.setBackgroundColor(Color.rgb(208, 215, 211));
-        Toast.makeText(this, "Puedes cambiar de opción y luego calificas para continuar", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Puedes cambiar de opción y luego Clic en Calificar.", Toast.LENGTH_SHORT).show();
 
         // Muestro Boton de Calificar
         btnCalificar.setVisibility(View.VISIBLE);
@@ -343,22 +347,63 @@ public class MainRetoSaber extends AppCompatActivity {
     }
 
     public void evaluarRespuestaGeneral(View view){
-
         // La Respuesta siempre va ser  un numero entero y mayor a cero
         String IdResp  = (String) idRespValidar.getText();
-
         if ( (Integer.parseInt( IdResp ) ) > 0 ){
-            Toast.makeText(this, "Respuesta Correcta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Respuesta Correcta, Clic para Continuar", Toast.LENGTH_SHORT).show();
+            // Transformo el boton si la respuesta es correcta
+            btnCalificar.setText(" ");
+            Drawable d = getResources().getDrawable(R.drawable.respcorrecto);
+            btnCalificar.setBackgroundDrawable(d);
+            // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
+            LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
+            paramImageViewBoton.setMargins(0, 50, 0, 0 );
+            btnCalificar.setLayoutParams(paramImageViewBoton);
+
+            // Muestro Boton Continuar
+            btnContinuar.setVisibility(View.VISIBLE);
+            // Focus
+            btnContinuar.setFocusable(true);
+            btnContinuar.setFocusableInTouchMode(true);///add this line
+            btnContinuar.requestFocus();
+
+            //Todo Crear metodo para insertar estadisticas
+
+
         }else{
-            Toast.makeText(this, "Respuesta InCorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Respuesta InCorrecta, Clic para Continuar", Toast.LENGTH_SHORT).show();
+            // Transformo el boton si la respuesta es Incorrecta
+            btnCalificar.setText(" ");
+            Drawable d = getResources().getDrawable(R.drawable.respincorrecta);
+            btnCalificar.setBackgroundDrawable(d);
+            // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
+            LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
+            paramImageViewBoton.setMargins(0, 50, 0, 0 );
+            btnCalificar.setLayoutParams(paramImageViewBoton);
+            // Muestro Boton Continuar
+            btnContinuar.setVisibility(View.VISIBLE);
+            // Focus
+            btnContinuar.setFocusable(true);
+            btnContinuar.setFocusableInTouchMode(true);///add this line
+            btnContinuar.requestFocus();
+
+            // Todo Crear metodo para insertar estadisticas
+
         }
     }
 
 
-
-
-
-
+    //Redirect-> Redirecciona a la interfaz Principal
+    public void btnContinuarInterfaz(View view){
+        Intent interfaz = new Intent(this,MainRetoSaber.class);
+        //Metodo que me permite crear variable
+        interfaz.putExtra("IdCategoria", "1"  );
+        interfaz.putExtra("IdNivel", "1" );
+        interfaz.putExtra("iContador", "1"  );
+        interfaz.putExtra("IndicePreg", "2"  );
+        //Activa la intent y envia el objeto con la variable.
+        startActivity(interfaz);
+    }
 
 
 }// Fin de la clase

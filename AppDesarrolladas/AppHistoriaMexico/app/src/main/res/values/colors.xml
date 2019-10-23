@@ -8,7 +8,8 @@
     <!-- Estilo Color Bton Reto al Saber-->
     <color name="colorSinCalificar">#4F627968</color>
     <color name="colorCalificar">#794527A0</color>
-    <color name="colorAprobada">#558B2F</color>
+    <color name="colorAprobada">#7CA261</color>
     <color name="colorReprobada">#66D32F2F</color>
+    <color name="colorLetraBlanca">#79161313</color>
 
 </resources>

@@ -95,28 +95,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="evaluarRespuesta_1"
-                android:text="Button" />
+                android:text="@string/btnDescrip" />
 
             <Button
                 android:id="@+id/btnOpcion2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="evaluarRespuesta_2"
-                android:text="Button" />
+                android:text="@string/btnDescrip" />
 
             <Button
                 android:id="@+id/btnOpcion3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="evaluarRespuesta_3"
-                android:text="Button" />
+                android:text="@string/btnDescrip" />
 
             <Button
                 android:id="@+id/btnOpcion4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="evaluarRespuesta_4"
-                android:text="Button" />
+                android:text="@string/btnDescrip" />
 
             <Button
                 android:id="@+id/btnCalificar"
@@ -125,6 +125,15 @@
                 android:layout_height="wrap_content"
                 android:onClick="evaluarRespuestaGeneral"
                 android:text="@string/labelBtns"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                style="@style/btnPregRetoSaber_aprobada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnContinuarInterfaz"
+                android:text="@string/labelBtns_continuar"
                 android:visibility="invisible" />
 
             <TextView
