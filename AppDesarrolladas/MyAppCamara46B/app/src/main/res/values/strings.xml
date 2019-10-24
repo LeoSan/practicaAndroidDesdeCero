@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyAppCamara</string>
+    <string name="app_texView">GESTIONAR IMAGEN</string>
+    <string name="app_btnBoton">SELECCIONAR IMAGEN</string>
+    <string name="app_vacia"> </string>
+
+    <string name="file_provider_authority" translatable="false"> com.example.myappcamera.fileprovider </string>
+</resources>

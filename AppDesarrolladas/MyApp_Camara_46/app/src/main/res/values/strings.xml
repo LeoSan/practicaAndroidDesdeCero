@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyApp_camara</string>
     <string name="app_btn"> </string>
+    <string name="app_foto">foto1.jpg </string>
 </resources>
