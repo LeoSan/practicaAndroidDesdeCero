@@ -13,6 +13,10 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase BasesDeDatos) {
 
+    // Tabla Estudios
+        BasesDeDatos.execSQL("CREATE TABLE t_estudios(id int primary Key, fecha date, co_actividad int)");
+        BasesDeDatos.execSQL("CREATE TABLE t_estadisticas(id int primary Key, co_estudios int, co_pregunta int, aprobada int)");
+
 
     // Tabla de categoria
         BasesDeDatos.execSQL("CREATE TABLE t_categoria(id int primary Key, nom_categoria text, desp_categoria text, activo int)");
@@ -26,15 +30,16 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
     // Tabla de Preguntas
         BasesDeDatos.execSQL("CREATE TABLE t_preguntas(id int primary Key, co_categoria int, co_nivel int, co_respuesta int, pregunta text, respuesta text, enlace_resp text, imagen_pre text, imagen_resp text, activo int)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (1, 1, 1, 1, '¿Cuáles son los Premios Nobel por mexicanos?', 'Premio Nobel de la Paz en 1982 Alfonso García Robles', '0', '0', '0', 1), (2, 1, 1, 2, '¿ Cuál es el Árbol Nacional? ', 'Ahuehuete o árbol de tule', 'https://www.gob.mx/conafor/articulos/el-arbol-nacional?idiom=es', '0', '0', 1), (3, 1, 1, 3, '¿ Cuál es el Animal Nacional ?', 'Aguila Real', 'https://www.mexicodesconocido.com.mx/aguila-real-mexicana.html', '0', '0', 1), (4, 1, 1, 4, '¿ Cuál es la flor Nacional ? ', 'Dalia', 'https://www.gob.mx/semarnat/articulos/dalia-flor-representativa-de-mexico?idiom=es', '0', '', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (1, 1, 1, 1, '¿Cuáles son los Premios Nobel por mexicanos?', 'Premio Nobel de la Paz en 1982 Alfonso García Robles', '0', '0', '0', 1), (2, 1, 1, 2, '¿ Cuál es el Árbol Nacional? ', 'Ahuehuete o árbol de tule', 'https://www.gob.mx/conafor/articulos/el-arbol-nacional?idiom=es', '0', '0', 1), (3, 1, 1, 3, '¿ Cuál es el Animal Nacional ?', 'Aguila Real', 'https://www.mexicodesconocido.com.mx/aguila-real-mexicana.html', '0', '0', 1), (4, 1, 1, 4, '¿ Cuál es la flor Nacional ? ', 'Dalia', 'https://www.gob.mx/semarnat/articulos/dalia-flor-representativa-de-mexico?idiom=es', '0', '', 1), (5, 1, 1, 5, '¿ El tema dominante del himno nacional mexicano ? ', 'Una exhortación a la guerra defensiva ', 'https://www.gob.mx/semarnat/articulos/dalia-flor-representativa-de-mexico?idiom=es', '0', '', 1)");
 
 
     // tabla de complemento
          BasesDeDatos.execSQL("CREATE TABLE t_complemento(id int primary Key, co_pregunta int, complemento text, imagen text, activo int)");
          BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1, 1, 'Premio Nobel de la Paz en 1982 Manuel Tolsa', '0', 1), (2, 1, 'Premio Nobel de la Paz en 1982 Maria Felix', '0', 1), (3, 1, 'Premio Nobel de la Paz en 1982 Octavio Paz', '0', 1) ");
+         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (4, 2, 'Ahuehuete o árbol de tule', '0', 1), (5, 2, 'Sabino', '0', 1), (6, 2, 'Cedro Blanco', '0', 1) ");
 
 
-//        BasesDeDatos.execSQL("Create table t_estadisticas(id int primary Key, co_estudios int, co_pregunta int, aprobada int)");
+
 //        BasesDeDatos.execSQL("Create table t_estudios(id int primary Key, fecha date, co_actividad int)");
 
 

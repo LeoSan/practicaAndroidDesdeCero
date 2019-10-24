@@ -62,10 +62,30 @@ public class MainRetoSaber extends AppCompatActivity {
         System.out.println( "  iContador " + iContador );
         System.out.println( "  IndicePreg " + IndicePreg );
 
+        validaPreguntaFinal(IndicePreg, IdCategoria, IdNivel);
 
         getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
 
     }// fin del onCreate
+
+    private void validaPreguntaFinal(String indicePreg, String IdCategoria, String IdNivel) {
+
+        String contTotalPreg = getPreguntasTotal(IdCategoria, IdNivel );
+
+        if ( Integer.parseInt(indicePreg) >= Integer.parseInt(contTotalPreg) ){
+            //Metodo que me permite crear variable
+            Intent interfaz = new Intent(this,MainResulRetoSaber.class);
+            interfaz.putExtra("IdCategoria", IdCategoria  );
+            interfaz.putExtra("IdNivel", IdNivel );
+            // todo -> Poner la id estudio
+            interfaz.putExtra("IdEstudio", "1" );
+            //Activa la intent y envia el objeto con la variable.
+            startActivity(interfaz);
+        }else if ( indicePreg == "0"){
+            // Inserto los datos de esttudio 
+        }
+
+    }
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
@@ -174,7 +194,7 @@ public class MainRetoSaber extends AppCompatActivity {
 
                 } while ( consultaId.moveToNext() );
 
-                //Establecer Pregunta y Respuestas Dinamico todo
+                //Todo -> Aqui PRegunta // Establecer Pregunta y Respuestas Dinamico todo
                 labelPregunta.setText(  sPreguntas[ Integer.parseInt( IndicePreg ) ] );
 
                 System.out.println( "  -------------------------------------  INDICE -> 1 ------------------------------------------------------ " + sPreguntas[ 1 ] );
@@ -183,18 +203,18 @@ public class MainRetoSaber extends AppCompatActivity {
                 int numero = (int)( Math.random()*4+1 );
 
                 //todo aqui las preguntas complementarias
-                sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
+        //        sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
 
                 if ( numero  == 1 ){
                     btnOpcion1.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion1.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion2.setText(  sComplemento[0] );
-                    btnOpcion2.setId( 0 );
-                    btnOpcion3.setText(  sComplemento[1] );
-                    btnOpcion3.setId( 0 );
-                    btnOpcion4.setText(  sComplemento[2] );
-                    btnOpcion4.setId( 0 );
+                //    btnOpcion2.setText(  sComplemento[0] );
+                //    btnOpcion2.setId( 0 );
+                //    btnOpcion3.setText(  sComplemento[1] );
+                 //   btnOpcion3.setId( 0 );
+                 //   btnOpcion4.setText(  sComplemento[2] );
+                 //   btnOpcion4.setId( 0 );
 
                 }
 
@@ -202,12 +222,12 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion2.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion2.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
-                    btnOpcion3.setText(  sComplemento[1] );
-                    btnOpcion3.setId( 0 );
-                    btnOpcion4.setText(  sComplemento[3] );
-                    btnOpcion4.setId( 0 );
+                //    btnOpcion1.setText(  sComplemento[0] );
+                //    btnOpcion1.setId( 0 );
+                //    btnOpcion3.setText(  sComplemento[1] );
+                //    btnOpcion3.setId( 0 );
+                //    btnOpcion4.setText(  sComplemento[3] );
+                //    btnOpcion4.setId( 0 );
 
                 }
 
@@ -215,24 +235,24 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion3.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion3.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
-                    btnOpcion2.setText(  sComplemento[1] );
-                    btnOpcion2.setId( 0 );
-                    btnOpcion4.setText(  sComplemento[2] );
-                    btnOpcion4.setId( 0 );
+                //    btnOpcion1.setText(  sComplemento[0] );
+                //    btnOpcion1.setId( 0 );
+                //    btnOpcion2.setText(  sComplemento[1] );
+                //    btnOpcion2.setId( 0 );
+                //    btnOpcion4.setText(  sComplemento[2] );
+                 //   btnOpcion4.setId( 0 );
                 }
 
                 if ( numero  == 4 ){
                     btnOpcion4.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion4.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                    btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
-                    btnOpcion2.setText(  sComplemento[1] );
-                    btnOpcion2.setId( 0 );
-                    btnOpcion3.setText(  sComplemento[2] );
-                    btnOpcion3.setId( 0 );
+                //    btnOpcion1.setText(  sComplemento[0] );
+                //    btnOpcion1.setId( 0 );
+                //    btnOpcion2.setText(  sComplemento[1] );
+                //    btnOpcion2.setId( 0 );
+                 //   btnOpcion3.setText(  sComplemento[2] );
+                 //   btnOpcion3.setId( 0 );
 
                 }
 
@@ -409,14 +429,42 @@ public class MainRetoSaber extends AppCompatActivity {
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void btnContinuarInterfaz(View view){
-        Intent interfaz = new Intent(this,MainRetoSaber.class);
+
+        String IdCategoria = getIntent().getStringExtra("IdCategoria");
+        String IdNivel     = getIntent().getStringExtra("IdNivel");
+        String contPregPut = getIntent().getStringExtra("IndicePreg");
+        String iContador   = getIntent().getStringExtra("iContador");
+        String IndicePreg   = getIntent().getStringExtra("IndicePreg");
+
+        String contTotalPreg = getPreguntasTotal(IdCategoria, IdNivel );
+
+        int nuevoIndice = Integer.parseInt(IndicePreg);;
+        int nuevoIContador = Integer.parseInt(iContador);
+
+        if ( Integer.parseInt(contPregPut) < Integer.parseInt(contTotalPreg) ){
+            nuevoIndice++;    //no tocar el indice
+            nuevoIContador++;
+
+        }else{
+
+            if ( Integer.parseInt(contPregPut) >= Integer.parseInt(contTotalPreg) ){
+                Toast.makeText(this, "Entro", Toast.LENGTH_SHORT).show();
+            }else{
+                nuevoIndice = Integer.parseInt(contTotalPreg) - 1;
+                nuevoIContador = nuevoIContador;
+            }
+        }
+
         //Metodo que me permite crear variable
-        interfaz.putExtra("IdCategoria", "1"  );
-        interfaz.putExtra("IdNivel", "1" );
-        interfaz.putExtra("iContador", "1"  );
-        interfaz.putExtra("IndicePreg", "0"  );
+        Intent interfaz = new Intent(this,MainRetoSaber.class);
+        interfaz.putExtra("IdCategoria", IdCategoria  );
+        interfaz.putExtra("IdNivel", IdNivel );
+        interfaz.putExtra("iContador", String.valueOf(nuevoIContador)  );
+        interfaz.putExtra("IndicePreg", String.valueOf(nuevoIndice) );
+        interfaz.putExtra("IdEstudio", "1" );
         //Activa la intent y envia el objeto con la variable.
         startActivity(interfaz);
+
     }
 
 
