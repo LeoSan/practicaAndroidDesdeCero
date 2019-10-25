@@ -14,8 +14,8 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase BasesDeDatos) {
 
     // Tabla Estudios
-        BasesDeDatos.execSQL("CREATE TABLE t_estudios(id int primary Key, fecha date, co_actividad int)");
-        BasesDeDatos.execSQL("CREATE TABLE t_estadisticas(id int primary Key, co_estudios int, co_pregunta int, aprobada int)");
+        BasesDeDatos.execSQL("CREATE TABLE t_estudios(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha date, co_actividad int)");
+        BasesDeDatos.execSQL("CREATE TABLE t_estadisticas(id INTEGER PRIMARY KEY AUTOINCREMENT, co_estudios int, co_pregunta int, validacion int)");
 
 
     // Tabla de categoria
@@ -37,6 +37,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
          BasesDeDatos.execSQL("CREATE TABLE t_complemento(id int primary Key, co_pregunta int, complemento text, imagen text, activo int)");
          BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1, 1, 'Premio Nobel de la Paz en 1982 Manuel Tolsa', '0', 1), (2, 1, 'Premio Nobel de la Paz en 1982 Maria Felix', '0', 1), (3, 1, 'Premio Nobel de la Paz en 1982 Octavio Paz', '0', 1) ");
          BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (4, 2, 'Ahuehuete o árbol de tule', '0', 1), (5, 2, 'Sabino', '0', 1), (6, 2, 'Cedro Blanco', '0', 1) ");
+         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (7, 2, 'Xoloitzcuintle', '0', 1), (8, 2, 'Sabino', '0', 1), (9, 2, 'Cedro Blanco', '0', 1) ");
 
 
 
