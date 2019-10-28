@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class MainRetoSaber extends AppCompatActivity {
@@ -57,6 +58,7 @@ public class MainRetoSaber extends AppCompatActivity {
         String iContador   = getIntent().getStringExtra("iContador");
         String IndicePreg  = getIntent().getStringExtra("IndicePreg");
 
+
         //Elementos Dinamicos.
         setNomNiveles(IdNivel, iContador, IdCategoria);
         setNomCategoria(IdCategoria);
@@ -68,96 +70,126 @@ public class MainRetoSaber extends AppCompatActivity {
         System.out.println( "  iContador "   + iContador   );
         System.out.println( "  IndicePreg "  + IndicePreg  );
 
-        validaPreguntaFinal(IndicePreg, IdCategoria, IdNivel);
+        if( validaPreguntaFinal(IndicePreg, IdCategoria, IdNivel) == false ){
+            getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
+        }
 
-        getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
+
 
     }// fin del onCreate
 
-    private void validaPreguntaFinal(String indicePreg, String IdCategoria, String IdNivel) {
+    private boolean validaPreguntaFinal(String indicePreg, String IdCategoria, String IdNivel) {
 
         String contTotalPreg = getPreguntasTotal(IdCategoria, IdNivel );
+        Boolean UltimaPregunta = false;
 
         if ( Integer.parseInt(indicePreg) >= Integer.parseInt(contTotalPreg) ){
             //Metodo que me permite crear variable
             Intent interfaz = new Intent(this,MainResulRetoSaber.class);
             interfaz.putExtra("IdCategoria", IdCategoria  );
             interfaz.putExtra("IdNivel"    , IdNivel );
-
             // todo -> Poner la id estudio
-            interfaz.putExtra("IdEstudio"  , "1" );
+            interfaz.putExtra("IdEstudio"  , consultarEstudioUltimaId() );
             //Activa la intent y envia el objeto con la variable.
             startActivity(interfaz);
-        }else if ( indicePreg == "0"){
+
+            System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
+
+
+            UltimaPregunta = true;
+
+        }else if ( Integer.parseInt(indicePreg) == 0){
             // Inserto los datos de estudio
             insertEstudio();
+            System.out.println( " -------------  Insert ------------------");
+            System.out.println( "  IdEstudio " + consultarEstudioUltimaId() );
+            System.out.println();
         }
 
+        return  UltimaPregunta;
+
     }
 
-    //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
-    public void vistaApoyo (View view){
-        Intent interfaz = new Intent(this,MainApoyo.class);
-        Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
-        //Metodo que me permite crear variable
-        enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
-        startActivity(interfaz);
-    }
 
     //Metodo  Tipo Cursor ->  Devuelve un cursos con los niveles de aprendizaje
     public Cursor getNivelId(String id){
-        //Consulta Los niveles de aprendizaje
+        //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor consultaId = BasesDeDatos.rawQuery("SELECT id,  nom_nivel, icono, activo FROM t_niveles WHERE activo = 1 AND id = " + id, null);
-        // consultaId.close();
-        // BasesDeDatos.close();
+
+        //consultaId.close();
+        //BasesDeDatos.close();
         return consultaId;
     }
 
-    //Metodo  Tipo Cursor ->  Devuelve un cursos con los niveles de aprendizaje
-    public String insertEstudio(){
-        //Consulta Los niveles de aprendizaje
+    //Metodo  Void->  Solo inserta una sola vez el estudio
+    public void insertEstudio(){
+        //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
 
-        String timeStamp  = new SimpleDateFormat("YYYY/MM/DD HH:mm:ss").format(new Date());
+        //Metodo apra almacenar fecha en SQLite
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(new Date());
 
-        ContentValues registro = new ContentValues();   // Aqui intaciamos el insert para la tabla
-        registro.put("fecha", timeStamp);               // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
+        ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
+        registro.put("fecha", date);                    // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
         registro.put("co_actividad", "1");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
 
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estudios", null, registro);
+        BasesDeDatos.close();
 
+    }
+
+    //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
+    public String consultarEstudioUltimaId(){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         //Consulta El valor t_estudio
-        Cursor consultaIdPreguntas = BasesDeDatos.rawQuery("SELECT * FROM t_estudios ORDER BY id DESC LIMIT 1", null);
+        Cursor consultaIdPreguntas = BasesDeDatos.rawQuery("SELECT id FROM t_estudios ORDER BY id DESC LIMIT 1", null);
+
+        String idPregunta = "0";
+
         if (consultaIdPreguntas.moveToFirst()){
-            return  consultaIdPreguntas.getString(0);
-        }else{
-            return "0";
+            idPregunta =  consultaIdPreguntas.getString(0);
         }
+
+        consultaIdPreguntas.close();
+        BasesDeDatos.close();
+
+        return idPregunta;
+
     }
 
     //Metodo Tipo String -> Me devulve el total de preguntas en un nivel
     public String getPreguntasTotal(String idCategoria, String idNivel ){
-        //Consulta Los niveles de aprendizaje
+        //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor consultaIdPreguntas = BasesDeDatos.rawQuery("SELECT count(id) total FROM t_preguntas WHERE co_categoria = "+idCategoria+" AND co_nivel = " +idNivel, null);
+
+        String idPregunta = "0";
+
         if (consultaIdPreguntas.moveToFirst()){
-          return  consultaIdPreguntas.getString(0);
-        }else{
-            return "0";
+           idPregunta =  consultaIdPreguntas.getString(0);
         }
+
+        consultaIdPreguntas.close();
+        BasesDeDatos.close();
+        return idPregunta;
+
     }
 
     //Metodo Tipo Arreglo -> Me devuelve las opciones relacionadas a una pregunta.
     public String[] getComplementoPreguntas(String idPregunta){
-        //Consulta Los niveles de aprendizaje
+        //Creamos el conector de bases de datos
 
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
@@ -195,7 +227,7 @@ public class MainRetoSaber extends AppCompatActivity {
 
     //Metodo Tipo Arreglo ->  Devuelve el string con todas las preguntas del nivel y categoria
     public String[] getPreguntasNivelCategoria(String idCategoria, String idNivel, String IndicePreg){
-        //Consulta Los niveles de aprendizaje
+        //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
@@ -303,7 +335,18 @@ public class MainRetoSaber extends AppCompatActivity {
     }
 
 
-    ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+    ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+    ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+    ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
+
+    //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
+    public void vistaApoyo (View view){
+        Intent interfaz = new Intent(this,MainApoyo.class);
+        Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
+        //Metodo que me permite crear variable
+        enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
+        startActivity(interfaz);
+    }
 
 
     // Establecer texto en los nivles
@@ -336,13 +379,13 @@ public class MainRetoSaber extends AppCompatActivity {
 
     //Metodo Tipo Cursor ->  Devuelve un cursos con los valores de la categoria
     public Cursor getCategoriaId(String idCategoria){
-
+        //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor consultaId = BasesDeDatos.rawQuery("SELECT id, nom_categoria, desp_categoria FROM t_categoria WHERE activo = 1 AND id =" + idCategoria, null);
-        // consultaId.close();
-        //BasesDeDatos.close();
+       // consultaId.close();
+       // BasesDeDatos.close();
         return consultaId;
     }
 

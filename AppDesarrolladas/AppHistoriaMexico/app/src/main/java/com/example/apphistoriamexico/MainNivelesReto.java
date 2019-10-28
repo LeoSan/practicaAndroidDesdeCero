@@ -120,7 +120,6 @@ public class MainNivelesReto extends AppCompatActivity {
             enviar.putExtra("iContador", "1"  );
             enviar.putExtra("IndicePreg", "0"  );
 
-
             //Activa la intent y envia el objeto con la variable.
             startActivity(enviar);
         }
