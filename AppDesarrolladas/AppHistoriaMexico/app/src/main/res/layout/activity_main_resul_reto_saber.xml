@@ -17,32 +17,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnResultado"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="100dp"
+                    android:gravity="center"
+                    android:text="@string/btnDescrip"
+                    android:layout_marginStart="100dp" />
+
+                <TextView
+                    android:id="@+id/idTextResul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:background="#E3D4E6"
+                    android:gravity="center"
+                    android:text="@string/btnDescrip" />
+            </LinearLayout>
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="121dp"
-                android:layout_height="120dp"
-                android:background="@drawable/respcorrecto"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="124dp"
-                android:layout_height="105dp"
-                android:background="@drawable/respincorrecta"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnContinuar"
                 style="@style/btnPregRetoSaber_calificar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="vistaInterfazPrincipal"
+                android:text="@string/labelBtns_continuar" />
 
         </LinearLayout>
     </ScrollView>

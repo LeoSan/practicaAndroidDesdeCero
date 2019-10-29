@@ -145,6 +145,25 @@ public class MainRetoSaber extends AppCompatActivity {
 
     }
 
+    //Metodo  Void->  Solo inserta parte de las estadisticas
+    public void insertEstadisticas(String IdPregunta, Integer validacicion){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+
+
+        ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
+        registro.put("co_estudios", consultarEstudioUltimaId() );
+        registro.put("co_pregunta", IdPregunta);
+        registro.put("validacion", validacicion);
+
+        //Conectamos con la base datos insertamos.
+        BasesDeDatos.insert("t_estadisticas", null, registro);
+        BasesDeDatos.close();
+
+    }
+
     //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
     public String consultarEstudioUltimaId(){
         //Creamos el conector de bases de datos
@@ -455,6 +474,7 @@ public class MainRetoSaber extends AppCompatActivity {
     public void evaluarRespuestaGeneral(View view){
         // La Respuesta siempre va ser  un numero entero y mayor a cero
         String IdResp  = (String) idRespValidar.getText();
+
         if ( (Integer.parseInt( IdResp ) ) > 0 ){
             Toast.makeText(this, "Respuesta Correcta, Clic para Continuar", Toast.LENGTH_SHORT).show();
             // Transformo el boton si la respuesta es correcta
@@ -474,6 +494,7 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.requestFocus();
 
             //Todo Crear metodo para insertar estadisticas
+            insertEstadisticas(IdResp, 1);
 
 
         }else{
@@ -494,6 +515,7 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.requestFocus();
 
             // Todo Crear metodo para insertar estadisticas
+            insertEstadisticas(IdResp, 0);
 
         }
     }
