@@ -10,7 +10,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,8 +18,6 @@ import android.widget.Toast;
 
 //Libreria para imagen dinamica
 import android.content.res.Resources;
-
-import android.view.ViewGroup;
 
 public class MainGuia extends AppCompatActivity {
 
@@ -33,26 +31,25 @@ public class MainGuia extends AppCompatActivity {
         setContentView(R.layout.activity_main_guia);
 
         //Capturo parametros Intent
-        String idTipoActividad = getIntent().getStringExtra("idActividad");
-        Toast.makeText(this, "idTipoActividad" + idTipoActividad, Toast.LENGTH_LONG).show();
+        String IdActividad = getIntent().getStringExtra("IdActividad");
+
+        System.out.println( " -------------  TIPO DE ACTIVIDAD  ------------------"  );
+        System.out.println( " IdActividad ->  " + IdActividad );
+
 
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         contBtnCategorias = (LinearLayout)findViewById(R.id.contBtnCategorias);
-
         //Obtener los valores de categoria
         agregarBotones(getCategorias(), contBtnCategorias);
-
-
     }
-
 
     //Metodos interfaz
 
     //Este Metodo permite crear los botones de las categorias
-    public void agregarBotones(Cursor datosCursor, LinearLayout contenedor ){
+    public void agregarBotones(Cursor datosCursor, LinearLayout contenedor){
 
         if ( datosCursor.moveToFirst() ) {//Muestra los valores encontrados en la consulta
 
@@ -68,15 +65,13 @@ public class MainGuia extends AppCompatActivity {
                 textCategoria.setText( datosCursor.getString(1) );
 
                 // Forma para anexar un evento al ImageView
-                botonCategoria.setOnClickListener(interfazEstdudio);
+                botonCategoria.setOnClickListener( interfazEstdudio );
                 // Atributo "setImageResource" Anexar Imagen
                 nombreLogo =  datosCursor.getString(2);
-
+                // Forma de Agregar Icono Dinamicamente - > todo Aqui leo
                 Resources res = getApplicationContext().getResources();
                 int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
                 botonCategoria.setImageResource(resId);
-
-              //botonCategoria.setImageResource(R.drawable.arte);
 
                 // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
                 LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
@@ -116,6 +111,7 @@ public class MainGuia extends AppCompatActivity {
             String cadena = Integer.toString( objBoton.getId() );
             //Metodo que me permite crear variable
             enviar.putExtra("IdCategoria", cadena  );
+            enviar.putExtra("IdActividad", getIntent().getStringExtra("IdActividad")  );
             //Activa la intent y envia el objeto con la variable.
             startActivity(enviar);
         }
@@ -139,7 +135,7 @@ public class MainGuia extends AppCompatActivity {
 
     //Metodo Devuelve un cursos con los valores de la categoria
     public Cursor getCategorias(){
-        //Consulta Categoria
+        //Permite crear la conexion a la BD
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();

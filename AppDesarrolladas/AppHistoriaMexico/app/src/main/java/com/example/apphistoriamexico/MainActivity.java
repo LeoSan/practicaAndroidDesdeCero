@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void vistaGuia (View view){
         Intent siguiente = new Intent(this,MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
-        siguiente.putExtra("idActividad", "2");
+        siguiente.putExtra("IdActividad", "1");
         startActivity(siguiente);
     }
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void vistaPreguntas (View view){
         Intent siguiente = new Intent(this,MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
-        siguiente.putExtra("idActividad", "1");
+        siguiente.putExtra("IdActividad", "2");
         startActivity(siguiente);
     }
 

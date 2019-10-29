@@ -30,7 +30,6 @@ public class MainNivelesReto extends AppCompatActivity {
         labelTituloNiveles = (TextView)findViewById(R.id.labelTituloNiveles);
         labelTipoCategoria = (TextView)findViewById(R.id.labelNivel);
 
-
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
@@ -44,7 +43,12 @@ public class MainNivelesReto extends AppCompatActivity {
         // Titulo Dinamico
         //Capturo parametros Intent
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
-       // Toast.makeText(this, "idCategoria" + IdCategoria, Toast.LENGTH_LONG).show();
+        String IdActividad = getIntent().getStringExtra("IdActividad");
+
+        System.out.println( " -------------  PARAMETROS DE ENTRADA   ------------------"  );
+        System.out.println(  " IdCategoria ->" + IdCategoria );
+        System.out.println(  " IdActividad ->" + IdActividad );
+
         categoriaId = getCategoriaId( IdCategoria );
         if ( categoriaId.moveToFirst() ){//Muestra los valores encontrados en la consulta
             labelTipoCategoria.setText( categoriaId.getString(1) );
@@ -108,20 +112,41 @@ public class MainNivelesReto extends AppCompatActivity {
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
         public void onClick(View v){
             ImageView objBoton = (ImageView) v;
-            //Toast.makeText(getApplicationContext(), "Nivel " + objBoton.getId() + " | Categoria -> " + getIntent().getStringExtra("IdCategoria") , Toast.LENGTH_LONG ).show();
-            //Intancio el Objeto Intent que necesito enviar la información
-            Intent enviar = new Intent( v.getContext(), MainRetoSaber.class );
-            //Debo realizar un parse de entero a string
-            String idNivel = Integer.toString( objBoton.getId() );
-            //Metodo que me permite crear variable
-            enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
-            enviar.putExtra("IdNivel", idNivel  );
-            // todo Debe de pensar una forma de recibir variables actualizadas y enviarlas
-            enviar.putExtra("iContador", "1"  );
-            enviar.putExtra("IndicePreg", "0"  );
+            String  IdActividad  = getIntent().getStringExtra("IdActividad");
 
-            //Activa la intent y envia el objeto con la variable.
-            startActivity(enviar);
+            //Intancio el Objeto Intent que necesito enviar la información
+            if( IdActividad.equals("1")  ){ // Redirecciono a la interfaz reto al saber
+                Intent enviar = new Intent( v.getContext(), MainRetoSaber.class );
+                //Debo realizar un parse de entero a string
+                String idNivel = Integer.toString( objBoton.getId() );
+                //Metodo que me permite crear variable
+                enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
+                enviar.putExtra("IdNivel",     idNivel  );
+                // todo Debe de pensar una forma de recibir variables actualizadas y enviarlas
+                enviar.putExtra("iContador",  "1"  );
+                enviar.putExtra("IndicePreg", "0"  );
+
+                //Activa la intent y envia el objeto con la variable.
+                startActivity(enviar);
+
+            }else{ // Redirecciono a la interfaz Cuestionario
+
+                Intent enviar = new Intent( v.getContext(), MainCuestionario.class );
+                //Debo realizar un parse de entero a string
+                String idNivel = Integer.toString( objBoton.getId() );
+                //Metodo que me permite crear variable
+                enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
+                enviar.putExtra("IdNivel",     idNivel  );
+                // todo Debe de pensar una forma de recibir variables actualizadas y enviarlas
+                enviar.putExtra("iContador",  "1"  );
+                enviar.putExtra("IndicePreg", "0"  );
+
+                //Activa la intent y envia el objeto con la variable.
+                startActivity(enviar);
+            }
+
+
+
         }
     };
 

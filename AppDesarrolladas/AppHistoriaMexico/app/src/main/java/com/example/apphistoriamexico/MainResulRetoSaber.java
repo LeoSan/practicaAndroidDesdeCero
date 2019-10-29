@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +17,7 @@ public class MainResulRetoSaber extends AppCompatActivity {
     Button btnResultado;
     TextView idTextResul;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +33,13 @@ public class MainResulRetoSaber extends AppCompatActivity {
         String IdEstudio   = getIntent().getStringExtra("IdEstudio");
 
         btnResultado   = (Button)findViewById(R.id.btnResultado);
-        idTextResul   = (TextView)findViewById(R.id.idTextResul);
-
+        idTextResul    = (TextView)findViewById(R.id.idTextResul);
 
         // todo Test
         System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
         System.out.println( "  IdCategoria " + IdCategoria );
         System.out.println( "  IdNivel "     + IdNivel     );
-        System.out.println( "  IdEstudio "  + IdEstudio  );
+        System.out.println( "  IdEstudio "   + IdEstudio   );
 
         //Eventos
         resultadoFinal( IdEstudio );
@@ -62,7 +61,6 @@ public class MainResulRetoSaber extends AppCompatActivity {
         String Total = "0";
 
         if (consultaId.moveToFirst()){
-
             Total =  consultaId.getString(0);
         }
 
@@ -80,7 +78,14 @@ public class MainResulRetoSaber extends AppCompatActivity {
        // Total de buenas
         String totalBuenas = getTotalEstadisticas(IdEstudio, 1);
         // Total de Malas
-       String totalMalas  =  getTotalEstadisticas(IdEstudio , 0);
+        String totalMalas  =  getTotalEstadisticas(IdEstudio , 0);
+
+        System.out.println( " -------------  Total BUENAS ------------------"  );
+        System.out.println( totalBuenas );
+
+        System.out.println( " -------------  Total MALAS   ------------------"  );
+        System.out.println( totalMalas );
+
 
         if ( Integer.parseInt(totalBuenas) > Integer.parseInt(totalMalas) ){
             btnResultado.setBackgroundResource(R.drawable.respcorrecto);
@@ -89,7 +94,7 @@ public class MainResulRetoSaber extends AppCompatActivity {
 
        }else{
             btnResultado.setBackgroundResource(R.drawable.respincorrecta);
-            idTextResul.setText(R.string.labelTextAprobado);
+            idTextResul.setText(R.string.labelTextReprobado);
             idTextResul.setTextAppearance(getApplicationContext(), R.style.labelText_reprobado);
         }
 
@@ -100,9 +105,6 @@ public class MainResulRetoSaber extends AppCompatActivity {
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
     }
-
-
-
 
 
 

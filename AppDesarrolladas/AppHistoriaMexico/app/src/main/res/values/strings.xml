@@ -59,6 +59,9 @@
     <string name="labelTextAprobado"> !!Chido!! Culminaste existosamente este nivel. </string>
     <string name="labelTextReprobado"> !!Chale!! Te falto poco, sigue intentando y lo conseguiras. </string>
 
+    <!-- Label Interfaz Cuestionario  -->
+    <string name="labelTituloCuestionario"> Cuestionario </string>
+
 
 
 </resources>

@@ -13,4 +13,11 @@
     <color name="colorLetraBlanca">#79F7F2F2</color>
     <color name="colorLetraNegra">#D0312E2E</color>
 
+    <!-- Estilo Color Cuestionaro -->
+    <color name="fondoPregunta">#74b9ff</color>
+    <color name="fondoRespuesta">#794527A0</color>
+    <color name="fondoEnlace">#8DFF9100</color>
+    <color name="colorBoton">#794527A0</color>
+
+
 </resources>

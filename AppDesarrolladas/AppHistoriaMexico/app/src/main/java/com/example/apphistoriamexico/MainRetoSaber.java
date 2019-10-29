@@ -19,13 +19,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class MainRetoSaber extends AppCompatActivity {
 
     TextView labelNivel, labelCategoria, labelPregunta, idRespValidar;
-    Cursor categoriaId, nivelesId,  listPreguntas;
+    Cursor categoriaId, nivelesId;
     Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4, btnCalificar, btnContinuar;
 
     @Override
@@ -40,8 +39,8 @@ public class MainRetoSaber extends AppCompatActivity {
         //Inicio relaciones con la interfaz
         labelNivel      = (TextView)findViewById(R.id.labelNivel);
         labelCategoria  = (TextView)findViewById(R.id.labelCategoria);
-        labelPregunta  = (TextView)findViewById(R.id.labelPregunta);
-        idRespValidar  = (TextView)findViewById(R.id.idRespValidar);
+        labelPregunta   = (TextView)findViewById(R.id.labelPregunta);
+        idRespValidar   = (TextView)findViewById(R.id.idRespValidar);
 
         //botones opciones
         btnOpcion1  = (Button)findViewById(R.id.btnOpcion1);
@@ -51,19 +50,16 @@ public class MainRetoSaber extends AppCompatActivity {
         btnCalificar = (Button)findViewById(R.id.btnCalificar);
         btnContinuar = (Button)findViewById(R.id.btnContinuar);
 
-
         // Recibo parametros
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
         String IdNivel     = getIntent().getStringExtra("IdNivel");
         String iContador   = getIntent().getStringExtra("iContador");
         String IndicePreg  = getIntent().getStringExtra("IndicePreg");
 
-
         //Elementos Dinamicos.
         setNomNiveles(IdNivel, iContador, IdCategoria);
         setNomCategoria(IdCategoria);
 
-        // todo Test
         System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
         System.out.println( "  IdCategoria " + IdCategoria );
         System.out.println( "  IdNivel "     + IdNivel     );
@@ -73,8 +69,6 @@ public class MainRetoSaber extends AppCompatActivity {
         if( validaPreguntaFinal(IndicePreg, IdCategoria, IdNivel) == false ){
             getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
         }
-
-
 
     }// fin del onCreate
 
@@ -88,14 +82,9 @@ public class MainRetoSaber extends AppCompatActivity {
             Intent interfaz = new Intent(this,MainResulRetoSaber.class);
             interfaz.putExtra("IdCategoria", IdCategoria  );
             interfaz.putExtra("IdNivel"    , IdNivel );
-            // todo -> Poner la id estudio
             interfaz.putExtra("IdEstudio"  , consultarEstudioUltimaId() );
             //Activa la intent y envia el objeto con la variable.
             startActivity(interfaz);
-
-            System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
-
-
             UltimaPregunta = true;
 
         }else if ( Integer.parseInt(indicePreg) == 0){
@@ -137,7 +126,7 @@ public class MainRetoSaber extends AppCompatActivity {
 
         ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
         registro.put("fecha", date);                    // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
-        registro.put("co_actividad", "1");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
+        registro.put("co_actividad", "2");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
 
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estudios", null, registro);
@@ -151,7 +140,6 @@ public class MainRetoSaber extends AppCompatActivity {
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
-
 
         ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
         registro.put("co_estudios", consultarEstudioUltimaId() );
@@ -252,10 +240,13 @@ public class MainRetoSaber extends AppCompatActivity {
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor consultaId = BasesDeDatos.rawQuery("SELECT id, co_respuesta, co_categoria, co_nivel, pregunta, respuesta FROM t_preguntas WHERE co_categoria = "+idCategoria+" AND co_nivel =  " + idNivel , null);
 
+        String contTotalPreg = getPreguntasTotal( idCategoria, idNivel );
+
+
         //Declaro arreglos. todo aqui debo definir el total  de indices
-        Integer[ ] iPregunta = new  Integer[19];
-        String[ ] sPreguntas = new  String[19];
-        String[ ] sRespuesta = new  String[19];
+        Integer[ ] iPregunta = new  Integer[ Integer.parseInt(contTotalPreg) ];
+        String[ ] sPreguntas = new  String[  Integer.parseInt(contTotalPreg) ];
+        String[ ] sRespuesta = new  String[  Integer.parseInt(contTotalPreg) ];
         String[ ] sComplemento = new  String[3];
 
         try {
@@ -277,24 +268,21 @@ public class MainRetoSaber extends AppCompatActivity {
                 //Todo -> Aqui PRegunta // Establecer Pregunta y Respuestas Dinamico todo
                 labelPregunta.setText(  sPreguntas[ Integer.parseInt( IndicePreg ) ] );
 
-                System.out.println( "  -------------------------------------  INDICE -> 1 ------------------------------------------------------ " + sPreguntas[ 1 ] );
-
-
                 int numero = (int)( Math.random()*4+1 );
 
-                //todo aqui las preguntas complementarias
-        //        sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
+                //todo aqui las preguntas complementarias leo
+               sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
 
                 if ( numero  == 1 ){
                     btnOpcion1.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion1.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                 //    btnOpcion2.setText(  sComplemento[0] );
-                 //    btnOpcion2.setId( 0 );
-                 //    btnOpcion3.setText(  sComplemento[1] );
-                 //    btnOpcion3.setId( 0 );
-                 //    btnOpcion4.setText(  sComplemento[2] );
-                 //    btnOpcion4.setId( 0 );
+                     btnOpcion2.setText(  sComplemento[0] );
+                     btnOpcion2.setId( 0 );
+                     btnOpcion3.setText(  sComplemento[1] );
+                     btnOpcion3.setId( 0 );
+                     btnOpcion4.setText(  sComplemento[2] );
+                     btnOpcion4.setId( 0 );
 
                 }
 
@@ -302,12 +290,12 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion2.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion2.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                //    btnOpcion1.setText(  sComplemento[0] );
-                //    btnOpcion1.setId( 0 );
-                //    btnOpcion3.setText(  sComplemento[1] );
-                //    btnOpcion3.setId( 0 );
-                //    btnOpcion4.setText(  sComplemento[3] );
-                //    btnOpcion4.setId( 0 );
+                   btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion3.setText(  sComplemento[1] );
+                    btnOpcion3.setId( 0 );
+                    btnOpcion4.setText(  sComplemento[3] );
+                    btnOpcion4.setId( 0 );
 
                 }
 
@@ -315,24 +303,24 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion3.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion3.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                //    btnOpcion1.setText(  sComplemento[0] );
-                //    btnOpcion1.setId( 0 );
-                //    btnOpcion2.setText(  sComplemento[1] );
-                //    btnOpcion2.setId( 0 );
-                //    btnOpcion4.setText(  sComplemento[2] );
-                //    btnOpcion4.setId( 0 );
+                    btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion2.setText(  sComplemento[1] );
+                    btnOpcion2.setId( 0 );
+                    btnOpcion4.setText(  sComplemento[2] );
+                    btnOpcion4.setId( 0 );
                 }
 
                 if ( numero  == 4 ){
                     btnOpcion4.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                     btnOpcion4.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
-                //    btnOpcion1.setText(  sComplemento[0] );
-                //    btnOpcion1.setId( 0 );
-                //    btnOpcion2.setText(  sComplemento[1] );
-                //    btnOpcion2.setId( 0 );
-                 //   btnOpcion3.setText(  sComplemento[2] );
-                 //   btnOpcion3.setId( 0 );
+                    btnOpcion1.setText(  sComplemento[0] );
+                    btnOpcion1.setId( 0 );
+                    btnOpcion2.setText(  sComplemento[1] );
+                    btnOpcion2.setId( 0 );
+                    btnOpcion3.setText(  sComplemento[2] );
+                    btnOpcion3.setId( 0 );
 
                 }
 
@@ -493,7 +481,7 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
-            //Todo Crear metodo para insertar estadisticas
+
             insertEstadisticas(IdResp, 1);
 
 
@@ -514,7 +502,6 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
-            // Todo Crear metodo para insertar estadisticas
             insertEstadisticas(IdResp, 0);
 
         }
@@ -541,7 +528,10 @@ public class MainRetoSaber extends AppCompatActivity {
         }else{
 
             if ( Integer.parseInt(contPregPut) >= Integer.parseInt(contTotalPreg) ){
-                Toast.makeText(this, "Entro", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Entro", Toast.LENGTH_SHORT).show();
+                System.out.println( " -------------  Limite total de las preguntas ------------------"  );
+                System.out.println();
+
             }else{
                 nuevoIndice = Integer.parseInt(contTotalPreg) - 1;
                 nuevoIContador = nuevoIContador;
@@ -559,6 +549,4 @@ public class MainRetoSaber extends AppCompatActivity {
         startActivity(interfaz);
 
     }
-
-
 }// Fin de la clase

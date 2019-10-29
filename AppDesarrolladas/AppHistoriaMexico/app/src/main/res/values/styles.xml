@@ -126,5 +126,36 @@
     </style>
 
 
+    <!-- Label Interfaz Cuestionario   -->
+
+    <style name="labelPreguntaCuestionario">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/fondoPregunta</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="labelRespuestaCuestionario">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/fondoRespuesta</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="labelEnlaceCuestionario">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/fondoEnlace</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+
 
 </resources>

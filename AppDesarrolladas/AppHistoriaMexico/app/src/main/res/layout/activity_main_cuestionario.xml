@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idContCuestionario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
+    tools:context=".MainCuestionario">
+
+    <LinearLayout
+        android:id="@+id/contBtnsOpcionCuestionario"
+        style="@style/btnMenu"
+        android:layout_width="327dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCtegoria"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/grade"
+            android:onClick="vistaPrincipal"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnBuenas"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/grade"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnMalas"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/grade"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnApoyo"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightbulb"
+            android:onClick="vistaApoyo"
+            android:text="@string/btnDescrip" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/idContScrollCuestionario"
+        android:layout_width="353dp"
+        android:layout_height="469dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionCuestionario"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/idLayoutCuestionario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelNivel"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D" />
+
+            <TextView
+                android:id="@+id/labelCategoria"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D" />
+
+            <TextView
+                android:id="@+id/labelPregunta"
+                style="@style/labelPreguntaCuestionario"
+                android:layout_width="338dp"
+                android:layout_height="108dp"
+                android:text="@string/labelPreguntaDesp" />
+
+            <TextView
+                android:id="@+id/labelRespuesta"
+                style="@style/labelRespuestaCuestionario"
+                android:layout_width="338dp"
+                android:layout_height="108dp"
+                android:text="@string/labelPreguntaDesp" />
+
+
+            <TextView
+                android:id="@+id/labelEnlace"
+                style="@style/labelEnlaceCuestionario"
+                android:layout_width="338dp"
+                android:layout_height="108dp"
+                android:text="@string/labelPreguntaDesp" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                style="@style/btnPregRetoSaber_aprobada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelBtns_continuar"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
