@@ -14,7 +14,7 @@
         android:layout_height="69dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.424"
@@ -54,15 +54,13 @@
 
     <ScrollView
         android:id="@+id/idContScrollEstadisticas"
-        android:layout_width="360dp"
-        android:layout_height="432dp"
+        android:layout_width="385dp"
+        android:layout_height="268dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/contBtnsOpcion">
@@ -93,6 +91,7 @@
                         android:layout_width="244dp"
                         android:layout_height="88dp"
                         android:text="TextView" />
+
                 </TableRow>
 
                 <TableRow
@@ -111,6 +110,7 @@
                         android:layout_width="244dp"
                         android:layout_height="88dp"
                         android:text="TextView" />
+
                 </TableRow>
 
                 <TableRow
@@ -167,6 +167,73 @@
         </LinearLayout>
     </ScrollView>
 
+    <ScrollView
+        android:layout_width="343dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idContScrollEstadisticas">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/checkCorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnDescrip" />
+
+                <TextView
+                    android:id="@+id/inpNotificarCorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelTituloCorreo" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/checkNotificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnDescrip" />
+
+                <TextView
+                    android:id="@+id/inpNotificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelTituloNotificar" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="time" />
+
+                <TextView
+                    android:id="@+id/inpTimeRecordatorio"
+                    android:layout_width="191dp"
+                    android:layout_height="40dp"
+                    android:text="@string/labelTituloRecordatorio" />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

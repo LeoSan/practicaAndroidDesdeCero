@@ -62,5 +62,10 @@
     <!-- Label Interfaz Cuestionario  -->
     <string name="labelTituloCuestionario"> Cuestionario </string>
 
+    <!-- Label Interfaz Estadisticas  -->
+    <string name="labelTituloCorreo"> Notificar por Correo diariamente. </string>
+    <string name="labelTituloNotificar"> Activar la notificación movil. </string>
+    <string name="labelTituloRecordatorio"> Configurar recordatorio. </string>
+
 
 </resources>
