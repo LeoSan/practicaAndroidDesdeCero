@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Apunta al Activity de Guia (Cuestionario)
     public void vistaGuia (View view){
-        Intent siguiente = new Intent(this,MainGuia.class);
+        Intent siguiente = new Intent(this, MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
         siguiente.putExtra("IdActividad", "1");
         startActivity(siguiente);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Apunta al Activity de Preguntas (Reto al Saber)
     public void vistaPreguntas (View view){
-        Intent siguiente = new Intent(this,MainGuia.class);
+        Intent siguiente = new Intent(this, MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
         siguiente.putExtra("IdActividad", "2");
         startActivity(siguiente);
@@ -38,15 +38,22 @@ public class MainActivity extends AppCompatActivity {
 
     //Apunta al Activity de Contacto (Enviar Correo)
     public void vistaContacto(View view){
-        Intent siguiente = new Intent(this,MainContacto.class);
+        Intent siguiente = new Intent(this, MainContacto.class);
         startActivity(siguiente);
     }
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
-        Intent interfaz = new Intent(this,MainApoyo.class);
+        Intent interfaz = new Intent(this, MainApoyo.class);
         startActivity(interfaz);
     }
+
+    //Apunta al Activity de Preguntas (Reto al Saber)
+    public void vistaEstaConfig (View view){
+        Intent siguiente = new Intent(this, MainEstadisticaConfiguracion.class);
+        startActivity(siguiente);
+    }
+
 
 
 }//fin de la clase

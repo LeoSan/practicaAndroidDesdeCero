@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainCuestionario"></activity>
+        <activity android:name=".MainEstadisticaConfiguracion"></activity>
+        <activity android:name=".MainCuestionario" />
         <activity android:name=".MainResulRetoSaber" />
         <activity android:name=".MainRetoSaber" />
         <activity android:name=".MainNivelesReto" />

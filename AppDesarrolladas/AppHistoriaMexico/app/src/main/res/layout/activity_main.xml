@@ -28,6 +28,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/maths"
+            android:onClick="vistaEstaConfig"
             android:text="@string/btnDescrip" />
 
         <Button

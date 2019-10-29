@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
+    tools:context=".MainEstadisticaConfiguracion">
+
+    <LinearLayout
+        android:id="@+id/contBtnsOpcion"
+        style="@style/btnMenu"
+        android:layout_width="229dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCtegoria"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/grade"
+            android:onClick="vistaPrincipal"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnConatcto"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/communication"
+            android:onClick="vistaContacto"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnApoyo"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightbulb"
+            android:onClick="vistaApoyo"
+            android:text="@string/btnDescrip" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/idContScrollEstadisticas"
+        android:layout_width="360dp"
+        android:layout_height="432dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contBtnsOpcion">
+
+        <LinearLayout
+            android:id="@+id/idLayoutEstadistica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/idTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnBasico"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/basico" />
+
+                    <TextView
+                        android:id="@+id/inpBasico"
+                        android:layout_width="244dp"
+                        android:layout_height="88dp"
+                        android:text="TextView" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/btnMedio"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/medio" />
+
+                    <TextView
+                        android:id="@+id/inpMedio"
+                        android:layout_width="244dp"
+                        android:layout_height="88dp"
+                        android:text="TextView" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnAvanzado"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/avanzado" />
+
+                    <TextView
+                        android:id="@+id/inpAvanzado"
+                        android:layout_width="244dp"
+                        android:layout_height="88dp"
+                        android:text="TextView" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnExperto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/experto" />
+
+                    <TextView
+                        android:id="@+id/inpExperto"
+                        android:layout_width="244dp"
+                        android:layout_height="88dp"
+                        android:text="TextView" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnLeyenda"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/leyenda" />
+
+                    <TextView
+                        android:id="@+id/inpLeyenda"
+                        android:layout_width="244dp"
+                        android:layout_height="88dp"
+                        android:text="TextView" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
