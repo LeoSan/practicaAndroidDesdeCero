@@ -32,13 +32,23 @@
             android:onClick="vistaPrincipal"
             android:text="@string/btnDescrip" />
 
+
         <Button
             android:id="@+id/btnBuenas"
             style="?android:attr/buttonBarStyle"
             android:layout_width="3dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@drawable/grade"
+            android:background="@drawable/respcorrectacuestionario"
+            android:text="@string/btnDescrip" />
+
+        <Button
+            android:id="@+id/btnVistas"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/respvistacuestionario"
             android:text="@string/btnDescrip" />
 
         <Button
@@ -47,7 +57,7 @@
             android:layout_width="3dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@drawable/grade"
+            android:background="@drawable/respincorrectacuestionario"
             android:text="@string/btnDescrip" />
 
         <Button
@@ -80,13 +90,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/labelCategoria"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D" />
+
             <ProgressBar
-                android:id="@+id/progressBar2"
+                android:id="@+id/idBarraCuestionario"
                 style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="100"
-                android:progress="12" />
+                android:background="@color/colorAprobada" />
 
             <TextView
                 android:id="@+id/labelNivel"
@@ -95,12 +111,6 @@
                 android:layout_height="wrap_content"
                 android:background="#FFFF8D" />
 
-            <TextView
-                android:id="@+id/labelCategoria"
-                style="@style/labelTituloInterfaces"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFF8D" />
 
             <TextView
                 android:id="@+id/labelPregunta"
@@ -131,7 +141,6 @@
                 android:layout_height="55dp"
                 android:onClick="btnContinuarInterfaz"
                 android:text="@string/labelBtns_continuar" />
-
 
         </LinearLayout>
     </ScrollView>

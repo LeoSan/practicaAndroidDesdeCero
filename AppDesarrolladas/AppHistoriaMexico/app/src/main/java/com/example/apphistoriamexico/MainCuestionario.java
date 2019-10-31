@@ -6,8 +6,13 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -17,6 +22,9 @@ public class MainCuestionario extends AppCompatActivity {
 
     TextView labelNivel, labelCategoria, labelPregunta, labelRespuesta, labelEnlace;
     Cursor categoriaId, nivelesId;
+    ProgressBar idBarraCuestionario;
+    String urlTemp = "www.google.com";
+    Button btnBuenas, btnVistas, btnMalas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +41,11 @@ public class MainCuestionario extends AppCompatActivity {
         labelPregunta  = (TextView)findViewById(R.id.labelPregunta);
         labelRespuesta = (TextView)findViewById(R.id.labelRespuesta);
         labelEnlace    = (TextView)findViewById(R.id.labelEnlace);
+        idBarraCuestionario =  (ProgressBar)findViewById(R.id.idBarraCuestionario);
 
-
+        btnBuenas =  (Button)findViewById(R.id.btnBuenas);
+        btnVistas =  (Button)findViewById(R.id.btnVistas);
+        btnMalas  =  (Button)findViewById(R.id.btnMalas);
 
         // Recibo parametros
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
@@ -48,7 +59,6 @@ public class MainCuestionario extends AppCompatActivity {
         System.out.println( "  iContador "   + iContador   );
         System.out.println( "  IndicePreg "  + IndicePreg  );
 
-
         //Elementos Dinamicos.
         setNomNiveles(IdNivel, iContador, IdCategoria);
         setNomCategoria(IdCategoria);
@@ -57,12 +67,20 @@ public class MainCuestionario extends AppCompatActivity {
             getPreguntasNivelCategoria(IdCategoria, IdNivel, IndicePreg);
         }
 
+        setBarra(IndicePreg, IdCategoria, IdNivel, iContador );
+
     }
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////EVENTOS DINAMICOS /////////////////////////////////////////////////////////////
 
+    //Evento -> Barra de progreso
+    private void setBarra(String indicePreg, String idCategoria, String idNivel, String iContador) {
+        String contTotalPreg = getPreguntasTotal( idCategoria, idNivel );
+        idBarraCuestionario.setMax( Integer.parseInt(contTotalPreg) );
+        idBarraCuestionario.setProgress( Integer.parseInt(iContador) );
+    }
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
@@ -195,13 +213,11 @@ public class MainCuestionario extends AppCompatActivity {
 
         String contTotalPreg = getPreguntasTotal( idCategoria, idNivel );
 
-
         //Declaro arreglos. todo aqui debo definir el total  de indices
         Integer[ ] iPregunta = new  Integer[ Integer.parseInt(contTotalPreg) ];
         String[ ] sPreguntas = new  String[  Integer.parseInt(contTotalPreg) ];
         String[ ] sRespuesta = new  String[  Integer.parseInt(contTotalPreg) ];
-        String[ ] sEnlace = new  String[  Integer.parseInt(contTotalPreg) ];
-        String[ ] sComplemento = new  String[3];
+        String[ ] sEnlace    = new  String[  Integer.parseInt(contTotalPreg) ];
 
         try {
 
@@ -224,8 +240,37 @@ public class MainCuestionario extends AppCompatActivity {
                 labelPregunta.setText(   sPreguntas[ Integer.parseInt( IndicePreg ) ] );
                 labelRespuesta.setText(  sRespuesta[ Integer.parseInt( IndicePreg ) ] );
                 labelEnlace.setText(     sEnlace[ Integer.parseInt( IndicePreg ) ] );
+                urlTemp =      sEnlace[ Integer.parseInt( IndicePreg ) ] ;
 
-                int numero = (int)( Math.random()*4+1 );
+                // inserto valor para las estadisticas
+                  insertEstadisticas( String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]) );
+
+                // Transformo el textView en un enlace.
+                    SpannableString content = new SpannableString( labelEnlace.getText() );
+
+                    content.setSpan(new UnderlineSpan(), 0, labelEnlace.length(), 0);
+
+                    labelEnlace.setText( content );
+                    labelEnlace.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String url = urlTemp;
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData( Uri.parse( url ) );
+                            startActivity(i);
+                        }
+                    });
+                // Transformo el textView en un enlace.
+
+
+                String valorBuenas = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "1");
+                String valorVistas = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "3");
+                String valorMalas  = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "0");
+
+                //Muestra estadisticas
+               btnBuenas.setText( valorBuenas );
+               btnVistas.setText( valorVistas );
+               btnMalas.setText( valorMalas );
 
             }else{
                 System.out.println( " -------------  No hay datos ------------------"  );
@@ -255,6 +300,7 @@ public class MainCuestionario extends AppCompatActivity {
             interfaz.putExtra("IdCategoria", IdCategoria  );
             interfaz.putExtra("IdNivel"    , IdNivel );
             interfaz.putExtra("IdEstudio"  , consultarEstudioUltimaId() );
+
             //Activa la intent y envia el objeto con la variable.
             startActivity(interfaz);
             UltimaPregunta = true;
@@ -286,6 +332,7 @@ public class MainCuestionario extends AppCompatActivity {
         registro.put("fecha", date);                    // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
         registro.put("co_actividad", "2");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
 
+
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estudios", null, registro);
         BasesDeDatos.close();
@@ -313,5 +360,47 @@ public class MainCuestionario extends AppCompatActivity {
         return idPregunta;
 
     }
+
+    //Metodo  Void->  Solo inserta parte de las estadisticas
+    public void insertEstadisticas(String IdPregunta){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+
+        ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
+        registro.put("co_estudios", consultarEstudioUltimaId() );
+        registro.put("co_pregunta", IdPregunta);
+        registro.put("validacion", 3);// Valor #3 Indica que son las preguntas estudiadas, vistas, repadas por el usuario.
+
+        //Conectamos con la base datos insertamos.
+        BasesDeDatos.insert("t_estadisticas", null, registro);
+        BasesDeDatos.close();
+
+    }
+
+
+    //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
+    public String consultarTotalPreguntasEstaditicas(String idPregunta, String tipoEstadisticas){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        //Consulta El valor t_estudio
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery(" SELECT count(id) total FROM t_estadisticas WHERE co_pregunta = "+idPregunta+" AND validacion ="+tipoEstadisticas, null);
+
+        String totalIdEstadistica = "0";
+
+        if (consultaIdTotal.moveToFirst()){
+            totalIdEstadistica =  consultaIdTotal.getString(0);
+        }
+
+        consultaIdTotal.close();
+        BasesDeDatos.close();
+
+        return totalIdEstadistica;
+
+    }
+
 
 }// fin de la clase

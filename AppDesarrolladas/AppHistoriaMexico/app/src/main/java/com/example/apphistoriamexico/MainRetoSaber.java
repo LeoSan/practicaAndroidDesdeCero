@@ -481,9 +481,7 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
-
             insertEstadisticas(IdResp, 1);
-
 
         }else{
             Toast.makeText(this, "Respuesta InCorrecta, Clic para Continuar", Toast.LENGTH_SHORT).show();
