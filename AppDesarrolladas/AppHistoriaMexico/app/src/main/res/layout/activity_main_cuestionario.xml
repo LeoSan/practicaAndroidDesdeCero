@@ -80,6 +80,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="12" />
+
             <TextView
                 android:id="@+id/labelNivel"
                 style="@style/labelTituloInterfaces"
@@ -119,9 +127,10 @@
             <Button
                 android:id="@+id/btnContinuar"
                 style="@style/btnPregRetoSaber_aprobada"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/labelBtns_continuar"/>
+                android:layout_width="338dp"
+                android:layout_height="55dp"
+                android:onClick="btnContinuarInterfaz"
+                android:text="@string/labelBtns_continuar" />
 
 
         </LinearLayout>

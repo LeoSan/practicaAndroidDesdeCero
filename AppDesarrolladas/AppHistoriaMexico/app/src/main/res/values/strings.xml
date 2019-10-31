@@ -56,7 +56,7 @@
     <string name="labelBtns_reprobado"> !! Chalee !!  </string>
     <string name="labelBtns_continuar"> Continuar  </string>
 
-    <string name="labelTextAprobado"> !!Chido!! Culminaste existosamente este nivel. </string>
+    <string name="labelTextAprobado"> !!Chido!! Culminaste exitosamente este nivel. </string>
     <string name="labelTextReprobado"> !!Chale!! Te falto poco, sigue intentando y lo conseguiras. </string>
 
     <!-- Label Interfaz Cuestionario  -->

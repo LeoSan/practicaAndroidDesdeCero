@@ -126,7 +126,7 @@ public class MainRetoSaber extends AppCompatActivity {
 
         ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
         registro.put("fecha", date);                    // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
-        registro.put("co_actividad", "2");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
+        registro.put("co_actividad", "1");              // Aqui asociamos los atributos de la tabla con los valores de los campos (Recuerda el campo de la tabla debe ser igual aqui)
 
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estudios", null, registro);
@@ -544,7 +544,7 @@ public class MainRetoSaber extends AppCompatActivity {
         interfaz.putExtra("IdNivel",     IdNivel );
         interfaz.putExtra("iContador",   String.valueOf(nuevoIContador) );
         interfaz.putExtra("IndicePreg",  String.valueOf(nuevoIndice) );
-        interfaz.putExtra("IdEstudio", "1" );
+        interfaz.putExtra("IdEstudio", consultarEstudioUltimaId() ); // todo posible error
         //Activa la intent y envia el objeto con la variable.
         startActivity(interfaz);
 
