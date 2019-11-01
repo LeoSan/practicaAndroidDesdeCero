@@ -12,15 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainCuestionarioResul"></activity>
-        <activity android:name=".MainEstadisticaConfiguracion" />
-        <activity android:name=".MainCuestionario" />
-        <activity android:name=".MainResulRetoSaber" />
-        <activity android:name=".MainRetoSaber" />
-        <activity android:name=".MainNivelesReto" />
-        <activity android:name=".MainContacto" />
-        <activity android:name=".MainApoyo" />
-        <activity android:name=".Splash">
+        <activity android:name=".MainCuestionarioResul" android:screenOrientation="portrait"/>
+        <activity android:name=".MainEstadisticaConfiguracion" android:screenOrientation="portrait" />
+        <activity android:name=".MainCuestionario" android:screenOrientation="portrait" />
+        <activity android:name=".MainResulRetoSaber" android:screenOrientation="portrait" />
+        <activity android:name=".MainRetoSaber" android:screenOrientation="portrait" />
+        <activity android:name=".MainNivelesReto" android:screenOrientation="portrait" />
+        <activity android:name=".MainContacto" android:screenOrientation="portrait" />
+        <activity android:name=".MainApoyo" android:screenOrientation="portrait" />
+        <activity android:name=".Splash" android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
