@@ -99,6 +99,12 @@ public class MainGuia extends AppCompatActivity {
 
     //Eventos
 
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
+
     //OnClic -> Para el arbol de pensamientos
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
 
@@ -122,12 +128,14 @@ public class MainGuia extends AppCompatActivity {
     public void vistaApoyo (View view){
         Intent interfaz = new Intent(this,MainApoyo.class);
         startActivity(interfaz);
+        finish();
     }
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaInterfazPrincipal (View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
     }
 
     // Metodos Conexion Bases de Datos

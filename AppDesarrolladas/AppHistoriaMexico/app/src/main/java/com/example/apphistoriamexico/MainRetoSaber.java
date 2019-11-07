@@ -72,6 +72,12 @@ public class MainRetoSaber extends AppCompatActivity {
 
     }// fin del onCreate
 
+    //Todo-> Usar boton regresar (Back)
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
     private boolean validaPreguntaFinal(String indicePreg, String IdCategoria, String IdNivel) {
 
         String contTotalPreg = getPreguntasTotal(IdCategoria, IdNivel );
@@ -359,6 +365,7 @@ public class MainRetoSaber extends AppCompatActivity {
         //Metodo que me permite crear variable
         enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
         startActivity(interfaz);
+        finish();
     }
 
 
@@ -388,6 +395,7 @@ public class MainRetoSaber extends AppCompatActivity {
         //Metodo que me permite crear variable
         enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
         startActivity(interfaz);
+        finish();
     }
 
     //Metodo Tipo Cursor ->  Devuelve un cursos con los valores de la categoria
@@ -554,6 +562,7 @@ public class MainRetoSaber extends AppCompatActivity {
         interfaz.putExtra("IdEstudio", consultarEstudioUltimaId() ); // todo posible error
         //Activa la intent y envia el objeto con la variable.
         startActivity(interfaz);
+        finish();
 
     }
 }// Fin de la clase

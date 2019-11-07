@@ -75,6 +75,12 @@ public class MainCuestionario extends AppCompatActivity {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////EVENTOS DINAMICOS /////////////////////////////////////////////////////////////
 
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
+
     //Evento -> Barra de progreso
     private void setBarra(String indicePreg, String idCategoria, String idNivel, String iContador) {
         String contTotalPreg = getPreguntasTotal( idCategoria, idNivel );
@@ -86,12 +92,14 @@ public class MainCuestionario extends AppCompatActivity {
     public void vistaApoyo (View view){
         Intent interfaz = new Intent(this,MainApoyo.class);
         startActivity(interfaz);
+        finish();
     }
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaPrincipal(View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
     }
 
     // Establecer texto en los nivles
@@ -151,6 +159,7 @@ public class MainCuestionario extends AppCompatActivity {
         interfaz.putExtra("IdEstudio", consultarEstudioUltimaId() );
         //Activa la intent y envia el objeto con la variable.
         startActivity(interfaz);
+        finish();
 
     }
 

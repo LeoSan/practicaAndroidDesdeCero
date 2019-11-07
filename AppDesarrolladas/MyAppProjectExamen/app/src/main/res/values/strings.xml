@@ -2,5 +2,5 @@
     <string name="app_name">MyAppProjectExamen</string>
     <string name="app_vacio"></string>
     <string name="inoNombre">¿ Como te llamas?</string>
-    <string name="btnJugar">Vamos a jusgar </string>
+    <string name="btnJugar">Vamos a jugar </string>
 </resources>

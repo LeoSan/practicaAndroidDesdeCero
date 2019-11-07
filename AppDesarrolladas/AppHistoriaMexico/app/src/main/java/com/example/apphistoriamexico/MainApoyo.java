@@ -34,6 +34,12 @@ public class MainApoyo extends AppCompatActivity {
     public void vistaInterfazPrincipal (View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
+    }
+
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
     }
 
 

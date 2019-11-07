@@ -19,16 +19,24 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
 
     }
 
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
+
     //Apunta al Activity de Contacto (Enviar Correo)
     public void vistaContacto(View view){
         Intent siguiente = new Intent(this, MainContacto.class);
         startActivity(siguiente);
+        finish();
     }
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
         Intent interfaz = new Intent(this, MainApoyo.class);
         startActivity(interfaz);
+        finish();
     }
 
 
@@ -36,6 +44,7 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
     public void vistaPrincipal(View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
     }
 
 }

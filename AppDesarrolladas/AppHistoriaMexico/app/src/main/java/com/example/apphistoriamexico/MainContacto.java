@@ -172,7 +172,13 @@ public class MainContacto extends AppCompatActivity {
     public void vistaInterfazPrincipal (View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
-        Toast.makeText(this, "Cambio", Toast.LENGTH_SHORT).show();
+        finish();
     }
+
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
 
 }// fin de la clase

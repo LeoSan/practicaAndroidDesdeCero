@@ -17,7 +17,7 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/imageView_Personaje"
+                android:id="@+id/iv_personaje"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_marginLeft="80dp"
@@ -27,7 +27,7 @@
                 app:srcCompat="@drawable/manzana" />
 
             <EditText
-                android:id="@+id/txt_nombre"
+                android:id="@+id/et_nombre"
                 style="@style/inoTextNombre"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
@@ -45,10 +45,11 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="30dp"
+                android:onClick="jugar"
                 android:text="@string/btnJugar" />
 
             <TextView
-                android:id="@+id/textView_bestScore"
+                android:id="@+id/tv_bestScore"
                 style="@style/textInterfazBienvenida"
                 android:layout_width="300dp"
                 android:layout_height="50dp"

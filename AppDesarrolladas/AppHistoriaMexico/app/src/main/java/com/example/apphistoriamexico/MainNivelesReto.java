@@ -59,6 +59,12 @@ public class MainNivelesReto extends AppCompatActivity {
 
     //Metodos interfaz
 
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
+
     //Este Metodo permite crear los botones de las categorias
     public void agregarBotones(Cursor datosCursor, LinearLayout contenedor ){
 
@@ -78,7 +84,7 @@ public class MainNivelesReto extends AppCompatActivity {
                 botonNiveles.setOnClickListener(interfazEstdudio);
                 // Atributo "setImageResource" Anexar Imagen
                 nombreLogo =  datosCursor.getString(2);
-
+                //Todo-> Forma  de extraer una imagen del resourse ( Recuerda que los set solo reciben enteros )
                 Resources res = getApplicationContext().getResources();
                 int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
                 botonNiveles.setImageResource(resId);
@@ -155,12 +161,14 @@ public class MainNivelesReto extends AppCompatActivity {
     public void vistaApoyo (View view){
         Intent interfaz = new Intent(this,MainApoyo.class);
         startActivity(interfaz);
+        finish();
     }
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaInterfazCategoria (View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
     }
 
 

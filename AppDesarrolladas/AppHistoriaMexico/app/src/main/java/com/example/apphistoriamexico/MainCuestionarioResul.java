@@ -80,6 +80,13 @@ public class MainCuestionarioResul extends AppCompatActivity {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////EVENTOS DINAMICOS /////////////////////////////////////////////////////////////
 
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
+
+
     //Evento -> Barra de progreso
     @SuppressLint("ResourceAsColor")
     private void setBarra(String idCategoria, String idNivel, String Buenas, String Malas) {
@@ -101,12 +108,14 @@ public class MainCuestionarioResul extends AppCompatActivity {
     public void vistaApoyo (View view){
         Intent interfaz = new Intent(this,MainApoyo.class);
         startActivity(interfaz);
+        finish();
     }
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaPrincipal(View view){
         Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
+        finish();
     }
 
     // Establecer texto en Categoria
