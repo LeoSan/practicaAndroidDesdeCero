@@ -159,7 +159,7 @@ public class MainNivelesReto extends AppCompatActivity {
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaInterfazCategoria (View view){
-        Intent interfaz = new Intent(this,MainGuia.class);
+        Intent interfaz = new Intent(this,MainActivity.class);
         startActivity(interfaz);
     }
 

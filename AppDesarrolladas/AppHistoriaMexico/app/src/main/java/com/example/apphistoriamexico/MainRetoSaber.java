@@ -135,7 +135,7 @@ public class MainRetoSaber extends AppCompatActivity {
     }
 
     //Metodo  Void->  Solo inserta parte de las estadisticas
-    public void insertEstadisticas(String IdPregunta, Integer validacicion){
+    public void insertEstadisticas(String IdPregunta, Integer validacicion, String co_nivel, String co_categoria){
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
@@ -144,7 +144,13 @@ public class MainRetoSaber extends AppCompatActivity {
         ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
         registro.put("co_estudios", consultarEstudioUltimaId() );
         registro.put("co_pregunta", IdPregunta);
+        registro.put("co_nivel", co_nivel);
+        registro.put("co_categoria", co_categoria);
         registro.put("validacion", validacicion);
+
+        System.out.println( " -------------  Insert RESPUESTA ------------------");
+        System.out.println( "  IdEstudio " + validacicion );
+
 
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estadisticas", null, registro);
@@ -203,7 +209,7 @@ public class MainRetoSaber extends AppCompatActivity {
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         Cursor consultaId= BasesDeDatos.rawQuery("SELECT complemento FROM t_complemento WHERE co_pregunta = " + idPregunta, null);
 
-        String[ ] sComplemento = new  String[3];
+        String[ ] sComplemento = new  String[20];
         try {
             if (consultaId != null) {
                 consultaId.moveToFirst();
@@ -247,7 +253,7 @@ public class MainRetoSaber extends AppCompatActivity {
         Integer[ ] iPregunta = new  Integer[ Integer.parseInt(contTotalPreg) ];
         String[ ] sPreguntas = new  String[  Integer.parseInt(contTotalPreg) ];
         String[ ] sRespuesta = new  String[  Integer.parseInt(contTotalPreg) ];
-        String[ ] sComplemento = new  String[3];
+        String[ ] sComplemento = new  String[2];
 
         try {
 
@@ -294,7 +300,7 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion1.setId( 0 );
                     btnOpcion3.setText(  sComplemento[1] );
                     btnOpcion3.setId( 0 );
-                    btnOpcion4.setText(  sComplemento[3] );
+                    btnOpcion4.setText(  sComplemento[2] );
                     btnOpcion4.setId( 0 );
 
                 }
@@ -463,7 +469,7 @@ public class MainRetoSaber extends AppCompatActivity {
         // La Respuesta siempre va ser  un numero entero y mayor a cero
         String IdResp  = (String) idRespValidar.getText();
 
-        if ( (Integer.parseInt( IdResp ) ) > 0 ){
+        if ( ( Integer.parseInt( IdResp ) ) > 0 ){
             Toast.makeText(this, "Respuesta Correcta, Clic para Continuar", Toast.LENGTH_SHORT).show();
             // Transformo el boton si la respuesta es correcta
             btnCalificar.setText(" ");
@@ -481,9 +487,9 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
-            insertEstadisticas(IdResp, 1);
+            insertEstadisticas(IdResp, 1, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
 
-        }else{
+        }else {
             Toast.makeText(this, "Respuesta InCorrecta, Clic para Continuar", Toast.LENGTH_SHORT).show();
             // Transformo el boton si la respuesta es Incorrecta
             btnCalificar.setText(" ");
@@ -500,7 +506,10 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
-            insertEstadisticas(IdResp, 0);
+            insertEstadisticas(IdResp, 0, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
+
+            System.out.println( " -------------  RESPUESTA ERRADA  ------------------"  );
+            System.out.println();
 
         }
     }

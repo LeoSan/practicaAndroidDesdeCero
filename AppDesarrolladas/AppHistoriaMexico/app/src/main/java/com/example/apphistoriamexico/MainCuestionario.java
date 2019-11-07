@@ -243,7 +243,10 @@ public class MainCuestionario extends AppCompatActivity {
                 urlTemp =      sEnlace[ Integer.parseInt( IndicePreg ) ] ;
 
                 // inserto valor para las estadisticas
-                  insertEstadisticas( String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]) );
+                String IdCategoria = getIntent().getStringExtra("IdCategoria");
+                String IdNivel     = getIntent().getStringExtra("IdNivel");
+
+                insertEstadisticas( String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), IdNivel, IdCategoria );
 
                 // Transformo el textView en un enlace.
                     SpannableString content = new SpannableString( labelEnlace.getText() );
@@ -262,10 +265,9 @@ public class MainCuestionario extends AppCompatActivity {
                     });
                 // Transformo el textView en un enlace.
 
-
-                String valorBuenas = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "1");
-                String valorVistas = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "3");
-                String valorMalas  = consultarTotalPreguntasEstaditicas(String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), "0");
+                String valorBuenas = consultarTotalPreguntasEstaditicas(iPregunta[Integer.parseInt( IndicePreg )], 1);
+                String valorVistas = consultarTotalPreguntasEstaditicas(iPregunta[Integer.parseInt( IndicePreg )], 3);
+                String valorMalas  = consultarTotalPreguntasEstaditicas(iPregunta[Integer.parseInt( IndicePreg )], 0);
 
                 //Muestra estadisticas
                btnBuenas.setText( valorBuenas );
@@ -362,7 +364,7 @@ public class MainCuestionario extends AppCompatActivity {
     }
 
     //Metodo  Void->  Solo inserta parte de las estadisticas
-    public void insertEstadisticas(String IdPregunta){
+    public void insertEstadisticas(String IdPregunta, String co_nivel, String co_categoria){
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
@@ -371,7 +373,9 @@ public class MainCuestionario extends AppCompatActivity {
         ContentValues registro = new ContentValues();   // Instanciamos el objeto contenedor de valores.
         registro.put("co_estudios", consultarEstudioUltimaId() );
         registro.put("co_pregunta", IdPregunta);
-        registro.put("validacion", 3);// Valor #3 Indica que son las preguntas estudiadas, vistas, repadas por el usuario.
+        registro.put("co_nivel", co_nivel);
+        registro.put("co_categoria", co_categoria);
+        registro.put("validacion", 3);// Valor #3 Indica que son las preguntas estudiadas, vistas, repasadas por el usuario.
 
         //Conectamos con la base datos insertamos.
         BasesDeDatos.insert("t_estadisticas", null, registro);
@@ -381,13 +385,13 @@ public class MainCuestionario extends AppCompatActivity {
 
 
     //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
-    public String consultarTotalPreguntasEstaditicas(String idPregunta, String tipoEstadisticas){
+    public String consultarTotalPreguntasEstaditicas(Integer idPregunta, Integer tipoEstadisticas){
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         //Consulta El valor t_estudio
-        Cursor consultaIdTotal = BasesDeDatos.rawQuery(" SELECT count(id) total FROM t_estadisticas WHERE co_pregunta = "+idPregunta+" AND validacion ="+tipoEstadisticas, null);
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery(" SELECT count(id) total FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_pregunta = "+idPregunta , null);
 
         String totalIdEstadistica = "0";
 

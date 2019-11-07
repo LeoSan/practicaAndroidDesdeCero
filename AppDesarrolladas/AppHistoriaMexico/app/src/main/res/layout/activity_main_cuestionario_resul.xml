@@ -104,12 +104,112 @@
                     android:layout_height="wrap_content"
                     android:background="@color/colorAprobada" />
 
-                <TextView
-                    android:id="@+id/labelNivel"
-                    style="@style/labelTituloInterfaces"
+            <TextView
+                android:id="@+id/labelNivel"
+                style="@style/labelTituloInterfaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8D"
+                android:text="@string/labelNivel"
+                android:textSize="18sp" />
+
+            <TableLayout
+                android:id="@+id/idTableDatosMedio"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:layout_marginTop="20dp">
+
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFF8D" />
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnNivel"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/btnDescrip" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/labelResulBuenas"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/labelResulVistas"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/labelResulMalas"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnEstatus"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/btnDescrip" />
+
+                    <TextView
+                        android:id="@+id/inpTotalBuenas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/inpTotalVistas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/inpTotalMalas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="18sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/inpMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelMsjResulMal"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                style="@style/btnPregRetoSaber_calificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="vistaPrincipal"
+                android:text="@string/labelBtns_continuar" />
 
         </LinearLayout>
     </ScrollView>

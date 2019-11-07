@@ -19,7 +19,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
     // Tabla Estudios
         BasesDeDatos.execSQL("CREATE TABLE t_estudios(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha date, co_actividad int)");
-        BasesDeDatos.execSQL("CREATE TABLE t_estadisticas(id INTEGER PRIMARY KEY AUTOINCREMENT, co_estudios int, co_pregunta int, validacion int)");
+        BasesDeDatos.execSQL("CREATE TABLE t_estadisticas(id INTEGER PRIMARY KEY AUTOINCREMENT, co_estudios int, co_pregunta int, co_nivel int, co_categoria int, validacion int)");
 
 
     // Tabla de categoria
@@ -32,13 +32,21 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_niveles(id,  nom_nivel, icono, activo) VALUES (1, 'Básico', 'basico', 1), (2, 'Medio', 'medio', 1), (3, 'Avanzado', 'avanzado', 1), (4, 'Experto', 'experto', 1), (5, 'Leyenda', 'leyenda', 1)");
 
 
-    // Tabla de Preguntas
+    // Tabla de Preguntas -TANDA CAT. COMIDA - NIVEL BASICO -
         BasesDeDatos.execSQL("CREATE TABLE t_preguntas(id int primary Key, co_categoria int, co_nivel int, co_respuesta int, pregunta text, respuesta text, enlace_resp text, imagen_pre text, imagen_resp text, activo int)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (1, 1, 1, 1, '¿Cuáles son los Premios Nobel por mexicanos?', 'Premio Nobel de la Paz en 1982 Alfonso García Robles', 'https://es.wikipedia.org/wiki/Categor%C3%ADa:Premios_Nobel_de_M%C3%A9xico', '0', '0', 1), (2, 1, 1, 2, '¿ Cuál es el Árbol Nacional? ', 'Ahuehuete o árbol de tule', 'https://www.gob.mx/conafor/articulos/el-arbol-nacional?idiom=es', '0', '0', 1), (3, 1, 1, 3, '¿ Cuál es el Animal Nacional ?', 'Aguila Real', 'https://www.mexicodesconocido.com.mx/aguila-real-mexicana.html', '0', '0', 1), (4, 1, 1, 4, '¿ Cuál es la flor Nacional ? ', 'Dalia', 'https://www.gob.mx/semarnat/articulos/dalia-flor-representativa-de-mexico?idiom=es', '0', '', 1), (5, 1, 1, 5, '¿ El tema dominante del himno nacional mexicano ? ', 'Una exhortación a la guerra defensiva ', 'https://www.gob.mx/semarnat/articulos/dalia-flor-representativa-de-mexico?idiom=es', '0', '', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (6, 1, 1, 6, '¿ Cuando fue declarado oficial el himno nacional ?', 'En 1943 durante la presidencia de Manuel Ávila Camacho', 'https://www.gob.mx/inafed/articulos/conmemoramos-que-hace-76-anos-se-emitio-el-decreto-por-el-que-se-establece-la-version-oficial-de-nuestro-himno-nacional', '0', '0', 1), (7, 1, 1, 7, '¿ Cual de los símbolos patrios fue reconocido oficialmente en 1943 ?', 'El Himno Nacional', 'https://www.gob.mx/inafed/articulos/conmemoramos-que-hace-76-anos-se-emitio-el-decreto-por-el-que-se-establece-la-version-oficial-de-nuestro-himno-nacional', '0', '0', 1), (8, 1, 1, 8, '¿ El águila y la serpiente que aparecen en el escudo nacional mexicano, incluido en la franja blanca de la bandera evoca a una ?', 'Evocan una leyenda prehispánica', 'https://es.wikipedia.org/wiki/Escudo_Nacional_de_M%C3%A9xico', '0', '0', 1), (9, 1, 1, 9, '¿ Perro Originario de México o Nombre de raza de perro prehispánico de poco pelo ?', 'Xoloitzcuintle', 'https://es.wikipedia.org/wiki/Xoloitzcuintle', '0', '', 1), (10, 1, 1, 10, '¿ A qué se le llama Fonda ?', 'Es un pequeño restaurante económico', '', '0', '', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (11, 1, 1,11, '¿ En México las estaciones de taxis se conocen como ?', 'Sitios', '0', '0', '0', 1), (12, 1, 1, 12, '¿ En México una tlapalería es ?', 'Una tienda de pinturas y solventes ', '0', '0', '0', 1), (13, 1, 1, 13, '¿ El vocablo chaparro significa ?', 'Bajo de estatura', '0', '0', '0', 1) , (14, 1, 1, 14, '¿ En el habla popular de México el término marchante que significado tiene ?', 'Se aplica de igual manera al comprador y al vendedor', '0', '0', '0', 1), (15, 1, 1, 15, '¿ La palabra jarocho alude a lo que es propio de ?', 'Veracruz', 'https://www.destinoveracruz.com/2012/09/origen-palabra-jarocho.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (16, 1, 1,16, '¿ Tradiciones de México fiestas patrias ?', 'Grito de Independencia 16 de septiembre', 'https://www.mexicodesconocido.com.mx/las-fiestas-patrias-en-mexico.html', '0', '0', 1), (17, 1, 1, 17, '¿ Que significa papalote ?', 'Mariposa o Cometa ', '0', '0', '0', 1), (18, 1, 1, 18, '¿ Cual es el lema de la Universidad Autónoma  Metropolitana (UAM) ?', 'Casa abierta al tiempo', 'http://www.uam.mx/identidad/emblemaylema/index.html', '0', '0', 1) , (19, 1, 1, 19, '¿ Sistema de Acueducto de CDMX y EDOmex ?', 'Sistema Cutzamala', '0', '0', '0', 1)");
+       // BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (16, 1, 1, 16, '¿ Tradiciones de México fiestas patrias ?', ' Grito de Independencia 16 de septiembre ', 'https://www.mexicodesconocido.com.mx/las-fiestas-patrias-en-mexico.html', '0', '0', 1) , (17, 1, 1, 17, '¿ Que significa papalote ?', ' Mariposa o Cometa ', 'http://etimologias.dechile.net/?papalote', '0', '0', 1) , (18, 1, 1, 18, '¿ Cual es el lema de la Universidad Autónoma  Metropolitana (UAM) ?', 'Casa abierta al tiempo', 'http://www.uam.mx/identidad/emblemaylema/index.html', '0', '0', 1) , (19, 1, 1, 19, '¿ Sistema de Acueducto de CDMX y EDOmex ?', 'Sistema Cutzamala', 'https://es.wikipedia.org/wiki/Sistema_Cutzamala', '0', '0', 1)");
+
+    // Tabla de Preguntas -TANDA CAT. COMIDA - NIVEL MEDIO -
 
 
-    // tabla de complemento
+
+
+        // tabla de complemento -TANDA CAT. COMIDA - NIVEL BASICO -
+
         BasesDeDatos.execSQL("CREATE TABLE t_complemento(id int primary Key, co_pregunta int, complemento text, imagen text, activo int)");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1, 1,  'Premio Nobel de la Paz en 1982 Manuel Tolsa', '0', 1), (2, 1, 'Premio Nobel de la Paz en 1982 Maria Felix', '0', 1), (3, 1, 'Premio Nobel de la Paz en 1982 Octavio Paz', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (4, 2,  'Arbol Nacional', '0', 1), (5, 2, 'Sabino', '0', 1), (6, 2, 'Cedro Blanco', '0', 1) ");
@@ -52,11 +60,19 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (25, 9,  'Chihuahua', '0', 1), (26, 9, 'Labrador Retriever', '0', 1), (27, 9, 'Bulldog', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (28, 10, 'Un Lugar de comida rapida.', '0', 1), (29, 10, 'Restaurantes', '0', 1), (30, 10, 'Lugar de Comida', '0', 1) ");
 
-//        BasesDeDatos.execSQL("Create table t_estudios(id int primary Key, fecha date, co_actividad int)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (31, 11, 'Estaciones.', '0', 1), (32, 11, 'Paradas', '0', 1), (33, 11, 'Puestos', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (34, 12, 'Una Panadería.', '0', 1), (35, 12, 'Restaurantes', '0', 1), (36, 12, 'Lugar de Comida', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (37, 13, 'Alguien grande.', '0', 1), (38, 13, 'Una persona', '0', 1), (39, 13, 'Un animal', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (40, 14, 'Al Comprador.', '0', 1), (41, 14, 'Al Vendedor', '0', 1), (42, 14, 'Alguien que camina.', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (43, 15, 'Ciudad de México.', '0', 1), (44, 15, 'Al País.', '0', 1), (45, 15, 'Una región.', '0', 1) ");
+
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (46, 16, 'Dia de la Bandera (25 de febrero).', '0', 1), (47, 16, 'Batalla de Puebla (8 de mayo)', '0', 1), (48, 16, 'Día del mal del puerco.', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (49, 17, 'Una Paloma.', '0', 1), (50, 17, 'Una Comida', '0', 1), (51, 17, 'Un Aguila', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (52, 18, 'Alguien grande.', '0', 1), (53, 18, 'Una persona', '0', 1), (54, 18, 'Un animal', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (55, 19, 'Sistema Río Magdalena.', '0', 1), (56, 19, 'Sistema Tequisquiac ', '0', 1), (57, 19, 'Sistema Río Pánuco .', '0', 1) ");
 
 
-//       BasesDeDatos.execSQL("Create table t_repaso_preguntas(id int primary Key, co_repaso_arbol int, co_preguntas int, aprendida int, leida int, activo int)");
-
+        // tabla de complemento -TANDA CAT. COMIDA - NIVEL MEDIO  -
 
 
     }
