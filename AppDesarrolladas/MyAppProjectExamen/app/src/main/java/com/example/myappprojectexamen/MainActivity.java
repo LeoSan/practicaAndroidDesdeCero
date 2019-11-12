@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Metodos dinamicos
         pintarPersonaje();
-        reproducirMusicaIntro();
-        // validaPuntaje();
+      //  reproducirMusicaIntro();
+         validaPuntaje();
 
 
     }//fin de la clase onCreate
@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         String nombre = et_nombre.getText().toString();
 
         if ( nombre.length() != 0 ){
-            mp.stop();
-            mp.release();
+        //    mp.stop();
+        //    mp.release();
 
             //Todo -> Permite crear una variable tipo seccion y abre otro activity
             Intent intent = new Intent(this, Main2Activity_nivel1.class);
@@ -117,9 +117,9 @@ public class MainActivity extends AppCompatActivity {
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "BasesDeDatos", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
-        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje WHERE score = (SELECT MAX(score) FROM t_puntaje )", null );
-        consultaScore.close();
-        BasesDeDatos.close();
+        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje as a WHERE a.score IN (SELECT MAX(score) FROM t_puntaje )", null );
+       // consultaScore.close();
+        //BasesDeDatos.close();
         return consultaScore;
     }
 

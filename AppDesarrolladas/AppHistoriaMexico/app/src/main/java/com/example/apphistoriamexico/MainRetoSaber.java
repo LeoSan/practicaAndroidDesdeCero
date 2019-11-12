@@ -1,6 +1,7 @@
 package com.example.apphistoriamexico;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 //librerias BD
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +12,7 @@ import android.database.Cursor;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +28,7 @@ public class MainRetoSaber extends AppCompatActivity {
     TextView labelNivel, labelCategoria, labelPregunta, idRespValidar;
     Cursor categoriaId, nivelesId;
     Button btnOpcion1, btnOpcion2, btnOpcion3, btnOpcion4, btnCalificar, btnContinuar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +95,7 @@ public class MainRetoSaber extends AppCompatActivity {
             //Activa la intent y envia el objeto con la variable.
             startActivity(interfaz);
             UltimaPregunta = true;
+            finish();
 
         }else if ( Integer.parseInt(indicePreg) == 0){
             // Inserto los datos de estudio
@@ -358,14 +362,17 @@ public class MainRetoSaber extends AppCompatActivity {
     ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
     ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
 
-    //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
-    public void vistaApoyo (View view){
-        Intent interfaz = new Intent(this,MainApoyo.class);
-        Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
-        //Metodo que me permite crear variable
-        enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
-        startActivity(interfaz);
-        finish();
+
+    private void reproducirAudioBuena() {
+        MediaPlayer mp_great;
+        mp_great = MediaPlayer.create(this, R.raw.buena);
+        mp_great.start();
+    }
+
+    private void reproducirAudioMala() {
+        MediaPlayer  mp_bad;
+        mp_bad = MediaPlayer.create(this, R.raw.bad);
+        mp_bad.start();
     }
 
 
@@ -389,8 +396,18 @@ public class MainRetoSaber extends AppCompatActivity {
 
     //Redirect-> Redirecciona a la interfaz Principal
     public void vistaInterfazNiveles (View view){
-        Intent interfaz = new Intent(this,MainNivelesReto.class);
+        Intent interfaz = new Intent(this,MainActivity.class);
         //Intancio el Objeto Intent que necesito enviar la información
+        Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
+        //Metodo que me permite crear variable
+        enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
+        startActivity(interfaz);
+        finish();
+    }
+
+    //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
+    public void vistaApoyo (View view){
+        Intent interfaz = new Intent(this,MainApoyo.class);
         Intent enviar = new Intent( view.getContext(), MainNivelesReto.class );
         //Metodo que me permite crear variable
         enviar.putExtra("IdCategoria", getIntent().getStringExtra("IdCategoria")  );
@@ -481,8 +498,9 @@ public class MainRetoSaber extends AppCompatActivity {
             Toast.makeText(this, "Respuesta Correcta, Clic para Continuar", Toast.LENGTH_SHORT).show();
             // Transformo el boton si la respuesta es correcta
             btnCalificar.setText(" ");
-            Drawable d = getResources().getDrawable(R.drawable.respcorrecto);
-            btnCalificar.setBackgroundDrawable(d);
+            btnCalificar.setBackground( ResourcesCompat.getDrawable(getResources(), R.drawable.respcorrecto, null) );
+
+
             // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
             LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
             paramImageViewBoton.setMargins(0, 50, 0, 0 );
@@ -494,15 +512,20 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusable(true);
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
+            //Audio
+            reproducirAudioBuena();
 
             insertEstadisticas(IdResp, 1, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
+            System.out.println( " -------------  RESPUESTA CORRECTA  ------------------"  );
+            System.out.println();
+
 
         }else {
             Toast.makeText(this, "Respuesta InCorrecta, Clic para Continuar", Toast.LENGTH_SHORT).show();
             // Transformo el boton si la respuesta es Incorrecta
             btnCalificar.setText(" ");
-            Drawable d = getResources().getDrawable(R.drawable.respincorrecta);
-            btnCalificar.setBackgroundDrawable(d);
+           //Todo -> Es la forma de colocar fondo a un boton
+            btnCalificar.setBackground( ResourcesCompat.getDrawable(getResources(), R.drawable.respincorrecta, null) );
             // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
             LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
             paramImageViewBoton.setMargins(0, 50, 0, 0 );
@@ -514,6 +537,8 @@ public class MainRetoSaber extends AppCompatActivity {
             btnContinuar.setFocusableInTouchMode(true);///add this line
             btnContinuar.requestFocus();
 
+            //Audio
+            reproducirAudioMala();
             insertEstadisticas(IdResp, 0, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
 
             System.out.println( " -------------  RESPUESTA ERRADA  ------------------"  );

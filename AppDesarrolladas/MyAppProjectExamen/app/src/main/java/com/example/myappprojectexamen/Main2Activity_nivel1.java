@@ -2,7 +2,10 @@ package com.example.myappprojectexamen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +26,7 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
     //Variables de ambito global
     int score, numAletorio_uno, numAletorio_dos, resultado, vidas = 3;
     String nombre_jugador, string_score, string_vidas;
-    String numero [] = {"cero", "uno", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
+    String numero [] = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
 
 
     @Override
@@ -41,40 +44,56 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
         tv_nombre = (TextView)findViewById(R.id.inpNombre);
         tv_score  = (TextView)findViewById(R.id.inpScore);
         iv_vidas  = (ImageView)findViewById(R.id.img_vidas);
-        iv_Auno  = (ImageView)findViewById(R.id.imagNum);
-        iv_Ados  = (ImageView)findViewById(R.id.imagNum2);
+        iv_Auno   = (ImageView)findViewById(R.id.imagNum);
+        iv_Ados   = (ImageView)findViewById(R.id.imagNum2);
         et_respuesta  = (EditText)findViewById(R.id.inpResp);
 
         //Metodos Dinamicos
         setNombreJugador();
-        reproducirAudio();
+      //  reproducirAudio();
         numAleatorio();
 
     }//Fin del onCreate
 
+
+    //Todo-> Usar boton regresar (Back)
+    @Override
+    public  void onBackPressed(){
+        System.out.println("---------------- No debe hacer nada  -------------------------------");
+    }
+
     public void comprobar(View view){
 
        String string_resp = et_respuesta.getText().toString();
+
         if (  string_resp.length() == 0  ){
+
             Toast.makeText(this, "Debes colocar una respuesta " + nombre_jugador, Toast.LENGTH_SHORT ).show();
+
         }else{
 
-            System.out.println("--------------respuesta ---"+string_resp);
-            System.out.println("--------------resultado ---"+resultado);
+            System.out.println("--------------respuesta ---"+ string_resp);
+            System.out.println("--------------resultado ---"+ resultado);
 
-            Integer respuesta = Integer.parseInt(string_resp);
-            if ( resultado == respuesta ){
-                reproducirAudioBuena();
-                score ++;
-                tv_score.setText( "Score : " + score );
-                et_respuesta.setText(" ");
+            if (  string_resp.equals( String.valueOf(resultado) ) ){
+
+                 System.out.println("--- Entro Bien  ---");
+                  reproducirAudioBuena();
+                  score ++;
+                  tv_score.setText( "Score : " + score );
+                  et_respuesta.setText("");
+                  getScore();
+                  numAleatorio();
 
             }else{
-                reproducirAudioMala();
-                vidas --;
+
+                 System.out.println("--- Entro Mal  ---");
+                 reproducirAudioMala();
+                 vidas --;
+                 getScore();
                 //Logica cuando te equivocas
-                validaVidas(vidas);
-                numAleatorio();
+                 validaVidas(vidas);
+                 numAleatorio();
 
             }
         }
@@ -101,8 +120,8 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
-                mp.stop();
-                mp.release();
+               // mp.stop();
+                //mp.release();
                 break;
         }
 
@@ -121,7 +140,7 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
             resultado = numAletorio_uno + numAletorio_dos;
 
             if (resultado <= 10 ){
-                for (int i =0;  i < numero.length; i++){
+                for (int i = 0;  i < numero.length; i++){
                     int id = getResources().getIdentifier( numero[i], "drawable", getPackageName() );
 
                     if (numAletorio_uno  == i){
@@ -148,8 +167,8 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
             intent.putExtra("nombreJugador", nombre_jugador);
             startActivity(intent);
             finish();
-            mp.stop();
-            mp.release();
+           // mp.stop();
+           // mp.release();
 
         }
 
@@ -177,6 +196,41 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
 
     }
 
+
+    //Metodo  Tipo Cursor ->  Devuelve un cursos
+    public void getScore(){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "BasesDeDatos", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje as a WHERE a.score = (SELECT MAX(score) FROM t_puntaje  ) ", null );
+
+        if (consultaScore.moveToFirst()){
+            String temp_nombre = consultaScore.getString(0);
+            String temp_score  = consultaScore.getString(1);
+
+            int bestScore = Integer.parseInt(temp_score);
+
+            if (score > bestScore){
+                ContentValues modificaScore = new ContentValues();
+                modificaScore.put("nomJugador", nombre_jugador );
+                modificaScore.put("score", score );
+                BasesDeDatos.update("t_puntaje", modificaScore, "score =" + bestScore, null);
+
+            }
+
+        }else{
+            ContentValues insertScore = new ContentValues();
+            insertScore.put("nomJugador", nombre_jugador );
+            insertScore.put("score", score );
+            BasesDeDatos.insert("t_puntaje", null, insertScore);
+
+
+        }
+
+        consultaScore.close();
+        BasesDeDatos.close();
+    }
 
 
 }
