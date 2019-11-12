@@ -3,6 +3,8 @@ package com.example.myappprojectexamen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //Metodos dinamicos
         pintarPersonaje();
         reproducirMusicaIntro();
+        // validaPuntaje();
 
 
     }//fin de la clase onCreate
@@ -71,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
             imm.showSoftInput(et_nombre, InputMethodManager.SHOW_IMPLICIT);
 
         }
-
-
-
     }
 
 
@@ -82,10 +82,7 @@ public class MainActivity extends AppCompatActivity {
         mp = MediaPlayer.create(this, R.raw.alphabet_song );
         mp.start();
         mp.setLooping(true);
-
-
     }
-
 
     public void pintarPersonaje(){
 
@@ -114,5 +111,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    //Metodo  Tipo Cursor ->  Devuelve un cursos con los niveles de aprendizaje
+    public Cursor getScore(){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "BasesDeDatos", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje WHERE score = (SELECT MAX(score) FROM t_puntaje )", null );
+        consultaScore.close();
+        BasesDeDatos.close();
+        return consultaScore;
+    }
+
+    public void validaPuntaje(){
+        String nomJugador = "";
+        String score = "";
+
+        Cursor cursorPuntaje = getScore();
+
+        if (cursorPuntaje.moveToFirst()){
+            nomJugador =  cursorPuntaje.getString(0);
+            score =  cursorPuntaje.getString(1);
+            tv_bestScore.setText("El Maximo Puntaje es:" + score +", Es de :  " + nomJugador);
+
+        }else{
+            tv_bestScore.setText(" Juguemos!! ");
+        }
+    }
+
+
 
 }//Fin de la clase

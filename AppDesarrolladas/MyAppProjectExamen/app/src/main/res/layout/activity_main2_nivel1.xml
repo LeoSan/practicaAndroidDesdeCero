@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaperprincipal"
     tools:context=".Main2Activity_nivel1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/inpNombre"
+        style="@style/textViewNombre"
+        android:text="@string/textViemJugador" />
+
+    <TextView
+        android:id="@+id/inpScore"
+        style="@style/textViewScore"
+        android:text="@string/textViemScore" />
+
+    <TextView
+        android:id="@+id/inpVida"
+        style="@style/textViewVidas"
+        android:text="@string/textViemVidas" />
+
+    <ImageView
+        android:id="@+id/img_vidas"
+        style="@style/imagViewVidas"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/tresvidas" />
+
+    <ImageView
+        android:id="@+id/imagNum"
+        style="@style/imagView001"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/imagSigno"
+        style="@style/imagViewSigno"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/adicion" />
+
+    <ImageView
+        android:id="@+id/imagNum2"
+        style="@style/imagView002"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <EditText
+        android:id="@+id/inpResp"
+        style="@style/inpNumeroResp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnEnviarResp"
+        style="@style/ButtonEnviarResp"
+        android:onClick="comprobar" />
+</RelativeLayout>

@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">MyAppProjectExamen</string>
+    <!-- Interfaz 1-->
     <string name="app_vacio"></string>
     <string name="inoNombre">¿ Como te llamas?</string>
     <string name="btnJugar">Vamos a jugar </string>
+
+    <!-- Interfaz 2-->
+    <string name="imView">valida </string>
+    <string name="textViemJugador">Jugador: </string>
+    <string name="textViemScore">Score: </string>
+    <string name="textViemVidas">Vidas: </string>
+    <string name="inpRespNivel_1">Respuesta </string>
+    <string name="btnNombre">Comprobar </string>
+
+
 </resources>

@@ -38,7 +38,87 @@
         <item name="android:background">@drawable/fondoet</item>
     </style>
 
+    <!-- Estilos Interfaz Nivel 1 -->
 
+    <style name="textViewNombre">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/fondoet</item>
+    </style>
+
+    <style name="textViewScore">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/fondoet</item>
+    </style>
+    <style name="textViewVidas">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">90dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/fondoet</item>
+    </style>
+
+    <style name="imagViewVidas">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">80dp</item>
+        <item name="android:layout_marginTop">90dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/fondoet</item>
+    </style>
+
+    <style name="imagView001">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginStart">80dp</item>
+        <item name="android:layout_marginTop">140dp</item>
+    </style>
+
+    <style name="imagViewSigno">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginStart">150dp</item>
+        <item name="android:layout_marginTop">140dp</item>
+    </style>
+
+    <style name="imagView002">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginStart">220dp</item>
+        <item name="android:layout_marginTop">140dp</item>
+    </style>
+
+    <style name="inpNumeroResp">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">270dp</item>
+        <item name="android:hint">@string/inpRespNivel_1</item>
+    </style>
+
+    <style name="ButtonEnviarResp">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">200dp</item>
+        <item name="android:layout_marginTop">270dp</item>
+        <item name="android:background">@drawable/fondoboton</item>
+        <item name="android:text">@string/btnNombre</item>
+
+    </style>
 
 
 </resources>
