@@ -73,5 +73,9 @@
     <string name="labelTituloNotificar"> Activar la notificación movil. </string>
     <string name="labelTituloRecordatorio"> Configurar recordatorio. </string>
 
+    <string name="tabEstaditicas"> Estadisticas </string>
+    <string name="tabConfiguracion"> Configuración </string>
+    <string name="tabOtros"> Extras </string>
+
 
 </resources>

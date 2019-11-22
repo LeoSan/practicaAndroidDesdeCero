@@ -20,7 +20,7 @@ public class MainCuestionarioResul extends AppCompatActivity {
     ProgressBar idBarraCuestionario;
     TextView labelCategoria, inpTotalBuenas, inpTotalVistas, inpTotalMalas, inpMensaje;
     Cursor categoriaId, nivelesId;
-    String totalMalas, totalBuenas, TotalEstudiadas;
+    Integer totalMalas, totalBuenas, TotalEstudiadas, comparaBuenas, comparaMalas;
     Button btnBuenas, btnVistas, btnMalas, btnNivel, btnEstatus;
 
     @Override
@@ -53,25 +53,30 @@ public class MainCuestionarioResul extends AppCompatActivity {
         String IdNivel     = getIntent().getStringExtra("IdNivel");
 
         //Detalles dinamicos.
-        setNomCategoria ( IdCategoria );
+        setNomCategoria ( IdCategoria, IdNivel );
         setNivel (IdNivel);
 
         totalBuenas     = consultarTotalPreguntasEstaditicas(IdNivel, IdCategoria, 1);
         TotalEstudiadas = consultarTotalNivelEstaditicas(IdNivel, IdCategoria, 3);
         totalMalas      = consultarTotalPreguntasEstaditicas(IdNivel, IdCategoria, 0);
 
-        setMsjEstatus(totalBuenas, totalMalas );
-        setBarra(IdCategoria, IdNivel, totalBuenas, totalMalas );
+
+
+        comparaBuenas = consultarTotalEstdisticas(IdNivel, IdCategoria, 1);
+        comparaMalas = consultarTotalEstdisticas(IdNivel, IdCategoria, 0);
+
+        setMsjEstatus(  comparaBuenas  ,  comparaMalas );
+        setBarra(IdCategoria, IdNivel, String.valueOf(totalBuenas)  ,  String.valueOf(totalMalas) );
 
 
         //Muestra estadisticas
-        btnBuenas.setText( totalBuenas );
-        btnVistas.setText( TotalEstudiadas );
-        btnMalas.setText( totalMalas );
+        btnBuenas.setText(  String.valueOf(totalBuenas) );
+        btnVistas.setText(  String.valueOf(TotalEstudiadas) );
+        btnMalas.setText(  String.valueOf(totalMalas) );
 
-        inpTotalBuenas.setText(totalBuenas);
-        inpTotalVistas.setText(TotalEstudiadas);
-        inpTotalMalas.setText(totalMalas);
+        inpTotalBuenas.setText( String.valueOf(totalBuenas));
+        inpTotalVistas.setText( String.valueOf(TotalEstudiadas));
+        inpTotalMalas.setText( String.valueOf(totalMalas));
 
     }
 
@@ -119,10 +124,13 @@ public class MainCuestionarioResul extends AppCompatActivity {
     }
 
     // Establecer texto en Categoria
-    public void setNomCategoria (String IdCategoria){
+    public void setNomCategoria (String IdCategoria, String idNivel){
         categoriaId = getCategoriaId( IdCategoria );
+
+        String contTotalPreg = getPreguntasTotal( IdCategoria, idNivel );
+
         if ( categoriaId.moveToFirst() ){//Muestra los valores encontrados en la consulta
-            labelCategoria.setText( categoriaId.getString(1) );
+            labelCategoria.setText( categoriaId.getString(1) + " - Total Pre:  " + contTotalPreg );
             String  nombreLogo =  categoriaId.getString(2);
             Resources res = getApplicationContext().getResources();
             int resId = res.getIdentifier(nombreLogo, "drawable", "com.example.apphistoriamexico");
@@ -143,8 +151,13 @@ public class MainCuestionarioResul extends AppCompatActivity {
         }
     }
 
-    private void setMsjEstatus(String totalBuenas, String totalMalas) {
-        if ( Integer.parseInt(totalBuenas) > Integer.parseInt(totalMalas) ){
+    private void setMsjEstatus(Integer totalBuenas, Integer totalMalas) {
+
+        System.out.println("------ Comparacion ------  ");
+        System.out.println("------ Buenas  ------  " + totalBuenas );
+        System.out.println("------ Mala  ------  " +  totalMalas);
+
+        if ( totalBuenas > totalMalas ){
             inpMensaje.setText(R.string.labelMsjResulBien);
         }else{
             inpMensaje.setText(R.string.labelMsjResulMal);
@@ -181,18 +194,18 @@ public class MainCuestionarioResul extends AppCompatActivity {
     }
 
     //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
-    public String consultarTotalPreguntasEstaditicas(String idNivel, String idCategoria, Integer tipoEstadisticas){
+    public Integer consultarTotalPreguntasEstaditicas(String idNivel, String idCategoria, Integer tipoEstadisticas){
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         //Consulta El valor t_estudio
-        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(id) FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_nivel = "+idNivel+" AND co_categoria = "+idCategoria, null);
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(co_pregunta) FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_nivel = "+idNivel+" AND co_categoria = "+idCategoria+" GROUP BY co_pregunta ", null);
 
-        String totalIdEstadistica = "0";
+        Integer totalIdEstadistica = 0;
 
         if (consultaIdTotal.moveToFirst()){
-            totalIdEstadistica =  consultaIdTotal.getString(0);
+            totalIdEstadistica =  consultaIdTotal.getCount();
         }
 
         consultaIdTotal.close();
@@ -202,18 +215,42 @@ public class MainCuestionarioResul extends AppCompatActivity {
 
     }
 
-    private String consultarTotalNivelEstaditicas(String idNivel, String idCategoria, int tipoEstadisticas) {
+    //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
+    public Integer consultarTotalEstdisticas(String idNivel, String idCategoria, Integer tipoEstadisticas){
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
         //Consulta El valor t_estudio
-        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(id) FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_nivel = "+idNivel+" AND co_categoria = "+idCategoria+" GROUP BY co_estudios ", null);
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(id) total FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_nivel = "+idNivel+" AND co_categoria = "+idCategoria, null);
 
-        String totalIdEstadistica = "0";
+        String idPregunta = "0";
 
         if (consultaIdTotal.moveToFirst()){
-            totalIdEstadistica =  consultaIdTotal.getString(0);
+            idPregunta =  consultaIdTotal.getString(0);
+        }
+
+
+        consultaIdTotal.close();
+        BasesDeDatos.close();
+
+        return Integer.parseInt(idPregunta);
+
+    }
+
+
+    private Integer consultarTotalNivelEstaditicas(String idNivel, String idCategoria, int tipoEstadisticas) {
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        //Consulta El valor t_estudio
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(co_pregunta) FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_nivel = "+idNivel+" AND co_categoria = "+idCategoria+" GROUP BY co_pregunta ", null);
+
+        Integer totalIdEstadistica = 0;
+
+        if (consultaIdTotal.moveToFirst()){
+            totalIdEstadistica =  consultaIdTotal.getCount();
         }
 
         consultaIdTotal.close();

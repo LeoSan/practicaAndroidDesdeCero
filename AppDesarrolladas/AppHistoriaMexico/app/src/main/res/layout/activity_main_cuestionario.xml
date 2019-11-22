@@ -139,6 +139,7 @@
                 style="@style/btnPregRetoSaber_aprobada"
                 android:layout_width="338dp"
                 android:layout_height="55dp"
+                android:layout_marginBottom="80dp"
                 android:onClick="btnContinuarInterfaz"
                 android:text="@string/labelBtns_continuar" />
 

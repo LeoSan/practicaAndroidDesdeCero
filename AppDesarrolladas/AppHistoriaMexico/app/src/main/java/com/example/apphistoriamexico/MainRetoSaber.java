@@ -286,7 +286,7 @@ public class MainRetoSaber extends AppCompatActivity {
 
                 int numero = (int)( Math.random()*4+1 );
 
-                //todo aqui las preguntas complementarias leo
+                //todo aqui las preguntas complementarias Mosca aqui idea algo crazy
                sComplemento = getComplementoPreguntas( Integer.toString( iPregunta[Integer.parseInt( IndicePreg )]  ) );
 
                 if ( numero  == 1 ){
@@ -294,11 +294,11 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion1.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
                      btnOpcion2.setText(  sComplemento[0] );
-                     btnOpcion2.setId( 0 );
+                     btnOpcion2.setId(  - iPregunta[Integer.parseInt( IndicePreg )]  );
                      btnOpcion3.setText(  sComplemento[1] );
-                     btnOpcion3.setId( 0 );
+                     btnOpcion3.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                      btnOpcion4.setText(  sComplemento[2] );
-                     btnOpcion4.setId( 0 );
+                     btnOpcion4.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
 
                 }
 
@@ -307,11 +307,11 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion2.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
                    btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
+                    btnOpcion1.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion3.setText(  sComplemento[1] );
-                    btnOpcion3.setId( 0 );
+                    btnOpcion3.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion4.setText(  sComplemento[2] );
-                    btnOpcion4.setId( 0 );
+                    btnOpcion4.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
 
                 }
 
@@ -320,11 +320,11 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion3.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
                     btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
+                    btnOpcion1.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion2.setText(  sComplemento[1] );
-                    btnOpcion2.setId( 0 );
+                    btnOpcion2.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion4.setText(  sComplemento[2] );
-                    btnOpcion4.setId( 0 );
+                    btnOpcion4.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                 }
 
                 if ( numero  == 4 ){
@@ -332,11 +332,11 @@ public class MainRetoSaber extends AppCompatActivity {
                     btnOpcion4.setId( iPregunta[Integer.parseInt( IndicePreg )] );
 
                     btnOpcion1.setText(  sComplemento[0] );
-                    btnOpcion1.setId( 0 );
+                    btnOpcion1.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion2.setText(  sComplemento[1] );
-                    btnOpcion2.setId( 0 );
+                    btnOpcion2.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
                     btnOpcion3.setText(  sComplemento[2] );
-                    btnOpcion3.setId( 0 );
+                    btnOpcion3.setId( - iPregunta[Integer.parseInt( IndicePreg )] );
 
                 }
 
@@ -362,17 +362,42 @@ public class MainRetoSaber extends AppCompatActivity {
     ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
     ////////////////////////// ///////////////////////////////// Elementos Dinámicos  ////////////////////////////////////////////////////////////////////////
 
-
     private void reproducirAudioBuena() {
         MediaPlayer mp_great;
         mp_great = MediaPlayer.create(this, R.raw.buena);
-        mp_great.start();
+        mp_great.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
+
+        mp_great.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+            }
+        });
+
     }
 
     private void reproducirAudioMala() {
         MediaPlayer  mp_bad;
         mp_bad = MediaPlayer.create(this, R.raw.bad);
-        mp_bad.start();
+
+        mp_bad.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
+
+        mp_bad.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+            }
+        });
     }
 
 
@@ -539,8 +564,10 @@ public class MainRetoSaber extends AppCompatActivity {
 
             //Audio
             reproducirAudioMala();
-            insertEstadisticas(IdResp, 0, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
 
+            Integer idRespPos;
+            idRespPos = Integer.parseInt( IdResp )*-1; //todo Solución algo crazy para validar las buenas y malas hay que realizar mas pruebas
+            insertEstadisticas(String.valueOf(idRespPos) , 0, getIntent().getStringExtra("IdNivel"), getIntent().getStringExtra("IdCategoria"));
             System.out.println( " -------------  RESPUESTA ERRADA  ------------------"  );
             System.out.println();
 

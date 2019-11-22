@@ -77,6 +77,7 @@
         android:layout_width="353dp"
         android:layout_height="469dp"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
@@ -85,24 +86,24 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-                android:id="@+id/idLayoutCuestionario"
+            android:id="@+id/idLayoutCuestionario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelCategoria"
+                style="@style/labelTituloInterfaces"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="#FFFF8D" />
 
-                <TextView
-                    android:id="@+id/labelCategoria"
-                    style="@style/labelTituloInterfaces"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFF8D" />
-
-                <ProgressBar
-                    android:id="@+id/idBarraCuestionario"
-                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorAprobada" />
+            <ProgressBar
+                android:id="@+id/idBarraCuestionario"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAprobada" />
 
             <TextView
                 android:id="@+id/labelNivel"
@@ -208,6 +209,7 @@
                 style="@style/btnPregRetoSaber_calificar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
                 android:onClick="vistaPrincipal"
                 android:text="@string/labelBtns_continuar" />
 
