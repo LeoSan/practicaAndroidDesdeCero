@@ -63,7 +63,7 @@
     <string name="labelTituloCuestionario"> Cuestionario </string>
     <string name="labelNivel"> Estadisticas de aciertos en este nivel.  </string>
     <string name="labelResulBuenas"> Aprobada </string>
-    <string name="labelResulVistas"> Estudiada </string>
+    <string name="labelResulVistas"> Preguntas </string>
     <string name="labelResulMalas">  Reprobada </string>
     <string name="labelMsjResulMal">  !!Animo!! tienes un total de aciertos muy bajo, podemos seguir estudiando y lo lograras. </string>
     <string name="labelMsjResulBien">  En hora buena, ya te sabes este nivel muy bien, vamos a probar con el siguiente!</string>

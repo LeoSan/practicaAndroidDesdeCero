@@ -455,7 +455,7 @@ public class MainRetoSaber extends AppCompatActivity {
     //Metodo Clic Evaluar -> Todo Evaluar Respuesta Reto al saber
     public void evaluarRespuesta_1(View view){
         int valdiar = btnOpcion1.getId();
-        btnOpcion1.setBackgroundColor(Color.rgb(70, 218, 100));
+        btnOpcion1.setBackgroundColor(Color.rgb(246, 165, 241));
         idRespValidar.setText( Integer.toString( valdiar ) );
 
         // opciones
@@ -472,7 +472,7 @@ public class MainRetoSaber extends AppCompatActivity {
     public void evaluarRespuesta_2(View view){
 
         int valdiar = btnOpcion2.getId();
-        btnOpcion2.setBackgroundColor(Color.rgb(70, 218, 100));
+        btnOpcion2.setBackgroundColor(Color.rgb(246, 165, 241));
         idRespValidar.setText( Integer.toString( valdiar ) );
 
         // opciones
@@ -487,7 +487,7 @@ public class MainRetoSaber extends AppCompatActivity {
     public void evaluarRespuesta_3(View view){
 
         int valdiar = btnOpcion3.getId();
-        btnOpcion3.setBackgroundColor(Color.rgb(70, 218, 100));
+        btnOpcion3.setBackgroundColor(Color.rgb(246, 165, 241));
         idRespValidar.setText( Integer.toString( valdiar ) );
 
         // opciones
@@ -503,7 +503,7 @@ public class MainRetoSaber extends AppCompatActivity {
     public void evaluarRespuesta_4(View view){
 
         int valdiar = btnOpcion4.getId();
-        btnOpcion4.setBackgroundColor(Color.rgb(70, 218, 100));
+        btnOpcion4.setBackgroundColor(Color.rgb(246, 165, 241));
         idRespValidar.setText( Integer.toString( valdiar ) );
 
         // opciones

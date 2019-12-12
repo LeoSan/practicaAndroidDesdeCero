@@ -3,10 +3,17 @@ package com.example.apphistoriamexico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainEstadisticaConfiguracion extends AppCompatActivity {
+
+    TextView inpAprobadas, inpVistas, inpReprobadas;
+    Integer toAprobadas, toReprobadas;
+    String toVistas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +24,21 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        /*Enlace con la interfaz*/
+        inpAprobadas  = (TextView)findViewById(R.id.inpTotalBasicBuenas);
+        inpVistas     = (TextView)findViewById(R.id.inpTotalBasicVistas);
+        inpReprobadas = (TextView)findViewById(R.id.inpTotalBasicMalas);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("1", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("1", 0);
+        toVistas     = getPreguntasTotal("1");
+
+        inpAprobadas.setText( String.valueOf(toAprobadas) );
+        inpReprobadas.setText( String.valueOf(toReprobadas) );
+        inpVistas.setText( toVistas );
+
     }
+
 
     @Override
     public  void onBackPressed(){
@@ -46,5 +67,53 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         startActivity(interfaz);
         finish();
     }
+
+
+    // --------------------------------------------------------- CONSULTAS BASES DE DATOS  -------------------------------------------------------
+
+
+    //Metodo  String ->  Devuelve la ultima id registrada en la tabla t:estudios
+    public Integer consultarTotalPreguntasEstaditicas( String idCategoria, Integer tipoEstadisticas){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        //Consulta El valor t_estudio
+        Cursor consultaIdTotal = BasesDeDatos.rawQuery("SELECT count(co_pregunta) FROM t_estadisticas WHERE validacion = "+tipoEstadisticas+" AND co_categoria = "+idCategoria+" GROUP BY co_pregunta ", null);
+
+        Integer totalIdEstadistica = 0;
+
+        if (consultaIdTotal.moveToFirst()){
+            totalIdEstadistica =  consultaIdTotal.getCount();
+        }
+
+        consultaIdTotal.close();
+        BasesDeDatos.close();
+
+        return totalIdEstadistica;
+
+    }
+
+
+    //Metodo Tipo String -> Me devulve el total de preguntas en un nivel
+    public String getPreguntasTotal(String idCategoria ){
+        //Creamos el conector de bases de datos
+        AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "administracion", null, 1 );
+        // Abre la base de datos en modo lectura y escritura
+        SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
+        Cursor consultaIdPreguntas = BasesDeDatos.rawQuery("SELECT count(id) total FROM t_preguntas WHERE co_categoria = "+idCategoria, null);
+
+        String idPregunta = "0";
+
+        if (consultaIdPreguntas.moveToFirst()){
+            idPregunta =  consultaIdPreguntas.getString(0);
+        }
+
+        consultaIdPreguntas.close();
+        BasesDeDatos.close();
+        return idPregunta;
+
+    }
+
 
 }

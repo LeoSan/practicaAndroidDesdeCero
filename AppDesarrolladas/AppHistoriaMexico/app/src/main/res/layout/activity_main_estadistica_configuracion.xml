@@ -12,12 +12,8 @@
         style="@style/btnMenu"
         android:layout_width="229dp"
         android:layout_height="69dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -52,18 +48,38 @@
             android:text="@string/btnDescrip" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/idContScrollEstadisticas"
-        android:layout_width="385dp"
-        android:layout_height="268dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
+    <LinearLayout
+        android:id="@+id/layoutNivelDesc"
+        android:layout_width="343dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contBtnsOpcion">
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion">
+
+        <TextView
+            android:id="@+id/labelNivel"
+            style="@style/labelTituloInterfaces"
+            android:layout_width="320dp"
+            android:layout_height="53dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFF8D"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/idContScrollEstadisticas"
+        android:layout_width="350dp"
+        android:layout_height="478dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNivelDesc">
 
         <LinearLayout
             android:id="@+id/idLayoutEstadistica"
@@ -338,91 +354,6 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/btnExperto"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:contentDescription="@string/btnDescrip"
-                        app:srcCompat="@drawable/experto" />
-
-                    <TableLayout
-                        android:id="@+id/idTableDatosExper"
-                        android:layout_width="240dp"
-                        android:layout_height="64dp"
-                        android:layout_marginTop="20dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/labelExperBuenas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="15dp"
-                                android:text="@string/labelResulBuenas"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/labelExperVistas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="15dp"
-                                android:text="@string/labelResulVistas"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/labelExperMalas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/labelResulMalas"
-                                android:textSize="14sp" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/inpTotalExperBuenas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="15dp"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"
-                                android:text="0"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/inpTotalExperVistas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="15dp"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"
-                                android:text="0"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/inpTotalExperMalas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"
-                                android:text="0"
-                                android:textSize="18sp" />
-                        </TableRow>
-
-                    </TableLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
                         android:id="@+id/btnLeyenda"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -503,69 +434,6 @@
 
                 </TableRow>
             </TableLayout>
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/scrollDetalleConfiguracion"
-        android:layout_width="343dp"
-        android:layout_height="184dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="33dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idContScrollEstadisticas">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:id="@+id/checkCorreo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btnDescrip" />
-
-                <TextView
-                    android:id="@+id/inpNotificarCorreo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/labelTituloCorreo" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:id="@+id/checkNotificar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btnDescrip" />
-
-                <TextView
-                    android:id="@+id/inpNotificar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/labelTituloNotificar" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/inpTimeRecordatorio"
-                    android:layout_width="191dp"
-                    android:layout_height="40dp"
-                    android:text="@string/labelTituloRecordatorio" />
-            </TableRow>
         </LinearLayout>
     </ScrollView>
 
