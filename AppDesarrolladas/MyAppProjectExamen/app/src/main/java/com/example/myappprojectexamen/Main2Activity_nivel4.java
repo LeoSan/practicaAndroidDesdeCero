@@ -33,7 +33,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
         setContentView(R.layout.activity_main2_nivel4);
 
 
-        Toast.makeText(this, "Nivel 3,  Restas Basicas ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Nivel 4,  Sumas y Restas  ", Toast.LENGTH_SHORT).show();
 
         //Relacion dinamica
         tv_nombre = (TextView)findViewById(R.id.inpNombre);
@@ -124,7 +124,13 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             numAletorio_uno = (int) (Math.random() * 10);
             numAletorio_dos = (int) (Math.random() * 10);
 
-            resultado = numAletorio_uno - numAletorio_dos;
+            if (numAletorio_uno >= 0 && numAletorio_dos <= 4 ){
+                resultado = numAletorio_uno + numAletorio_dos;
+            }else{
+                resultado = numAletorio_uno - numAletorio_dos;
+            }
+
+
 
             if (resultado >=  0 ){
                 for (int i = 0;  i < numero.length; i++) {
@@ -145,7 +151,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
 
         }else{
 
-            Intent intent = new Intent(this, Main2Activity_nivel4.class);
+            Intent intent = new Intent(this, Main2Activity_nivel5.class);
 
             string_score = String.valueOf(score);
             string_vidas = String.valueOf(vidas);
