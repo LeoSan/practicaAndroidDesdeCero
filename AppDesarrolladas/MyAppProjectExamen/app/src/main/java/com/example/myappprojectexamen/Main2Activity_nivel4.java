@@ -14,10 +14,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Integer.parseInt;
+
 public class Main2Activity_nivel4 extends AppCompatActivity {
 
     private TextView tv_nombre, tv_score;
-    private ImageView iv_Auno, iv_Ados, iv_vidas;
+    private ImageView iv_Auno, iv_Ados, iv_vidas, imagSigno;
     private EditText et_respuesta;
     private MediaPlayer mp, mp_great, mp_bad;
 
@@ -32,9 +34,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_nivel4);
 
-
         Toast.makeText(this, "Nivel 4,  Sumas y Restas  ", Toast.LENGTH_SHORT).show();
-
         //Relacion dinamica
         tv_nombre = (TextView)findViewById(R.id.inpNombre);
         tv_score  = (TextView)findViewById(R.id.inpScore);
@@ -42,6 +42,13 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
         iv_Auno   = (ImageView)findViewById(R.id.imagNum);
         iv_Ados   = (ImageView)findViewById(R.id.imagNum2);
         et_respuesta  = (EditText)findViewById(R.id.inpResp);
+
+        imagSigno   = (ImageView)findViewById(R.id.imagNum);
+
+
+
+
+        setNombreJugador();
 
     }//fin del onCreate
     //Todo-> Usar boton regresar (Back)
@@ -63,7 +70,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             System.out.println("--------------respuesta ---"+ string_resp);
             System.out.println("--------------resultado ---"+ resultado);
 
-            if (  string_resp.equals( String.valueOf(resultado) ) ){
+            if ( parseInt(string_resp) == resultado ){
 
                 System.out.println("--- TE Entro Bien  ---");
                 reproducirAudioBuena();
@@ -124,12 +131,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             numAletorio_uno = (int) (Math.random() * 10);
             numAletorio_dos = (int) (Math.random() * 10);
 
-            if (numAletorio_uno >= 0 && numAletorio_dos <= 4 ){
-                resultado = numAletorio_uno + numAletorio_dos;
-            }else{
-                resultado = numAletorio_uno - numAletorio_dos;
-            }
-
+            resultado = numAletorio_uno - numAletorio_dos;
 
 
             if (resultado >=  0 ){
@@ -158,7 +160,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
 
             intent.putExtra("score", string_score);
             intent.putExtra("vidas", string_vidas);
-            intent.putExtra("nombreJugador", nombre_jugador);
+            intent.putExtra("nombreJugador", tv_nombre.getText() );
             startActivity(intent);
             finish();
             // mp.stop();
@@ -210,6 +212,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             }
         });
     }
+
     private void setNombreJugador() {
         nombre_jugador = getIntent().getStringExtra("nombreJugador");
         tv_nombre.setText( "Jugador :" + nombre_jugador  );
@@ -232,7 +235,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             String temp_nombre = consultaScore.getString(0);
             String temp_score  = consultaScore.getString(1);
 
-            int bestScore = Integer.parseInt(temp_score);
+            int bestScore = parseInt(temp_score);
 
             if (score > bestScore){
                 ContentValues modificaScore = new ContentValues();

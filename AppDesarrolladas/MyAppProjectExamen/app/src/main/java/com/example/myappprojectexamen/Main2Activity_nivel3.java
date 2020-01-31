@@ -93,6 +93,7 @@ public class Main2Activity_nivel3 extends AppCompatActivity {
                 //Logica cuando te equivocas
                 validaVidas(vidas);
                 numAleatorio();
+                et_respuesta.setText("");
 
             }
         }
@@ -163,7 +164,7 @@ public class Main2Activity_nivel3 extends AppCompatActivity {
 
             intent.putExtra("score", string_score);
             intent.putExtra("vidas", string_vidas);
-            intent.putExtra("nombreJugador", nombre_jugador);
+            intent.putExtra("nombreJugador", tv_nombre.getText() );
             startActivity(intent);
             finish();
             // mp.stop();
