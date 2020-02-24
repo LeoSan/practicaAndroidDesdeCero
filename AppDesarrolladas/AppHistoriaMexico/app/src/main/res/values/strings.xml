@@ -3,13 +3,13 @@
     <string name="btnDescrip"> </string>
     <string name="label_a"> Reto al saber </string>
     <string name="label_b"> Alimenta tu curiosidad </string>
-    <string name="labelCategorias"> Categorias </string>
+    <string name="labelCategorias"> Categorías </string>
     <string name="labelApoyo"> Apoyo </string>
     <string name="labelContacto"> Contacto </string>
 
     <!-- Mensaje de ayuda o explicativos  -->
 
-    <string name="labelInformacionApoyo"> Este apartado te resumo los tipos de métodos para aprender, sabemos que usamos nuestra memoria para entender y retener información, es importante para tu examen puedas usar todas las herramientas necesarias por la cantidad de información que se estudia. </string>
+    <string name="labelInformacionApoyo"> Este apartado te resumo los tipos de métodos para aprender, sabemos que usamos nuestra memoria para entender y retener información, es importante para tu examen puedas usar todas las herramientas necesarias por la cantidad de información que se estudia. Se agradece atemano al canal de Youtube por su resumen https://www.youtube.com/watch?v=JysHlMS_Vjs  </string>
     <string name="labelInformacionContacto"> En este apartado podras ayudar a la comunidad mandando sugerencias, observaciones o incluso si deseas agregar alguna pregunta que no este en este cuestionario, la información que nos suministres, será validada y nuestro equipo la validará y la anexara a la herramienta. </string>
 
 
@@ -61,11 +61,11 @@
 
     <!-- Label Interfaz Cuestionario  -->
     <string name="labelTituloCuestionario"> Cuestionario </string>
-    <string name="labelNivel"> Estadisticas de aciertos en este nivel.  </string>
+    <string name="labelNivel"> Estadísticas de aciertos en este nivel.  </string>
     <string name="labelResulBuenas"> Aprobada </string>
     <string name="labelResulVistas"> Preguntas </string>
     <string name="labelResulMalas">  Reprobada </string>
-    <string name="labelMsjResulMal">  !!Animo!! tienes un total de aciertos muy bajo, podemos seguir estudiando y lo lograras. </string>
+    <string name="labelMsjResulMal">  !!Ánimo!! tienes un total de aciertos muy bajo, podemos seguir estudiando y lo lograras. </string>
     <string name="labelMsjResulBien">  En hora buena, ya te sabes este nivel muy bien, vamos a probar con el siguiente!</string>
 
     <!-- Label Interfaz Estadisticas  -->
@@ -73,7 +73,7 @@
     <string name="labelTituloNotificar"> Activar la notificación movil. </string>
     <string name="labelTituloRecordatorio"> Configurar recordatorio. </string>
 
-    <string name="tabEstaditicas"> Estadisticas </string>
+    <string name="tabEstaditicas"> Estadísticas </string>
     <string name="tabConfiguracion"> Configuración </string>
     <string name="tabOtros"> Extras </string>
 

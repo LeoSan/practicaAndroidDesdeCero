@@ -21,22 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnApoyo"
-            style="?android:attr/buttonBarStyle"
-            android:layout_width="3dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/communication"
-            android:text="@string/btnDescrip" />
-
-        <TextView
-            android:id="@+id/labelCategorias"
-            style="@style/labelTituloInterfaces"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/labelContacto" />
 
         <Button
             android:id="@+id/btnCategoria"
@@ -48,52 +32,56 @@
             android:onClick="vistaInterfazPrincipal"
             android:text="@string/btnDescrip" />
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="370dp"
-        android:layout_height="135dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion">
-
         <TextView
-            android:id="@+id/labelInformacionContacto"
-            style="@style/labelInformacion"
-            android:layout_width="324dp"
-            android:layout_height="111dp"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="50dp"
-            android:text="@string/labelInformacionContacto" />
+            android:id="@+id/labelCategorias"
+            style="@style/labelTituloInterfaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/labelContacto" />
+
+        <Button
+            android:id="@+id/btnApoyo"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/communication"
+            android:text="@string/btnDescrip" />
+
+
     </LinearLayout>
+
 
     <ScrollView
         android:id="@+id/camposInterfazContacto"
-        android:layout_width="303dp"
-        android:layout_height="324dp"
+        android:layout_width="308dp"
+        android:layout_height="494dp"
         android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
+        app:layout_constraintVertical_bias="0.144">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelInformacionContacto"
+                style="@style/labelInformacion"
+                android:layout_width="324dp"
+                android:layout_height="111dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/labelInformacionContacto" />
 
             <TextView
                 android:id="@+id/labelTituloContacto"

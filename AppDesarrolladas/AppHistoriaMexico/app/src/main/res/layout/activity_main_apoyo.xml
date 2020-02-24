@@ -22,23 +22,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btnApoyo"
-            style="?android:attr/buttonBarStyle"
-            android:layout_width="3dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/lightbulb"
-            android:text="@string/btnDescrip" />
-
-        <TextView
-            android:id="@+id/labelCategorias"
-            style="@style/labelTituloInterfaces"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/labelApoyo" />
-
-        <Button
             android:id="@+id/btnCategoria"
             style="?android:attr/buttonBarStyle"
             android:layout_width="3dp"
@@ -48,13 +31,31 @@
             android:onClick="vistaInterfazPrincipal"
             android:text="@string/btnDescrip" />
 
+
+        <TextView
+            android:id="@+id/labelCategorias"
+            style="@style/labelTituloInterfaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/labelApoyo" />
+
+
+        <Button
+            android:id="@+id/btnApoyo"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightbulb"
+            android:text="@string/btnDescrip" />
+
     </LinearLayout>
 
     <ScrollView
         android:layout_width="320dp"
-        android:layout_height="871dp"
+        android:layout_height="1000dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
@@ -63,9 +64,14 @@
         <LinearLayout
             android:id="@+id/idLayouApoyo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="1000dp"
             android:gravity="center"
             android:orientation="vertical">
+
+            <VideoView
+                android:id="@+id/idVideoView"
+                android:layout_width="300dp"
+                android:layout_height="300dp" />
 
             <TextView
                 android:id="@+id/ejemplo"
@@ -165,17 +171,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/labelCaso7" />
-
-            <WebView
-                android:id="@+id/idWebViewApoyo"
-                android:layout_width="335dp"
-                android:layout_height="449dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="500dp" />
 
         </LinearLayout>
     </ScrollView>

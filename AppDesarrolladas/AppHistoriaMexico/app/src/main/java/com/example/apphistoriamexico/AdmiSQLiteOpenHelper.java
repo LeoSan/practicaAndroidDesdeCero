@@ -233,6 +233,17 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (352, 118, 'Solo Cozumel', '0', 1),  (353, 118, 'Solo Mazatlan ', '0', 1), (354, 118, 'Solo Acapulco', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (355, 119, 'Sol', '0', 1),  (356, 119, 'Luna', '0', 1), (357, 119, 'Lluvia', '0', 1) ");
 
+// --------------------------------------------- COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA - COMIDA -  COMIDA
+
+        // Tabla de Preguntas -TANDA CAT. COMIDA - NIVEL BASICO -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (120, 2, 1, 120, '¿ Cómo se llama el dulce de amaranto de Xochimilco ?', 'Alegrías ', 'https://www.historiacocina.com/paises/articulos/mexico/huautli.htm', '0', '0', 1)  ,(121, 2, 1, 121, '¿ Cómo se llama el dulce típico de Guanajuato ?', ' Charamusca  ', 'https://www.revistabuenviaje.com/conocemexico/saboramexico/charamuscas/las-charamuscas.php ', '0', '0', 1) , (122, 2, 1, 122, ' ¿ Cómo se llama el dulce típico de Pachuca, Hidalgo ? ', 'Palanqueta  ', 'https://mural-guadalajara.vlex.com.mx/vid/palanqueta-es-zapotlan-grande-79546513 ', '0', '0', 1) , (123, 2, 1, 123, '¿ Cómo se llama el dulce típico de Guadalajara a base de birotes salados ?', ' Capirotada ', ' https://www.mexicodesconocido.com.mx/la-capirotada.html ', '0', '0', 1) ,(124, 2, 1, 124, '¿ Platillo mexicano elaborado con granos de maíz ?', ' Pozole ', ' https://www.muyinteresante.com.mx/historia/origen-pozole/ ', '0', '0', 1)");
+
+        // Tabla de Preguntas -TANDA CAT. COMIDA - NIVEL BASICO -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (358, 120, ' Charamusca ', '0', 1),   (359, 120, 'Caramelo Dulce', '0', 1), (360, 120, 'Capirotada', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (361, 121, ' Palanqueta  ', '0', 1),  (362, 121, ' Dulce Tipico', '0', 1),  (363, 121, 'Caramelo Guanajuato', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (364, 122, ' Alegrías  ', '0', 1),    (365, 122, ' Charamusca ', '0', 1),   (366, 122, ' Capirotada', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (367, 123, ' Alegrías  ', '0', 1),    (368, 123, ' Charamusca ', '0', 1),   (369, 123, ' Palanqueta ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (370, 124, ' Alegrías  ', '0', 1),    (371, 124, ' Charamusca ', '0', 1),   (372, 124, ' Palanqueta ', '0', 1) ");
 
     }
 
