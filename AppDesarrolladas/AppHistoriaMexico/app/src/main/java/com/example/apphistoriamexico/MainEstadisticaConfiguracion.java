@@ -11,7 +11,12 @@ import android.widget.TextView;
 
 public class MainEstadisticaConfiguracion extends AppCompatActivity {
 
+    //Item de Nivel Basico
     TextView inpAprobadas, inpVistas, inpReprobadas;
+
+    //Item de Nivel Medio
+    TextView inpTotalMedioBuenas, inpTotalMedioVistas, inpTotalMedioMalas;
+
     Integer toAprobadas, toReprobadas;
     String toVistas;
 
@@ -25,17 +30,31 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         /*Enlace con la interfaz*/
-        inpAprobadas  = (TextView)findViewById(R.id.inpTotalBasicBuenas);
-        inpVistas     = (TextView)findViewById(R.id.inpTotalBasicVistas);
-        inpReprobadas = (TextView)findViewById(R.id.inpTotalBasicMalas);
+        //Item de Nivel Basico
+            inpAprobadas  = (TextView)findViewById(R.id.inpTotalMedioBuenas);
+            inpVistas     = (TextView)findViewById(R.id.inpTotalBasicVistas);
+            inpReprobadas = (TextView)findViewById(R.id.inpTotalBasicMalas);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("1", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("1", 0);
-        toVistas     = getPreguntasTotal("1");
+            toAprobadas  = consultarTotalPreguntasEstaditicas("1", 1);
+            toReprobadas = consultarTotalPreguntasEstaditicas("1", 0);
+            toVistas     = getPreguntasTotal("1");
 
-        inpAprobadas.setText( String.valueOf(toAprobadas) );
-        inpReprobadas.setText( String.valueOf(toReprobadas) );
-        inpVistas.setText( toVistas );
+            inpAprobadas.setText( String.valueOf(toAprobadas) );
+            inpReprobadas.setText( String.valueOf(toReprobadas) );
+            inpVistas.setText( toVistas );
+
+        //Item de Nivel Medio
+            inpTotalMedioBuenas  = (TextView)findViewById(R.id.inpTotalBasicBuenas);
+            inpTotalMedioVistas  = (TextView)findViewById(R.id.inpTotalMedioVistas);
+            inpTotalMedioMalas   = (TextView)findViewById(R.id.inpTotalMedioMalas);
+
+            toAprobadas  = consultarTotalPreguntasEstaditicas("2", 1);
+            toReprobadas = consultarTotalPreguntasEstaditicas("2", 0);
+            toVistas     = getPreguntasTotal("2");
+
+            inpTotalMedioBuenas.setText( String.valueOf(toAprobadas) );
+            inpTotalMedioVistas.setText( String.valueOf(toReprobadas) );
+            inpTotalMedioMalas.setText( toVistas );
 
     }
 

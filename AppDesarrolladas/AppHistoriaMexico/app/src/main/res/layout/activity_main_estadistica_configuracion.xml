@@ -102,7 +102,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:contentDescription="@string/btnDescrip"
-                        app:srcCompat="@drawable/basico" />
+                        app:srcCompat="@drawable/curiosidad" />
 
                     <TableLayout
                         android:id="@+id/idTableDatosBasic"
@@ -189,7 +189,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:contentDescription="@string/btnDescrip"
-                        app:srcCompat="@drawable/medio" />
+                        app:srcCompat="@drawable/comida" />
 
                     <TableLayout
                         android:id="@+id/idTableDatosMedio"
@@ -274,7 +274,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:contentDescription="@string/btnDescrip"
-                        app:srcCompat="@drawable/avanzado" />
+                        app:srcCompat="@drawable/cine" />
 
                     <TableLayout
                         android:id="@+id/idTableDatosAvanzado"
@@ -359,7 +359,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:contentDescription="@string/btnDescrip"
-                        app:srcCompat="@drawable/leyenda" />
+                        app:srcCompat="@drawable/arte" />
 
                     <TableLayout
                         android:id="@+id/idTableDatosLeyenda"
