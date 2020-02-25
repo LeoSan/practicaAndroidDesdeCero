@@ -13,11 +13,10 @@
         android:layout_width="304dp"
         android:layout_height="66dp"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -52,91 +51,87 @@
 
     </LinearLayout>
 
-
-    <ScrollView
-        android:id="@+id/camposInterfazContacto"
-        android:layout_width="308dp"
-        android:layout_height="494dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/labelTituloContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/labelTituloContacto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
-        app:layout_constraintVertical_bias="0.144">
+        app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:orientation="vertical">
+    <EditText
+        android:id="@+id/inpNombreContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:hint="@string/labelNombreContacto"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTituloContacto"
+        android:autofillHints="" tools:targetApi="o"/>
 
-            <TextView
-                android:id="@+id/labelInformacionContacto"
-                style="@style/labelInformacion"
-                android:layout_width="324dp"
-                android:layout_height="111dp"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="50dp"
-                android:text="@string/labelInformacionContacto" />
+    <EditText
+        android:id="@+id/inpAsuntoContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/labelAsuntoContacto"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpNombreContacto"/>
 
-            <TextView
-                android:id="@+id/labelTituloContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/labelTituloContacto" />
+    <EditText
+        android:id="@+id/inpCorreoContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/labelCorreoContacto"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpAsuntoContacto"/>
 
-            <EditText
-                android:id="@+id/inpNombreContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:ems="10"
-                android:hint="@string/labelNombreContacto"
-                android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/inpMsjContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/labelMsjContacto"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:paddingBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpCorreoContacto"/>
 
-            <EditText
-                android:id="@+id/inpAsuntoContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/labelAsuntoContacto"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+    <TextView
+        android:id="@+id/labelInformacionContacto"
+        style="@style/labelInformacion"
+        android:layout_width="324dp"
+        android:layout_height="178dp"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/labelInformacionContacto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpMsjContacto"/>
 
-            <EditText
-                android:id="@+id/inpCorreoContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/labelCorreoContacto"
-                android:importantForAutofill="no"
-                android:inputType="textEmailAddress" />
-
-            <EditText
-                android:id="@+id/inpMsjContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:hint="@string/labelMsjContacto"
-                android:importantForAutofill="no"
-                android:inputType="textMultiLine"
-                android:paddingBottom="50dp" />
-
-            <Button
-                android:id="@+id/idEnviarCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:text="@string/textBtnContacto" />
-
-        </LinearLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/idEnviarCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/textBtnContacto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInformacionContacto"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

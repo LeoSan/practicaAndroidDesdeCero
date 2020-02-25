@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         //Metodos dinamicos
-        reproducirMusicaIntro();
+         reproducirMusicaIntro();
 
 
     }//Fin del onCreate

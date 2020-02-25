@@ -145,7 +145,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/inpTotalBasicBuenas"
+                                android:id="@+id/inpCuriosidadesAprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -155,7 +155,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalBasicVistas"
+                                android:id="@+id/inpCuriosidadesPreguntas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -165,7 +165,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalBasicMalas"
+                                android:id="@+id/inpCuriosidadesReprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="15dp"
@@ -232,7 +232,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/inpTotalMedioBuenas"
+                                android:id="@+id/inpComidaAprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -242,7 +242,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalMedioVistas"
+                                android:id="@+id/inpComidaPreguntas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -252,7 +252,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalMedioMalas"
+                                android:id="@+id/inpComidaReprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="15dp"
@@ -317,7 +317,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/inpTotalAvanzBuenas"
+                                android:id="@+id/inpCineAprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -327,7 +327,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalAvanzVistas"
+                                android:id="@+id/inpCinePreguntas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -337,7 +337,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalAvanzMalas"
+                                android:id="@+id/inpCineReprobadas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="15dp"

@@ -11,11 +11,14 @@ import android.widget.TextView;
 
 public class MainEstadisticaConfiguracion extends AppCompatActivity {
 
-    //Item de Nivel Basico
-    TextView inpAprobadas, inpVistas, inpReprobadas;
+    //Item de Nivel Curiosidad
+    TextView inpCuriosidadesAprobadas, inpCuriosidadesPreguntas, inpCuriosidadesReprobadas;
 
-    //Item de Nivel Medio
-    TextView inpTotalMedioBuenas, inpTotalMedioVistas, inpTotalMedioMalas;
+    //Item de Nivel Comida
+    TextView inpComidaAprobadas, inpComidaPreguntas, inpComidaReprobadas;
+
+    //Item de Nivel Cine
+    TextView inpCineAprobadas, inpCinePreguntas, inpCineReprobadas;
 
     Integer toAprobadas, toReprobadas;
     String toVistas;
@@ -30,31 +33,45 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         /*Enlace con la interfaz*/
-        //Item de Nivel Basico
-            inpAprobadas  = (TextView)findViewById(R.id.inpTotalMedioBuenas);
-            inpVistas     = (TextView)findViewById(R.id.inpTotalBasicVistas);
-            inpReprobadas = (TextView)findViewById(R.id.inpTotalBasicMalas);
+        //Item Categoria Curiosidad
+            inpCuriosidadesAprobadas  = (TextView)findViewById(R.id.inpCuriosidadesAprobadas);
+            inpCuriosidadesPreguntas  = (TextView)findViewById(R.id.inpCuriosidadesPreguntas);
+            inpCuriosidadesReprobadas = (TextView)findViewById(R.id.inpCuriosidadesReprobadas);
 
             toAprobadas  = consultarTotalPreguntasEstaditicas("1", 1);
             toReprobadas = consultarTotalPreguntasEstaditicas("1", 0);
             toVistas     = getPreguntasTotal("1");
 
-            inpAprobadas.setText( String.valueOf(toAprobadas) );
-            inpReprobadas.setText( String.valueOf(toReprobadas) );
-            inpVistas.setText( toVistas );
+            inpCuriosidadesAprobadas.setText( String.valueOf(toAprobadas) );
+            inpCuriosidadesReprobadas.setText( String.valueOf(toReprobadas) );
+            inpCuriosidadesPreguntas.setText( toVistas );
 
-        //Item de Nivel Medio
-            inpTotalMedioBuenas  = (TextView)findViewById(R.id.inpTotalBasicBuenas);
-            inpTotalMedioVistas  = (TextView)findViewById(R.id.inpTotalMedioVistas);
-            inpTotalMedioMalas   = (TextView)findViewById(R.id.inpTotalMedioMalas);
+        //Item Categoria Comida
+            inpComidaAprobadas  = (TextView)findViewById(R.id.inpComidaAprobadas);
+            inpComidaPreguntas  = (TextView)findViewById(R.id.inpComidaPreguntas);
+            inpComidaReprobadas = (TextView)findViewById(R.id.inpComidaReprobadas);
 
             toAprobadas  = consultarTotalPreguntasEstaditicas("2", 1);
             toReprobadas = consultarTotalPreguntasEstaditicas("2", 0);
             toVistas     = getPreguntasTotal("2");
 
-            inpTotalMedioBuenas.setText( String.valueOf(toAprobadas) );
-            inpTotalMedioVistas.setText( String.valueOf(toReprobadas) );
-            inpTotalMedioMalas.setText( toVistas );
+            inpComidaAprobadas.setText( String.valueOf(toAprobadas) );
+            inpComidaReprobadas.setText( String.valueOf(toReprobadas) );
+            inpComidaPreguntas.setText( toVistas );
+
+
+        //Item Categoria Cine
+            inpCineAprobadas  = (TextView)findViewById(R.id.inpCineAprobadas);
+            inpCinePreguntas  = (TextView)findViewById(R.id.inpCinePreguntas);
+            inpCineReprobadas = (TextView)findViewById(R.id.inpCineReprobadas);
+
+            toAprobadas  = consultarTotalPreguntasEstaditicas("3", 1);
+            toReprobadas = consultarTotalPreguntasEstaditicas("3", 0);
+            toVistas    = getPreguntasTotal("3");
+
+            inpCineAprobadas.setText( String.valueOf(toAprobadas) );
+            inpCineReprobadas.setText( String.valueOf(toReprobadas) );
+            inpCinePreguntas.setText( toVistas );
 
     }
 
