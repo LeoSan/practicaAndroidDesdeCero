@@ -4,100 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaperprincipal"
     tools:context=".Main2Activity_nivel3">
-    <ScrollView
-        android:id="@+id/idContScroll"
-        android:layout_width="match_parent"
-        android:layout_height="605dp"
+
+    <TextView
+        android:id="@+id/inpNombre"
+        style="@style/textViewNombre"
+        android:layout_width="188dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="55dp" />
+
+    <TextView
+        android:id="@+id/inpScore"
+        style="@style/textViewScore"
+        android:text="@string/textViemScore" />
+
+    <TextView
+        android:id="@+id/inpVida"
+        style="@style/textViewVidas"
+        android:text="@string/textViemVidas" />
+
+    <ImageView
+        android:id="@+id/img_vidas"
+        style="@style/imagViewVidas"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/tresvidas" />
+
+    <ImageView
+        android:id="@+id/imagNum"
+        style="@style/imagView001"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/imagSigno"
+        style="@style/imagViewSigno"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/resta" />
+
+    <ImageView
+        android:id="@+id/imagNum2"
+        style="@style/imagView002"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <EditText
+        android:id="@+id/inpResp"
+        style="@style/inpNumeroResp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnEnviarResp"
+        style="@style/ButtonEnviarResp"
+        android:onClick="comprobar" />
+
+    <TextView
+        android:id="@+id/labelNom"
+        style="@style/textViewNombre"
+        android:layout_width="125dp"
+        android:layout_height="27dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-2dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/inpNombre"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/textViemJugador" />
-
-            <TextView
-                android:id="@+id/inpScore"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:baselineAligned="false"
-                android:text="@string/textViemScore" />
-
-            <TextView
-                android:id="@+id/inpVida"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/textViemVidas" />
-
-            <ImageView
-                android:id="@+id/img_vidas"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="110dp"
-                android:layout_marginTop="-40dp"
-                android:contentDescription="@string/app_vacio"
-                app:srcCompat="@drawable/tresvidas" />
-
-            <ImageView
-                android:id="@+id/imagNum"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:contentDescription="@string/app_vacio"
-                app:srcCompat="@drawable/cero" />
-
-            <ImageView
-                android:id="@+id/imagSigno"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="-100dp"
-                android:contentDescription="@string/app_vacio"
-                app:srcCompat="@drawable/resta" />
-
-            <ImageView
-                android:id="@+id/imagNum2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="240dp"
-                android:layout_marginTop="-100dp"
-                android:contentDescription="@string/app_vacio"
-                app:srcCompat="@drawable/cero" />
-
-            <EditText
-                android:id="@+id/inpResp"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="47dp"
-                android:layout_marginTop="40dp"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/btnEnviarResp"
-                android:layout_width="140dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="-50dp"
-                android:background="@drawable/fondoboton"
-                android:onClick="comprobar"
-                android:text="Comprobar" />
-        </LinearLayout>
-    </ScrollView>
-
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/textViemJugador" />
 </RelativeLayout>

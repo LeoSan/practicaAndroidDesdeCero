@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Debes colocar el nombre", Toast.LENGTH_SHORT).show();
 
-            //todo -> Metodo que abre el teclaodo
+            //todo -> Metodo que abre el teclado
             et_nombre.requestFocus();
             InputMethodManager  imm = (InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
             imm.showSoftInput(et_nombre, InputMethodManager.SHOW_IMPLICIT);

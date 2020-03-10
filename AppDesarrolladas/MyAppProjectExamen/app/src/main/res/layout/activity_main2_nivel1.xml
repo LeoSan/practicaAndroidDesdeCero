@@ -10,7 +10,11 @@
     <TextView
         android:id="@+id/inpNombre"
         style="@style/textViewNombre"
-        android:text="@string/textViemJugador" />
+        android:layout_width="188dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="55dp" />
 
     <TextView
         android:id="@+id/inpScore"
@@ -55,4 +59,15 @@
         android:id="@+id/btnEnviarResp"
         style="@style/ButtonEnviarResp"
         android:onClick="comprobar" />
+
+    <TextView
+        android:id="@+id/labelNom"
+        style="@style/textViewNombre"
+        android:layout_width="125dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/textViemJugador" />
 </RelativeLayout>

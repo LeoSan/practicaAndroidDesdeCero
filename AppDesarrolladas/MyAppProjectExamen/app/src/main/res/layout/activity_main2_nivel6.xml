@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaperprincipal"
     tools:context=".Main2Activity_nivel6">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/inpNombre"
+        style="@style/textViewNombre"
+        android:layout_width="188dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="55dp" />
+
+    <TextView
+        android:id="@+id/inpScore"
+        style="@style/textViewScore"
+        android:text="@string/textViemScore" />
+
+    <TextView
+        android:id="@+id/inpVida"
+        style="@style/textViewVidas"
+        android:text="@string/textViemVidas" />
+
+    <ImageView
+        android:id="@+id/img_vidas"
+        style="@style/imagViewVidas"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/tresvidas" />
+
+    <ImageView
+        android:id="@+id/imagNum"
+        style="@style/imagView001"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/imagSigno"
+        style="@style/imagViewSigno"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/multiplicacion" />
+
+    <ImageView
+        android:id="@+id/imagNum2"
+        style="@style/imagView002"
+        android:contentDescription="@string/app_vacio"
+        app:srcCompat="@drawable/cero" />
+
+    <EditText
+        android:id="@+id/inpResp"
+        style="@style/inpNumeroResp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnEnviarResp"
+        style="@style/ButtonEnviarResp"
+        android:onClick="comprobar" />
+
+    <TextView
+        android:id="@+id/labelNom"
+        style="@style/textViewNombre"
+        android:layout_width="125dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/textViemJugador" />
+</RelativeLayout>

@@ -44,11 +44,12 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
         et_respuesta  = (EditText)findViewById(R.id.inpResp);
 
         imagSigno   = (ImageView)findViewById(R.id.imagNum);
+        score = Integer.parseInt(getIntent().getStringExtra("score"));
 
-
-
-
+        //Metodos Dinamicos
         setNombreJugador();
+        //  reproducirAudio();
+        numAleatorio(score);
 
     }//fin del onCreate
     //Todo-> Usar boton regresar (Back)
@@ -75,20 +76,19 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
                 System.out.println("--- TE Entro Bien  ---");
                 reproducirAudioBuena();
                 score ++;
-                tv_score.setText( "Score : " + score );
                 et_respuesta.setText("");
-                getScore();
-                numAleatorio();
+                getScore(score, 1);
+                numAleatorio(score);
 
             }else{
 
                 System.out.println("--- TE  Entro Mal  ---");
                 reproducirAudioMala();
                 vidas --;
-                getScore();
+                getScore(score, 0);
                 //Logica cuando te equivocas
                 validaVidas(vidas);
-                numAleatorio();
+                numAleatorio(score);
 
             }
         }
@@ -124,9 +124,9 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
 
     }//fin del metodo
 
-    public void numAleatorio(){
+    public void numAleatorio(int score){
 
-        if (score <=3){
+        if (score <=12){
 
             numAletorio_uno = (int) (Math.random() * 10);
             numAletorio_dos = (int) (Math.random() * 10);
@@ -147,7 +147,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
                 }
 
             }else{
-                numAleatorio();
+                numAleatorio(score);
             }
 
 
@@ -215,7 +215,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
 
     private void setNombreJugador() {
         nombre_jugador = getIntent().getStringExtra("nombreJugador");
-        tv_nombre.setText( "Jugador :" + nombre_jugador  );
+        tv_nombre.setText(  nombre_jugador  );
 
         string_score  = getIntent().getStringExtra("score");
         tv_score.setText("Score : "  + string_score);
@@ -223,36 +223,40 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
     }
 
 
+
     //Metodo  Tipo Cursor ->  Devuelve un cursos
-    public void getScore(){
+    public void getScore( int score, int tipo){
+        nombre_jugador = getIntent().getStringExtra("nombreJugador");
         //Creamos el conector de bases de datos
         AdmiSQLiteOpenHelper admin = new AdmiSQLiteOpenHelper(this, "BasesDeDatos", null, 1 );
         // Abre la base de datos en modo lectura y escritura
         SQLiteDatabase BasesDeDatos = admin.getWritableDatabase();
-        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje as a WHERE a.score = ( "+string_score+"  ) ", null );
-
-        if (consultaScore.moveToFirst()){
-            String temp_nombre = consultaScore.getString(0);
-            String temp_score  = consultaScore.getString(1);
-
-            int bestScore = parseInt(temp_score);
-
-            if (score > bestScore){
-                ContentValues modificaScore = new ContentValues();
-                modificaScore.put("nomJugador", nombre_jugador );
-                modificaScore.put("score", score );
-                BasesDeDatos.update("t_puntaje", modificaScore, "score =" + bestScore, null);
-            }
-
-        }else{
+        if (tipo == 1){ //Solo si la respuesta es correcta
+            System.out.println("---------------- DELETE -------------------------------");
+            BasesDeDatos.delete("t_puntaje", "nomJugador='"+nombre_jugador+"'", null);
+            System.out.println("---------------- INSERT  -------------------------------");
             ContentValues insertScore = new ContentValues();
             insertScore.put("nomJugador", nombre_jugador );
             insertScore.put("score", score );
             BasesDeDatos.insert("t_puntaje", null, insertScore);
         }
+        Cursor consultaScore = BasesDeDatos.rawQuery( "SELECT * FROM t_puntaje as a WHERE a.nomJugador = '"+nombre_jugador+"' AND a.score = (SELECT MAX(score) FROM t_puntaje  ) GROUP BY a.nomJugador", null );
 
+        if (consultaScore != null) {
+            if (consultaScore.moveToFirst()){
+                String temp_nombre = "";
+                String temp_score = "";
+
+                System.out.println("---------------- ACTUALIZA INTERFAZ  -------------------------------");
+                temp_nombre = consultaScore.getString(0);
+                temp_score  = consultaScore.getString(1);
+                tv_score.setText( "Score : " + temp_score );
+
+            }
+        }
         consultaScore.close();
         BasesDeDatos.close();
     }
+
 
 }
