@@ -71,7 +71,7 @@ public class Main2Activity_nivel4 extends AppCompatActivity {
             System.out.println("--------------respuesta ---"+ string_resp);
             System.out.println("--------------resultado ---"+ resultado);
 
-            if ( parseInt(string_resp) == resultado ){
+            if (  string_resp.equals( String.valueOf(resultado) ) ){
 
                 System.out.println("--- TE Entro Bien  ---");
                 reproducirAudioBuena();

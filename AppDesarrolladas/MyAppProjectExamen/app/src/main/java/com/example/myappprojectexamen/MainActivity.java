@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Metodos dinamicos
         pintarPersonaje();
-      //  reproducirMusicaIntro();
+        reproducirMusicaIntro();
          validaPuntaje();
 
 

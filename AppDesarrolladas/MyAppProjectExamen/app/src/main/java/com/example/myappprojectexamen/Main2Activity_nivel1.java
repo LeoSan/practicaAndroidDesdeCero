@@ -118,8 +118,8 @@ public class Main2Activity_nivel1 extends AppCompatActivity {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
-               // mp.stop();
-                //mp.release();
+//                mp.stop();
+  //              mp.release();
                 break;
         }
 
