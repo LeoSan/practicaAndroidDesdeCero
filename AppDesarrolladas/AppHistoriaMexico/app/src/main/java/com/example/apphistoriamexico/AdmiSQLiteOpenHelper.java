@@ -432,36 +432,67 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
         // Tabla de Preguntas - MUSICA ARTE LITERATURA - NIVEL Experto -
 
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (205, 4, 4, 205, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (206, 4, 4, 206, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (207, 4, 4, 207, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (208, 4, 4, 208, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (209, 4, 4, 209, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (210, 4, 4, 210, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (211, 4, 4, 211, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (212, 4, 4, 212, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (213, 4, 4, 213, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (214, 4, 4, 214, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (215, 4, 4, 215, '¿  ?', '   ', '   ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (216, 4, 4, 216, '¿  ?', '   ', '   ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (205, 4, 4, 205, '¿ Quién escribió la noche de Tlatelolco ?', ' Elena Poniatowska  ', ' https://es.wikipedia.org/wiki/La_noche_de_Tlatelolco._Testimonios_de_historia_oral ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (206, 4, 4, 206, '¿ Cuál es el nombre del escritor de música de niños ?', ' Francisco Gabilondo Soler   ', ' https://es.wikipedia.org/wiki/Francisco_Gabilondo_Soler ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (207, 4, 4, 207, '¿ Quién escribió relámpagos de agosto ?', ' Jorge Ibargüengoitia  ', ' https://es.wikipedia.org/wiki/Los_rel%C3%A1mpagos_de_agosto ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (208, 4, 4, 208, '¿ Quién es Juan rulfo ?', ' Escritor mexicano, reconocido como uno de los grandes maestros de la narrativa hispanoamericana del siglo XX.  ', ' https://es.wikipedia.org/wiki/Juan_Rulfo ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (209, 4, 4, 209, '¿ Quien escribió el llano en llamas ?', ' Juan Rulfo  ', ' https://es.wikipedia.org/wiki/El_llano_en_llamas ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (210, 4, 4, 210, '¿ Nombre Completo de Frida ?', ' Magdalena Carmen Frida Kahlo Calderón  ', ' https://es.wikipedia.org/wiki/Frida_Kahlo  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (211, 4, 4, 211, '¿ Quién fue el escritor que escribió sobre Francisco I. Madero ?', ' Paco Ignacio Taibo II  ', '  Sin Confirmar ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (212, 4, 4, 212, '¿ Quien dijo Hombres necios que acusáis a la mujer sin razón, sin ver que sois la ocasión de lo mismo que culpáis ?', ' Sor Juana Ines de la Cruz  ', ' https://www.culturagenial.com/es/poema-hombres-necios-que-acusais-de-sor-juana-ines-de-la-cruz/  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (213, 4, 4, 213, '¿ Que pintaba Jose Maria Velazco ?', ' paisajista mexicano  ', ' https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Velasco_G%C3%B3mez  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (214, 4, 4, 214, '¿ Autor del mural del Palacio Nacional ?', ' Diego Rivera   ', ' https://mxcity.mx/2018/03/diego-rivera-sus-murales-del-palacio-nacional-epopeya-del-pueblo-mexicano/  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (215, 4, 4, 215, '¿ Exponente de la narrativa mexicana (literatura de la revolucion Mexicana)  ?', ' Mariano Azuela  ', ' https://colnal.mx/integrantes/mariano-azuela/  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (216, 4, 4, 216, '¿ Que escritor revoluciono la literatura Mexicana ?', '  Octavio Paz ', '  https://www.gob.mx/cultura/prensa/octavio-paz-poeta-y-ensayista-de-trascendencia-universal ', '0', '0', 1)");
 
 
         // Tabla de OPCIONES - MUSICA ARTE LITERATURA - NIVEL Experto -
 
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (614, 205, '  ', '0', 1),   (615, 205, '   ', '0', 1),   (616, 205, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (617, 206, '  ', '0', 1),   (618, 206, '   ', '0', 1),   (619, 206, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (620, 207, '  ', '0', 1),   (621, 207, '   ',  '0', 1),  (622, 207, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (623, 208, '  ', '0', 1),   (624, 208, '   ', '0', 1),   (625, 208, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (626, 209, '  ', '0', 1),   (627, 209, '   ', '0', 1),   (628, 209, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (629, 210, '  ', '0', 1),   (630, 210, '   ', '0', 1),   (631, 210, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (632, 211, '  ', '0', 1),   (633, 211, '   ', '0', 1),   (634, 211, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (635, 212, '  ', '0', 1),   (636, 212, '   ', '0', 1),   (637, 212, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (638, 213, '  ', '0', 1),   (639, 213, '   ', '0', 1),   (640, 213, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (641, 214, '  ', '0', 1),   (642, 214, '   ', '0', 1),   (643, 214, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (644, 215, '  ', '0', 1),   (645, 215, '   ', '0', 1),   (646, 215, '    ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (647, 216, '  ', '0', 1),   (648, 216, '   ', '0', 1),   (649, 216, '    ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (614, 205, ' Juan Rulfo ', '0', 1),   (615, 205, ' Magdalena Carmen Frida Kahlo Calderón  ', '0', 1),   (616, 205, ' Paco Ignacio Taibo II  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (617, 206, ' Paco Ignacio Taibo II ', '0', 1),   (618, 206, ' Juan Rulfo  ', '0', 1),   (619, 206, '  Diego Rivera ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (620, 207, ' Juan Rulfo ', '0', 1),   (621, 207, ' Diego Rivera  ',  '0', 1),  (622, 207, ' Paco Ignacio Taibo II ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (623, 208, 'Paco Ignacio Taibo II  ', '0', 1),   (624, 208, '  Elena Poniatowska ', '0', 1),   (625, 208, ' Diego Rivera  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (626, 209, ' Paco Ignacio Taibo II ', '0', 1),   (627, 209, ' Mariano Azuela  ', '0', 1),   (628, 209, '  Octavio Paz  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (629, 210, ' Elena Poniatowska ', '0', 1),   (630, 210, ' Kahlo Calderón  ', '0', 1),   (631, 210, '  Carmen Frida  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (632, 211, ' Juan Rulfo ', '0', 1),   (633, 211, ' Elena Poniatowska  ', '0', 1),   (634, 211, '  Carmen Frida  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (635, 212, ' Elena Poniatowska ', '0', 1),   (636, 212, '  Magdalena Carmen Frida Kahlo Calderón ', '0', 1),   (637, 212, '  Juan Rulfo  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (638, 213, ' Murales ', '0', 1),   (639, 213, ' Teatros  ', '0', 1),   (640, 213, ' Ciudades   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (641, 214, 'Jose Maria Velazco ', '0', 1),   (642, 214, '  Juan Rulfo ', '0', 1),   (643, 214, ' Octavio Paz   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (644, 215, ' Elena Poniatowska ', '0', 1),   (645, 215, ' Jose Maria Velazco  ', '0', 1),   (646, 215, '  Octavio Paz  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (647, 216, ' Juan Rulfo ', '0', 1),   (648, 216, ' Paco Ignacio Taibo II  ', '0', 1),   (649, 216, '  Diego Rivera  ', '0', 1) ");
 
 
+        // Tabla de Preguntas - MUSICA ARTE LITERATURA - NIVEL Leyenda  -
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (217, 4, 5, 217, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (218, 4, 5, 218, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (219, 4, 5, 219, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (220, 4, 5, 220, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (221, 4, 5, 221, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (222, 4, 5, 222, '¿  ?', '   ', '   ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (223, 4, 5, 223, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (224, 4, 5, 224, '¿  ?', '   ', '   ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (225, 4, 5, 225, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (226, 4, 5, 226, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (227, 4, 5, 227, '¿   ?', '  ', '   ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (228, 4, 5, 228, '¿  ?', '   ', '  ', '0', '0', 1)");
+
+
+
+        // Tabla de OPCIONES - MUSICA ARTE LITERATURA - NIVEL Experto -
+
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (650, 217, '  ', '0', 1),   (651, 651, '   ', '0', 1),   (652, 217, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (653, 218, '  ', '0', 1),   (654, 218, '   ', '0', 1),   (655, 218, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (656, 219, '  ', '0', 1),   (657, 219, '   ',  '0', 1),  (658, 219, '  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (659, 220, '  ', '0', 1),   (660, 220, '  ', '0', 1),    (661, 220, '    ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (662, 221, '  ', '0', 1),   (663, 221, '   ', '0', 1),   (664, 221, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (665, 222, '  ', '0', 1),   (666, 222, '   ', '0', 1),   (667, 222, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (668, 223, '  ', '0', 1),   (669, 223, '   ', '0', 1),   (670, 223, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (671, 224, '  ', '0', 1),   (672, 224, '  ', '0', 1),    (673, 224, '    ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (674, 225, '  ', '0', 1),   (675, 225, '   ', '0', 1),   (676, 225, '  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (677, 226, '  ', '0', 1),   (678, 226, '  ', '0', 1),    (679, 226, '     ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (680, 227, '  ', '0', 1),   (681, 227, '   ', '0', 1),   (682, 227, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (683, 228, '  ', '0', 1),   (684, 228, '   ', '0', 1),   (685, 228, '   ', '0', 1) ");
 
     }
 
