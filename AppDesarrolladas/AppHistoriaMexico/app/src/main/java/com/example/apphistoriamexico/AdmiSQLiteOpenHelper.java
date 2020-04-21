@@ -492,34 +492,34 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
 
         // Tabla de Preguntas - DEPORTE - NIVEL BASICO  -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (229, 5, 1, 229, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (230, 5, 1, 230, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (231, 5, 1, 231, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (229, 5, 1, 229, '¿ Apodo de la boxeadora mexicana actualmente considerada como la campeona mundial en la catergoria de peso supermosca del consejo mundial de boxeo ?', 'La Negra,La Guerrera,La India,  Ana Maria Torres Ramirez  ', ' https://es.wikipedia.org/wiki/Ana_Mar%C3%ADa_Torres ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (230, 5, 1, 230, '¿ Apodo de la boxeadora mexicana reconocida como la mejor boxeadora del año por la federacion internacional de boxeo (FIB) ?', ' YAZMÍN La Rusita RIVAS HERNANDEZ   ', 'https://www.cletoreyes.com.mx/es/acerca-de-cleto-reyes/museo/campeones-mexicanos/item/299-yazmin-rusita-rivas ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (231, 5, 1, 231, '¿ Que record ganó Ana Guevara en 2003  ?', '  300 metros planos en 35.30 segundos ', 'https://es.wikipedia.org/wiki/Ana_Gabriela_Guevara ', '0', '0', 1)");
 
         // Tabla de OPCIONES - DEPORTE - NIVEL BASICO  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (686, 229, ' ', '0', 1),   (687, 229, '   ', '0', 1),   (688, 229, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (689, 230, ' ', '0', 1),   (690, 230, '   ', '0', 1),   (691, 230, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (692, 231, ' ', '0', 1),   (693, 231, '   ', '0', 1),   (694, 231, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (686, 229, 'La Rusita ', '0', 1),   (687, 229, ' La ganadora  ', '0', 1),   (688, 229, '  La fiera ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (689, 230, ' La gata ', '0', 1),   (690, 230, ' La Negra  ', '0', 1),   (691, 230, ' La India   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (692, 231, ' 200 Metros Planos ', '0', 1),   (693, 231, '  Salto de jabalina  ', '0', 1),   (694, 231, ' Tiro al Arco  ', '0', 1) ");
 
         // Tabla de Preguntas - DEPORTE - NIVEL MEDIO  -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (232, 5, 2, 232, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (233, 5, 2, 233, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (234, 5, 2, 234, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (232, 5, 2, 232, '¿ Cual récord de carrera ganó Ana Guevara en las Olimpíadas ?', 'Atenas 2004, medalla de plata', 'https://www.marca.com/claro-mx/otros-deportes/2018/08/24/5b804a7f22601d4c748b45a4.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (233, 5, 2, 233, '¿ Quien ganó en el 2000 El Oro en pesas por las olimpiadas. en Sídney por Halterofilia ?', '  Soraya Jiménez Mendivil ', 'https://es.wikipedia.org/wiki/Soraya_Jim%C3%A9nez ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (234, 5, 2, 234, '¿ Cuando fue sede México de las Olimpiadas?', ' 1968  ', 'https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_M%C3%A9xico_1968', '0', '0', 1)");
 
         // Tabla de OPCIONES - DEPORTE - NIVEL MEDIO  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (695, 232, ' ', '0', 1),   (696, 232, '   ', '0', 1),   (697, 232, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (698, 233, ' ', '0', 1),   (699, 233, '   ', '0', 1),   (700, 233, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (701, 234, ' ', '0', 1),   (702, 234, '   ', '0', 1),   (703, 234, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (695, 232, ' Tokio 1964', '0', 1),   (696, 232, ' Múnich 1972 ', '0', 1),   (697, 232, '  Londres 2012 ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (698, 233, 'Ana Maria Torres Ramirez ', '0', 1),   (699, 233, ' Rivas Hernandez  ', '0', 1),   (700, 233, '  Ana Guevara ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (701, 234, ' 1970 ', '0', 1),   (702, 234, ' 1978  ', '0', 1),   (703, 234, ' 1988  ', '0', 1) ");
 
         // Tabla de Preguntas - DEPORTE - NIVEL AVANZADO  -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (235, 5, 3, 235, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (236, 5, 3, 236, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (237, 5, 3, 237, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (235, 5, 3, 235, '¿ En que años fue sede de la Copa Mundial México  ?', ' 1970 y 1986  ', 'https://www.elsoldemexico.com.mx/deportes/futbol/ciudad-de-mexico-primera-en-organizar-tres-copas-mundiales-de-futbol-1759628.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (236, 5, 3, 236, '¿ Deporte nacional por excelencia?', 'La Charreria', 'https://es.wikipedia.org/wiki/Charrer%C3%Ada', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (237, 5, 3, 237, '¿ Como se llama el futbolista Mexicano famoso en España (80) ?', ' Hugo Sánchez Márquez  ', 'https://es.wikipedia.org/wiki/Hugo_S%C3%A1nchez', '0', '0', 1)");
 
         // Tabla de OPCIONES - DEPORTE - NIVEL AVANZADO  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (704, 235, ' ', '0', 1),   (705, 235, '   ', '0', 1),   (706, 235, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (707, 236, ' ', '0', 1),   (708, 236, '   ', '0', 1),   (709, 236, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (710, 237, ' ', '0', 1),   (711, 237, '   ', '0', 1),   (712, 237, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (704, 235, ' 1970 y 1980 ', '0', 1),   (705, 235, ' 1970 y 1989  ', '0', 1),   (706, 235, ' 1970 y 1985  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (707, 236, ' El Boxeo', '0', 1),   (708, 236, ' El Taekwondo   ', '0', 1),   (709, 236, '  Tiro al Arco ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (710, 237, ' Luis García Postigo ', '0', 1),   (711, 237, '  Ana Guevara ', '0', 1),   (712, 237, '  Rivas Hernandez ', '0', 1) ");
 
         // Tabla de Preguntas - DEPORTE - NIVEL EXPERTO  -
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (238, 5, 4, 238, '¿  ?', '   ', '  ', '0', '0', 1)");
