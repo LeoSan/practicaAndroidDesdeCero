@@ -522,25 +522,23 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (710, 237, ' Luis García Postigo ', '0', 1),   (711, 237, '  Ana Guevara ', '0', 1),   (712, 237, '  Rivas Hernandez ', '0', 1) ");
 
         // Tabla de Preguntas - DEPORTE - NIVEL EXPERTO  -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (238, 5, 4, 238, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (239, 5, 4, 239, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (240, 5, 4, 240, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (238, 5, 4, 238, '¿ cual es el nombre del futbolista que destaco en europa en los 90 ?', ' Luis García Postigo  ', 'https://es.wikipedia.org/wiki/Luis_Garc%C3%ADa_Postigo', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (239, 5, 4, 239, '¿ Cuando se creo la confederación deportiva de México ?', ' 22 de julio de 1933  ', 'https://es.wikipedia.org/wiki/Confederaci%C3%B3n_Deportiva_Mexicana  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (240, 5, 4, 240, '¿ BOXEADOR MEXICANO DE RENOMBRE ?', '  Julio Cesar Chávez y Juan Manuel Márquez. ', 'https://lifeandstyle.mx/deportes/2016/02/24/los-10-mejores-boxeadores-mexicanos-de-la-historia  ', '0', '0', 1)");
 
         // Tabla de OPCIONES - DEPORTE - NIVEL EXPERTO  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (713, 238, ' ', '0', 1),   (714, 238, '   ', '0', 1),   (715, 238, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (716, 239, ' ', '0', 1),   (717, 239, '   ', '0', 1),   (718, 239, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (719, 240, ' ', '0', 1),   (720, 240, '   ', '0', 1),   (721, 240, '   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (713, 238, 'Javier Hernández Balcázar ', '0', 1),   (714, 238, 'Julio Cesar Chávez   ', '0', 1),   (715, 238, 'Juan Manuel Márquez   ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (716, 239, ' 22 de julio de 1970', '0', 1),   (717, 239, '22 de julio de 1980   ', '0', 1),   (718, 239, ' 22 de julio de 1990  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (719, 240, 'Javier Hernández Balcázar ', '0', 1),   (720, 240, ' Luis García Postigo  ', '0', 1),   (721, 240, '  Hugo Sánchez Márquez ', '0', 1) ");
 
 
         // Tabla de Preguntas - DEPORTE - NIVEL LEYENDA  -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (241, 5, 5, 241, '¿  ?', '   ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (242, 5, 5, 242, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (241, 5, 5, 241, '¿ Mexico, sede eventos deportivos ?', ' Copas del Mundo 1970 y 1986, Juegos Olímpicos de 1968, Juegos Panamericanos de 1975  ', 'https://www.elsoldemexico.com.mx/deportes/futbol/ciudad-de-mexico-primera-en-organizar-tres-copas-mundiales-de-futbol-1759628.html  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (242, 5, 5, 242, '¿ Fultbolista de Renombre en la actualidad ?', ' Javier Hernández Balcázar ( Chicharito)  ', 'https://es.wikipedia.org/wiki/Javier_Hern%C3%A1ndez_Balc%C3%A1zar', '0', '0', 1)");
 
         // Tabla de OPCIONES - DEPORTE - NIVEL LEYENDA  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (722, 241, ' ', '0', 1),   (723, 241, '   ', '0', 1),   (724, 241, '   ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (725, 242, ' ', '0', 1),   (726, 242, '   ', '0', 1),   (727, 242, '   ', '0', 1) ");
-
-
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (722, 241, 'No hubo ', ' Copas del Mundo 1975 y 1985 ', 1),   (723, 241, 'Juegos Olímpicos de 1970', '0', 1),   (724, 241, ' Juegos Panamericanos de 1978  ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (725, 242, 'Hugo Sánchez Márquez ', '0', 1),   (726, 242, ' Luis García Postigo  ', '0', 1),   (727, 242, ' Juan Manuel Márquez', '0', 1) ");
 
 
     }
