@@ -553,7 +553,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (249, 6, 1, 249, '¿ Donde se ubicaba la Calzada de los Muertos ?', 'En Teotihuacan', 'https://www.inah.gob.mx/zonas/23-zona-arqueologica-de-teotihuacan', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (250, 6, 1, 250, '¿ Cuáles eran los dos grandes grupos étnicos que habitaban en Teotihuacan ?', 'Nahuas y Otomies', 'https://www.inah.gob.mx/zonas/23-zona-arqueologica-de-teotihuacan', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (251, 6, 1, 251, '¿ Lider prehispanico que lideró la victoria durante la noche triste ?', 'Cuitlahuac', 'https://www.gob.mx/sedena/documentos/30-de-junio-de-1520-batalla-de-la-noche-triste?state=published', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (252, 6, 1, 253, '¿ Lugar mítico de donde salieron los Mexicas ?', ' Aztlán ', 'https://es.wikipedia.org/wiki/Aztl%C3%A1n', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (252, 6, 1, 252, '¿ Lugar mítico de donde salieron los Mexicas ?', ' Aztlán ', 'https://es.wikipedia.org/wiki/Aztl%C3%A1n', '0', '0', 1)");
 
         // Tabla de OPCIONES - PREHISPANICA - NIVEL BASICO  -
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (728, 243, ' Kikapu ', '0', 1),   (729, 243, ' Teotihuacan ', '0', 1),   (730, 243, 'Tepexpan', '0', 1) ");
@@ -568,28 +568,53 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (755, 252, ' Kikapu ', '0', 1),   (756, 252, 'Teotihuacan', '0', 1),   (757, 252, ' Tepexpan ', '0', 1) ");
 
         // Tabla de Preguntas - PREHISPANICA - NIVEL MEDIO
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (253, 6, 2, 253, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (254, 6, 2, 254, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (255, 6, 2, 255, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (256, 6, 2, 256, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (257, 6, 2, 257, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (258, 6, 2, 258, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (259, 6, 2, 259, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (260, 6, 2, 260, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (261, 6, 2, 261, '¿  ?', ' ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (262, 6, 2, 262, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (253, 6, 2, 253, '¿ Qué significa Aztán ?', ' Lugar de las garzas  ', 'http://www.mexica.net/aztlansp.php ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (254, 6, 2, 254, '¿ Quienes integraron la triple alianza ?', ' Tenochtitlan, Texcoco y Tlacopan ', 'https://lahistoriamexicana.mx/antiguo-mexico/triple-alianza-senorios-independientes ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (255, 6, 2, 255, '¿ Deidad del México antiguo conocida como la Serpiente Emplumada ?', 'Quetzalcóatl ', 'http://neomexicanismos.com/mexico-prehispanico/leyenda-de-quetzalcoatl-biografia-serpiente-emplumada-maya-azteca-mito/  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (256, 6, 2, 256, '¿ Que significa Tula en Nahuatl ?', 'Juncal ', 'https://www.inah.gob.mx/images/stories/Materiales_consulta/monografias/tula_toltecas2.pdf', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (257, 6, 2, 257, '¿ Deidad Maya de la guerra   ?', 'Ek Chuah  ', 'https://es.wikipedia.org/wiki/Ek_Chuah  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (258, 6, 2, 258, '¿ Dios de la LUNA en Maya ?', ' Ixchel ', 'https://es.wikipedia.org/wiki/Ixchel  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (259, 6, 2, 259, '¿ Dios de la LUNA en Azteca ?', 'Coyolxauhqui ', 'https://universes.art/es/art-destinations/mexico/tour/templo-mayor/12  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (260, 6, 2, 260, '¿ Dios del MAÍZ en Maya ?', ' Yum Kaax ', 'https://pueblosoriginarios.com/meso/maya/maya/yum.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (261, 6, 2, 261, '¿ Dios del MAÍZ en Azteca ?', ' Centéotl ', 'https://www.mitologia.info/centeotl/  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (262, 6, 2, 262, '¿ Nombre de la Diosa de la FERTILIDAD mexica  ?', 'Coatlicue', 'https://www.inside-mexico.com/leyenda-de-coatlicue-y-coyolxauhqui/', '0', '0', 1)");
 
-        // Tabla de OPCIONES - PREHISPANICA - NIVEL BASICO  -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (758, 253, '  ', '0', 1),   (759, 253, '  ', '0', 1),   (760, 253, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (761, 254, '  ', '0', 1),   (762, 254, '  ', '0', 1),   (763, 254, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (764, 255, '  ', '0', 1),   (765, 255, '  ', '0', 1),   (766, 255, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (767, 256, '  ', '0', 1),   (768, 256, '  ', '0', 1),   (769, 256, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (770, 257, '  ', '0', 1),   (771, 257, '  ', '0', 1),   (772, 257, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (773, 258, '  ', '0', 1),   (774, 258, '  ', '0', 1),   (775, 258, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (776, 259, '  ', '0', 1),   (777, 259, '  ', '0', 1),   (778, 259, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (779, 260, '  ', '0', 1),   (780, 260, '  ', '0', 1),   (781, 260, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (782, 261, '  ', '0', 1),   (783, 261, '  ', '0', 1),   (784, 261, '', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (785, 262, '  ', '0', 1),   (786, 262, '  ', '0', 1),   (787, 262, '', '0', 1) ");
+        // Tabla de OPCIONES - PREHISPANICA - NIVEL MEDIO  -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (758, 253, ' Origenes nacientes  ', '0', 1),   (759, 253, ' Lugar de vuelos  ', '0', 1),   (760, 253, 'Ciudad de los dioses', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (761, 254, ' Tlaxcala, Texcoco y Teotitlan  ', '0', 1),   (762, 254, ' Mixteca, Tenochtitlan,Tlaxcala   ', '0', 1),   (763, 254, ' Tlaxcala, Tenochtitlan, Teotitlan ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (764, 255, ' Huitzilopochtli ', '0', 1),   (765, 255, ' Coyolxauhqui ', '0', 1),   (766, 255, 'Tezcatlipoca', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (767, 256, ' Montaña ', '0', 1),   (768, 256, 'Cerro  ', '0', 1),   (769, 256, 'Palmas', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (770, 257, ' Huitzilopochtli ', '0', 1),   (771, 257, 'Quetzalcóatl  ', '0', 1),   (772, 257, 'Tezcatlipoca', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (773, 258, ' Coyolxauhqui ', '0', 1),   (774, 258, ' Centéotl ', '0', 1),   (775, 258, 'Quetzalcóatl', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (776, 259, ' Ixchel ', '0', 1),   (777, 259, ' Yum Kaax  ', '0', 1),   (778, 259, 'Centéotl ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (779, 260, 'Centéotl  ', '0', 1),   (780, 260, 'Ixchel  ', '0', 1),   (781, 260, 'Coyolxauhqui', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (782, 261, 'Coyolxauhqui  ', '0', 1),   (783, 261, 'Huitzilopochtli  ', '0', 1),   (784, 261, 'Tezcatlipoca', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (785, 262, 'Coyolxauhqui ', '0', 1),   (786, 262, ' Ixchel ', '0', 1),   (787, 262, 'Centéotl', '0', 1) ");
+
+        // Tabla de Preguntas - PREHISPANICA - NIVEL Avanzado
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (263, 6, 3, 263, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (264, 6, 3, 264, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (265, 6, 3, 265, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (266, 6, 3, 266, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (267, 6, 3, 267, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (268, 6, 3, 268, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (269, 6, 3, 269, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (270, 6, 3, 270, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (271, 6, 3, 271, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (272, 6, 3, 272, '¿  ?', '  ', ' ', '0', '0', 1)");
+
+        // Tabla de OPCIONES - PREHISPANICA - NIVEL Avanzado  -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (788, 263, '  ', '0', 1),   (789, 263, '   ', '0', 1),   (790, 263, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (791, 264, '  ', '0', 1),   (792, 264, '   ', '0', 1),   (793, 264, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (794, 265, '  ', '0', 1),   (795, 265, '   ', '0', 1),   (796, 265, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (797, 266, '  ', '0', 1),   (798, 266, '   ', '0', 1),   (799, 266, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (800, 267, '  ', '0', 1),   (801, 267, '   ', '0', 1),   (802, 267, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (803, 268, '  ', '0', 1),   (804, 268, '   ', '0', 1),   (805, 268, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (806, 269, '  ', '0', 1),   (807, 269, '   ', '0', 1),   (808, 269, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (809, 270, '  ', '0', 1),   (810, 270, '   ', '0', 1),   (811, 270, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (812, 271, '  ', '0', 1),   (813, 271, '   ', '0', 1),   (814, 271, ' ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (815, 272, '  ', '0', 1),   (816, 272, '   ', '0', 1),   (817, 272, ' ', '0', 1) ");
+
 
 
     }
