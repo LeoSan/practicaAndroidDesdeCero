@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
 
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 
@@ -33,9 +34,8 @@ public class MainGuia extends AppCompatActivity {
         //Capturo parametros Intent
         String IdActividad = getIntent().getStringExtra("IdActividad");
 
-        System.out.println( " -------------  TIPO DE ACTIVIDAD  ------------------"  );
+        System.out.println( " -------------  TIPO DE ACTIVIDAD  - Estoy en MainGuia ------------------"  );
         System.out.println( " IdActividad ->  " + IdActividad );
-
 
         //Metodo de cambiar nombre de la App y el Icono en cada Activity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -59,7 +59,10 @@ public class MainGuia extends AppCompatActivity {
 
                 //Instancio el Imagen View y Texto
                 ImageView botonCategoria = new ImageView( getApplicationContext() );
-                TextView  textCategoria = new TextView ( getApplicationContext() );
+                TextView  textCategoria = new TextView ( getApplicationContext(), null, R.style.labelTituloCategoriaMainGuia);
+
+               //Ajuste del Tamaño del Texto dinamico
+                textCategoria.setTextSize(TypedValue.COMPLEX_UNIT_DIP,20);
 
                 //Text View -> Anexo nombre de la categoria
                 textCategoria.setText( datosCursor.getString(1) );
@@ -77,8 +80,8 @@ public class MainGuia extends AppCompatActivity {
                 LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
                 botonCategoria.setLayoutParams(paramImageViewBoton);
 
-                LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 150);
-                paramTextViewBoton.setMargins(0,0, 0, 20);
+                LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(450, 170);
+                paramTextViewBoton.setMargins(95,0, 0, 20);
                 textCategoria.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton

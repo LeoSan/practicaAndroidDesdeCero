@@ -24,7 +24,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
     // Tabla de categoria
         BasesDeDatos.execSQL("CREATE TABLE t_categoria(id int primary Key, nom_categoria text, desp_categoria text, activo int)");
-        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, 'Curiosidades ', 'curiosidad', 1), (2, 'Comida', 'comida', 1),(3, 'Cine', 'cine', 1),(4, 'Musica / Arte', 'arte', 1),(5, 'Deporte', 'deporte', 1),(6, 'Prehispánica', 'prehispanica', 1),(7, 'Nueva España', 'deporte', 1),(8, 'Independencia ', 'independencia', 1),(9, 'Revolución', 'revolucion', 1),(10, 'Historia Comtemponranea', 'historiamoderna', 1),(11, 'Geografía', 'geografia', 1),(12, 'Legislación Política ', 'legislacion', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, 'Curiosidades ', 'curiosidad', 1), (2, 'Comida', 'comida', 1),(3, 'Cine / Tv', 'cine', 1),(4, 'Musica / Arte', 'arte', 1),(5, 'Deporte', 'deporte', 1),(6, 'Prehispánica', 'prehispanica', 1),(7, 'Nueva España', 'deporte', 1),(8, 'Independencia ', 'independencia', 1),(9, 'Revolución', 'revolucion', 1),(10, 'Historia Comtemponranea', 'historiamoderna', 1),(11, 'Geografía', 'geografia', 1),(12, 'Legislación Política ', 'legislacion', 1)");
 
      // Tabla Niveles de aprendizaje
 
