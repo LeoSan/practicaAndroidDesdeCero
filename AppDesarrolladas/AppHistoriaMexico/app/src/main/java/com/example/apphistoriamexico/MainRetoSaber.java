@@ -63,7 +63,7 @@ public class MainRetoSaber extends AppCompatActivity {
         setNomNiveles(IdNivel, iContador, IdCategoria);
         setNomCategoria(IdCategoria);
 
-        System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ------------------------------------------------------ "  );
+        System.out.println( "  -------------------------------------  PARAMETROS DE ENTRADA ----------------Estoy MainRetoSaber-------------------------------------- "  );
         System.out.println( "  IdCategoria " + IdCategoria );
         System.out.println( "  IdNivel "     + IdNivel     );
         System.out.println( "  iContador "   + iContador   );

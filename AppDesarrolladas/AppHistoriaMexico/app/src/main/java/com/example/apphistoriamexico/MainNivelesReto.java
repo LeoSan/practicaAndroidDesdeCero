@@ -7,12 +7,15 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.lang.reflect.Type;
 
 public class MainNivelesReto extends AppCompatActivity {
 
@@ -45,7 +48,7 @@ public class MainNivelesReto extends AppCompatActivity {
         String IdCategoria = getIntent().getStringExtra("IdCategoria");
         String IdActividad = getIntent().getStringExtra("IdActividad");
 
-        System.out.println( " -------------  PARAMETROS DE ENTRADA   ------------------"  );
+        System.out.println( " -------------  TIPO DE ACTIVIDAD  - Estoy en MainNivelesReto ------------------"  );
         System.out.println(  " IdCategoria ->" + IdCategoria );
         System.out.println(  " IdActividad ->" + IdActividad );
 
@@ -77,6 +80,9 @@ public class MainNivelesReto extends AppCompatActivity {
                 ImageView botonNiveles = new ImageView( getApplicationContext() );
                 TextView textNiveles = new TextView ( getApplicationContext() );
 
+                //Ajuste del Tamaño del Texto dinamico
+                textNiveles.setTextSize(TypedValue.COMPLEX_UNIT_DIP,20);
+
                 //Text View -> Anexo nombre de la categoria
                 textNiveles.setText( datosCursor.getString(1) );
 
@@ -90,11 +96,11 @@ public class MainNivelesReto extends AppCompatActivity {
                 botonNiveles.setImageResource(resId);
 
                 // Atributo Layout Permite definir el tamaño a los botones Tipo Image View
-                LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(300, 300);
+                LinearLayout.LayoutParams  paramImageViewBoton = new LinearLayout.LayoutParams(350, 350);
                 botonNiveles.setLayoutParams(paramImageViewBoton);
 
-                LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 150);
-                paramTextViewBoton.setMargins(0,0, 0, 40);
+                LinearLayout.LayoutParams  paramTextViewBoton = new LinearLayout.LayoutParams(300, 170);
+                paramTextViewBoton.setMargins(80,0, 0, 40);
                 textNiveles.setLayoutParams(paramTextViewBoton);
 
                 //Defino la Id al Boton

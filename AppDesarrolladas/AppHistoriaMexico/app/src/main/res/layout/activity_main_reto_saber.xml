@@ -54,18 +54,17 @@
         android:id="@+id/contScrollRetoSaber"
         android:layout_width="331dp"
         android:layout_height="527dp"
-        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcionRetoSaber"
-        app:layout_constraintVertical_bias="0.37">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:id="@+id/contLinearBtnsNiveles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp">
