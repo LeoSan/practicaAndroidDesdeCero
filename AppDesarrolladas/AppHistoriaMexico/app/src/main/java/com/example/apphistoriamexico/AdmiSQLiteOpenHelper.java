@@ -734,41 +734,37 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (950, 316, 'Era un capitan  ', '0', 1),   (951, 316, 'Era la corona   ', '0', 1),   (952, 316, 'Era un mercader ', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (953, 317, 'Pardos  ', '0', 1),   (954, 317, ' Zambos  ', '0', 1),   (955, 317, 'Curdos ', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (956, 318, 'Un Palacio  ', '0', 1),   (957, 318, 'Un Recinto   ', '0', 1),   (958, 318, 'Una Carcel ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (959, 319, ' Las Iglesias de los Frailes ', '0', 1),   (960, 319, ' No tenian derecho ', '0', 1),   (961, 319, 'Ninguna ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (959, 319, ' Las Iglesias de los Frailes ', '0', 1),   (960, 319, ' No tenian derecho ', '0', 1),   (961, 319, 'Ninguna   ', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (962, 320, ' El Templo de la Santa Cruz ', '0', 1),   (963, 320, ' El Recinto de la Santa Cruz  ', '0', 1),   (964, 320, 'Ninguna ', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (965, 321, ' San Francisco de los Frailes ', '0', 1),   (966, 321, '  San Texcoco ', '0', 1),   (967, 321, ' Ninguna', '0', 1) ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (968, 322, 'San José de los Frailes ', '0', 1),   (969, 322, ' Los Naturales  ', '0', 1),   (970, 322, 'Ninguna ', '0', 1) ");
 
-
         // Tabla de Preguntas - NUEVA ESPAÑA - NIVEL Experto
- /*
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (323, 7, 4, 323, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (324, 7, 4, 324, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (325, 7, 4, 325, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (326, 7, 4, 326, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (327, 7, 4, 327, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (328, 7, 4, 328, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (329, 7, 4, 329, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (330, 7, 4, 330, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (331, 7, 4, 331, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (332, 7, 4, 332, '¿  ?', ' ', ' ', '0', '0', 1)");
-*/
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (323, 7, 4, 323, '¿ Cómo se llamó el Primer periódico de México ?', ' La Gaceta de México (Gazeta de México) ', 'https://en.wikipedia.org/wiki/La_Gaceta_de_M%C3%A9xico ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (324, 7, 4, 324, '¿ Cuales fueron los tres principios fundamentales del plan de Iguala ?', 'Independencia, Religion, Union ', ' https://www.mexicodesconocido.com.mx/plan-de-iguala-1820.html ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (325, 7, 4, 325, '¿ Quienes integraron el triunvirato a la caida del imperio del Mexico independiente ?', 'Guadalupe Victoria, Pedro Celestino Negrete, Nicolas Bravo', 'https://www.chihuahuamexico.com/index.php?option=com_content&task=view&id=3488&Itemid=30', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (326, 7, 4, 326, '¿ Quien fue el ultimo Virrey de la Nueva España ?', 'Juan Ruiz de Apodaca', 'https://es.wikipedia.org/wiki/Juan_O%27Donoj%C3%BA', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (327, 7, 4, 327, '¿ El término Nueva España fue acuñado por ?', 'Hernán Cortés', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (328, 7, 4, 328, '¿ Quien subio al trono luego de la muerte de Fernando VI ?', 'Carlos III', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (329, 7, 4, 329, '¿ Provincias de la Constitución de Cádiz ?', ' Nueva España', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (330, 7, 4, 330, '¿ Provincias de la Constitución de Cádiz ?', ' Provincias internas orientales', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (331, 7, 4, 331, '¿ Provincias de la Constitución de Cádiz ?', ' Provincias internas occidentales', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (332, 7, 4, 332, '¿ Provincias de la Constitución de Cádiz ?', ' San Luis Potosí', 'https://es.wikipedia.org/wiki/Virreinato_de_Nueva_Espa%C3%B1a', '0', '0', 1)");
+
         // Tabla de OPCIONES - NUEVA ESPAÑA - NIVEL Experto  -
- /*
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (971, 313, '  ', '0', 1),   (972, 313, '   ', '0', 1),   (973, 313, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (974, 314, '  ', '0', 1),   (975, 314, '   ', '0', 1),   (976, 314, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (977, 315, '  ', '0', 1),   (978, 315, '   ', '0', 1),   (979, 315, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (980, 316, '  ', '0', 1),   (981, 316, '   ', '0', 1),   (982, 316, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (983, 317, '  ', '0', 1),   (984, 317, '   ', '0', 1),   (985, 317, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (986, 318, '  ', '0', 1),   (987, 318, '   ', '0', 1),   (988, 318, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (989, 319, '  ', '0', 1),   (990, 319, '   ', '0', 1),   (991, 319, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (992, 320, '  ', '0', 1),   (993, 320, '   ', '0', 1),   (994, 320, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (995, 321, '  ', '0', 1),   (996, 321, '   ', '0', 1),   (997, 321, ' ', '0', 1) ");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (998, 322, '  ', '0', 1),   (999, 322, '   ', '0', 1),   (1000, 322, ' ', '0', 1) ");
-*/
 
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (971, 323, ' El Despertador Americano', '0', 1), (972, 323, 'El Pueblo', '0', 1),   (973, 323, 'El Nacional', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (974, 324, 'Conquista', '0', 1), (975, 324, 'Libertad', '0', 1),   (976, 324, 'Igualdad ', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (977, 325, 'Nicolas Bravo', '0', 1), (978, 325, 'Guadalupe Victoria', '0', 1),   (979, 325, 'Pedro Celestino', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (980, 326, 'Fernando Maximiliano ', '0', 1),   (981, 326, ' Carlota de México', '0', 1),   (982, 326, 'Leopoldo I de Bélgica', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (983, 327, 'Fernando VI', '0', 1), (984, 327, 'Carlos III', '0', 1),   (985, 327, 'Juan Ruiz de Apodaca', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (986, 328, 'Carlos II', '0', 1), (987, 328, 'Carlos I', '0', 1),   (988, 328, 'Carlos IV', '0', 1)   ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (989, 329, 'Ninguna', '0', 1),   (990, 329, 'Hernán Cortés', '0', 1),   (991, 329, 'Cádiz', '0', 1)  ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (992, 330, 'Ninguna', '0', 1),   (993, 330, 'Hernán Cortés', '0', 1),   (994, 330, 'Cádiz', '0', 1)  ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (995, 331, 'Ninguna', '0', 1),   (996, 331, 'Hernán Cortés', '0', 1),   (997, 331, 'Cádiz', '0', 1)  ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (998, 332, 'Ninguna', '0', 1),   (999, 332, 'Hernán Cortés', '0', 1),   (1000, 332, 'Cádiz', '0', 1) ");
     }
-
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
