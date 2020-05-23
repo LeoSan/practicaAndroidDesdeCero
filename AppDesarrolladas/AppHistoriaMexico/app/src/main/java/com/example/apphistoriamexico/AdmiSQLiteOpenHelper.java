@@ -24,7 +24,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
 
     // Tabla de categoria
         BasesDeDatos.execSQL("CREATE TABLE t_categoria(id int primary Key, nom_categoria text, desp_categoria text, activo int)");
-        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, 'Curiosidades ', 'curiosidad', 1), (2, 'Comida', 'comida', 1),(3, 'Cine / Tv', 'cine', 1),(4, 'Musica / Arte', 'arte', 1),(5, 'Deporte', 'deporte', 1),(6, 'Prehispánica', 'prehispanica', 1),(7, 'Nueva España', 'deporte', 1),(8, 'Independencia ', 'independencia', 1),(9, 'Revolución', 'revolucion', 1),(10, 'Historia Comtemponranea', 'historiamoderna', 1),(11, 'Geografía', 'geografia', 1),(12, 'Legislación Política ', 'legislacion', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_categoria(id, nom_categoria, desp_categoria, activo) VALUES (1, '   Curiosidades ', 'curiosidad', 1), (2, '            Comida', 'comida', 1),(3, '      Cine / TV', 'cine', 1),(4, '   Musica / Arte', 'arte', 1),(5, '        Deporte', 'deporte', 1),(6, '     Prehispánica', 'prehispanica', 1),(7, '   Nueva España', 'nueva', 1),(8, '   Independencia ', 'independencia', 1),(9, '    Revolución', 'revolucion', 1),(10, '    Historia Comtemponranea', 'historiamoderna', 1),(11, '       Geografía', 'geografia', 1),(12, '    Legislación Política ', 'legislacion', 1)");
 
      // Tabla Niveles de aprendizaje
 
@@ -764,6 +764,23 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (992, 330, 'Ninguna', '0', 1),   (993, 330, 'Hernán Cortés', '0', 1),   (994, 330, 'Cádiz', '0', 1)  ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (995, 331, 'Ninguna', '0', 1),   (996, 331, 'Hernán Cortés', '0', 1),   (997, 331, 'Cádiz', '0', 1)  ");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (998, 332, 'Ninguna', '0', 1),   (999, 332, 'Hernán Cortés', '0', 1),   (1000, 332, 'Cádiz', '0', 1) ");
+
+        // Tabla de Preguntas - NUEVA ESPAÑA - NIVEL Leyenda
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (333, 7, 5, 333, '¿ Cuál fue el Plan que usó Porfirio Díaz en contra de la reelección ?', 'Plan de la Noria', 'https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_La_Noria', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (334, 7, 5, 334, '¿ 1950 que obra escribio carlos fuentes que habla sobre la vida mexicana ?', 'La región mas transparente', 'http://www.elem.mx/autor/datos/1162', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (335, 7, 5, 335, '¿ Monumento que modernizo México ?', 'El Caballito de Reforma ', 'Torre del Caballito', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (336, 7, 5, 336, '¿ 4 nombres de presidentes?', 'Adolfo Lopez Mateos', 'https://www.mexicodesconocido.com.mx/presidentes-de-mexico.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (337, 7, 5, 337, '¿ Quién dijo las palabras Tierra y Libertad ?', 'Emiliano Zapata', 'https://es.wikipedia.org/wiki/Tierra_y_Libertad', '0', '0', 1)");
+
+        // Tabla de OPCIONES - NUEVA ESPAÑA - NIVEL Leyenda  -
+
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1001, 333, 'Tuxtepec', '0', 1), (1002, 333, 'Plan Cadiz', '0', 1),   (1003, 333, 'Plan Iguala', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1004, 334, 'La grandeza de Mexico ', '0', 1),  (1005, 334, 'La gaceta de México', '0', 1),  (1006, 334, 'Unión de Armas', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1007, 335, 'Monumento de la revolución', '0', 1),  (1008, 335, 'Angel de Indipendencia', '0', 1),  (1009, 335, 'El palacio de Bellas Artes', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1010, 336, 'Mario Fortino Alfonso Moreno Reyes', '0', 1),  (1011, 336, 'Alejandro González iñárritu', '0', 1),  (1012, 336, 'Emmanuel lubezki', '0', 1) ");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1013, 337, 'Alfonso cuarón', '0', 1),  (1014, 337, 'Anthony Quinn', '0', 1),  (1015, 337, 'Guillermo del Toro', '0', 1) ");
+
     }
 
     @Override
