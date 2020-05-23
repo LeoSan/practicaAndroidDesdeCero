@@ -91,7 +91,8 @@
             <TableLayout
                 android:id="@+id/idTableLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="100px">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -373,7 +374,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/labelLeyendaBuenas"
+                                android:id="@+id/labelLeyendaBuenasArte"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -381,7 +382,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
-                                android:id="@+id/labelLeyendaVistas"
+                                android:id="@+id/labelLeyendaVistasArte"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -389,7 +390,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
-                                android:id="@+id/labelLeyendaMalas"
+                                android:id="@+id/labelLeyendaMalasArte"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/labelResulMalas"
@@ -402,7 +403,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/inpTotalLeyendaBuenas"
+                                android:id="@+id/inpTotalArteBuenas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -412,7 +413,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalLeyendaVistas"
+                                android:id="@+id/inpTotalArteVistas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -422,7 +423,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/inpTotalLeyendaMalas"
+                                android:id="@+id/inpTotalArteMalas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="15dp"
@@ -434,6 +435,693 @@
                     </TableLayout>
 
                 </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnDeporte"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/deporte" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosDeporte"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasDeporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnPrehispanica"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/prehispanica" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosPrehispanica"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasPrehispanica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnNuevaEspania"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/nueva" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosNuevaEspania"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasNuevaEspania"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnIndependencia"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/independencia" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosIndependencia"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasIndependencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnRevolucion"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/revolucion" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosRevolucion"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasRevolucion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnComtemponranea"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/historiamoderna" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosComtemponranea"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                    android:id="@+id/inpTotalLeyendaMalasComtemponranea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnGeografia"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/geografia" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosGeografia"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasGeografia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnLegislacion"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/btnDescrip"
+                        app:srcCompat="@drawable/legislacion" />
+
+                    <TableLayout
+                        android:id="@+id/idTableDatosLegislacion"
+                        android:layout_width="240dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/labelLeyendaLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulBuenas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaVistasLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="@string/labelResulVistas"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/labelLeyendaMalasLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/labelResulMalas"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaBuenasLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaVistasLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/inpTotalLeyendaMalasLegislacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+                //fin
             </TableLayout>
         </LinearLayout>
     </ScrollView>

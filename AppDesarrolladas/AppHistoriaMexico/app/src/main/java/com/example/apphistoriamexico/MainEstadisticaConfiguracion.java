@@ -3,6 +3,7 @@ package com.example.apphistoriamexico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -19,6 +20,33 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
 
     //Item de Nivel Cine
     TextView inpCineAprobadas, inpCinePreguntas, inpCineReprobadas;
+
+    //Item de Nivel Arte
+    TextView inpArteAprobadas, inpArtePreguntas, inpArteReprobadas;
+
+    //Item de Nivel Deporte
+    TextView inpDeporteAprobadas, inpDeportePreguntas, inpDeporteReprobadas;
+
+    //Item de Nivel Prehispanico
+    TextView inpPrehispanicoAprobadas, inpPrehispanicoPreguntas, inpPrehispanicoReprobadas;
+
+    //Item de Nivel NuevaEspania
+    TextView inpNuevaEspaniaAprobadas, inpNuevaEspaniaPreguntas, inpNuevaEspaniaReprobadas;
+
+    //Item de Nivel Independencia
+    TextView inpIndenpendenciaAprobadas, inpIndenpendenciaPreguntas, inpIndenpendenciaReprobadas;
+
+    //Item de Nivel Revolucion
+    TextView inpRevolucionAprobadas, inpRevolucionPreguntas, inpRevolucionReprobadas;
+
+    //Item de Nivel Contemporanea
+    TextView inpContemporaneaAprobadas, inpContemporaneaPreguntas, inpContemporaneaReprobadas;
+
+    //Item de Nivel Geograficos
+    TextView inpGeograficasAprobadas, inpGeograficasPreguntas, inpGeograficasReprobadas;
+
+    //Item de Nivel Legislación
+    TextView inpLegislacionAprobadas, inpLegislacionPreguntas, inpLegislacionReprobadas;
 
     Integer toAprobadas, toReprobadas;
     String toVistas;
@@ -72,6 +100,125 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
             inpCineAprobadas.setText( String.valueOf(toAprobadas) );
             inpCineReprobadas.setText( String.valueOf(toReprobadas) );
             inpCinePreguntas.setText( toVistas );
+
+        //Item Categoria Arte
+        inpArteAprobadas  = (TextView)findViewById(R.id.inpTotalArteBuenas);
+        inpArtePreguntas  = (TextView)findViewById(R.id.inpTotalArteVistas);
+        inpArteReprobadas = (TextView)findViewById(R.id.inpTotalArteMalas);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("4", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("4", 0);
+        toVistas    = getPreguntasTotal("4");
+
+        inpArteAprobadas.setText( String.valueOf(toAprobadas) );
+        inpArteReprobadas.setText( String.valueOf(toReprobadas) );
+        inpArtePreguntas.setText( toVistas );
+
+        //Item Categoria Deporte
+        inpDeporteAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasDeporte);
+        inpDeportePreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasDeporte);
+        inpDeporteReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasDeporte);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("5", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("5", 0);
+        toVistas    = getPreguntasTotal("5");
+
+        inpDeporteAprobadas.setText( String.valueOf(toAprobadas) );
+        inpDeporteReprobadas.setText( String.valueOf(toReprobadas) );
+        inpDeportePreguntas.setText( toVistas );
+
+        //Item Categoria Prehispanico
+        inpPrehispanicoAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasPrehispanica);
+        inpPrehispanicoPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasPrehispanica);
+        inpPrehispanicoReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasPrehispanica);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("5", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("5", 0);
+        toVistas    = getPreguntasTotal("5");
+
+        inpPrehispanicoAprobadas.setText( String.valueOf(toAprobadas) );
+        inpPrehispanicoReprobadas.setText( String.valueOf(toReprobadas) );
+        inpPrehispanicoPreguntas.setText( toVistas );
+
+        //Item Categoria Prehispanico
+        inpNuevaEspaniaAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasNuevaEspania);
+        inpNuevaEspaniaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasNuevaEspania);
+        inpNuevaEspaniaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasNuevaEspania);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("6", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("6", 0);
+        toVistas    = getPreguntasTotal("6");
+
+        inpNuevaEspaniaAprobadas.setText( String.valueOf(toAprobadas) );
+        inpNuevaEspaniaReprobadas.setText( String.valueOf(toReprobadas) );
+        inpNuevaEspaniaPreguntas.setText( toVistas );
+
+
+        //Item Categoria Independencia
+        inpIndenpendenciaAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasIndependencia);
+        inpIndenpendenciaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasIndependencia);
+        inpIndenpendenciaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasIndependencia);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("7", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("7", 0);
+        toVistas    = getPreguntasTotal("7");
+
+        inpIndenpendenciaAprobadas.setText( String.valueOf(toAprobadas) );
+        inpIndenpendenciaReprobadas.setText( String.valueOf(toReprobadas) );
+        inpIndenpendenciaPreguntas.setText( toVistas );
+
+        //Item Categoria Independencia
+        inpRevolucionAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasRevolucion);
+        inpRevolucionPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasRevolucion);
+        inpRevolucionReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasRevolucion);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("8", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("8", 0);
+        toVistas    = getPreguntasTotal("8");
+
+        inpRevolucionAprobadas.setText( String.valueOf(toAprobadas) );
+        inpRevolucionReprobadas.setText( String.valueOf(toReprobadas) );
+        inpRevolucionPreguntas.setText( toVistas );
+
+        //Item Categoria Independencia
+        inpIndenpendenciaAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasIndependencia);
+        inpIndenpendenciaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasIndependencia);
+        inpIndenpendenciaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasIndependencia);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("9", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("9", 0);
+        toVistas    = getPreguntasTotal("9");
+
+        inpIndenpendenciaAprobadas.setText( String.valueOf(toAprobadas) );
+        inpIndenpendenciaReprobadas.setText( String.valueOf(toReprobadas) );
+        inpIndenpendenciaPreguntas.setText( toVistas );
+
+        //Item Categoria Datos Geograficos
+        inpGeograficasAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasGeografia);
+        inpGeograficasPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasGeografia);
+        inpGeograficasReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasGeografia);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("10", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("10", 0);
+        toVistas    = getPreguntasTotal("10");
+
+        inpGeograficasAprobadas.setText( String.valueOf(toAprobadas) );
+        inpGeograficasReprobadas.setText( String.valueOf(toReprobadas) );
+        inpGeograficasPreguntas.setText( toVistas );
+
+        //Item Categoria Datos Legislacion
+        inpLegislacionAprobadas  = (TextView)findViewById(R.id.inpTotalLeyendaBuenasLegislacion);
+        inpLegislacionPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasLegislacion);
+        inpLegislacionReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasLegislacion);
+
+        toAprobadas  = consultarTotalPreguntasEstaditicas("11", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("11", 0);
+        toVistas    = getPreguntasTotal("11");
+
+        inpLegislacionAprobadas.setText( String.valueOf(toAprobadas) );
+        inpLegislacionReprobadas.setText( String.valueOf(toReprobadas) );
+        inpLegislacionPreguntas.setText( toVistas );
+
 
     }
 
