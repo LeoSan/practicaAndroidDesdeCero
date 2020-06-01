@@ -132,9 +132,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpPrehispanicoPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasPrehispanica);
         inpPrehispanicoReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasPrehispanica);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("5", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("5", 0);
-        toVistas    = getPreguntasTotal("5");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("6", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("6", 0);
+        toVistas    = getPreguntasTotal("6");
 
         inpPrehispanicoAprobadas.setText( String.valueOf(toAprobadas) );
         inpPrehispanicoReprobadas.setText( String.valueOf(toReprobadas) );
@@ -145,9 +145,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpNuevaEspaniaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasNuevaEspania);
         inpNuevaEspaniaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasNuevaEspania);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("6", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("6", 0);
-        toVistas    = getPreguntasTotal("6");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("7", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("7", 0);
+        toVistas    = getPreguntasTotal("7");
 
         inpNuevaEspaniaAprobadas.setText( String.valueOf(toAprobadas) );
         inpNuevaEspaniaReprobadas.setText( String.valueOf(toReprobadas) );
@@ -159,9 +159,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpIndenpendenciaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasIndependencia);
         inpIndenpendenciaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasIndependencia);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("7", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("7", 0);
-        toVistas    = getPreguntasTotal("7");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("8", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("8", 0);
+        toVistas    = getPreguntasTotal("8");
 
         inpIndenpendenciaAprobadas.setText( String.valueOf(toAprobadas) );
         inpIndenpendenciaReprobadas.setText( String.valueOf(toReprobadas) );
@@ -172,9 +172,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpRevolucionPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasRevolucion);
         inpRevolucionReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasRevolucion);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("8", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("8", 0);
-        toVistas    = getPreguntasTotal("8");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("9", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("9", 0);
+        toVistas    = getPreguntasTotal("9");
 
         inpRevolucionAprobadas.setText( String.valueOf(toAprobadas) );
         inpRevolucionReprobadas.setText( String.valueOf(toReprobadas) );
@@ -185,9 +185,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpIndenpendenciaPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasIndependencia);
         inpIndenpendenciaReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasIndependencia);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("9", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("9", 0);
-        toVistas    = getPreguntasTotal("9");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("10", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("10", 0);
+        toVistas    = getPreguntasTotal("10");
 
         inpIndenpendenciaAprobadas.setText( String.valueOf(toAprobadas) );
         inpIndenpendenciaReprobadas.setText( String.valueOf(toReprobadas) );
@@ -198,9 +198,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpGeograficasPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasGeografia);
         inpGeograficasReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasGeografia);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("10", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("10", 0);
-        toVistas    = getPreguntasTotal("10");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("11", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("11", 0);
+        toVistas    = getPreguntasTotal("11");
 
         inpGeograficasAprobadas.setText( String.valueOf(toAprobadas) );
         inpGeograficasReprobadas.setText( String.valueOf(toReprobadas) );
@@ -211,9 +211,9 @@ public class MainEstadisticaConfiguracion extends AppCompatActivity {
         inpLegislacionPreguntas  = (TextView)findViewById(R.id.inpTotalLeyendaVistasLegislacion);
         inpLegislacionReprobadas = (TextView)findViewById(R.id.inpTotalLeyendaMalasLegislacion);
 
-        toAprobadas  = consultarTotalPreguntasEstaditicas("11", 1);
-        toReprobadas = consultarTotalPreguntasEstaditicas("11", 0);
-        toVistas    = getPreguntasTotal("11");
+        toAprobadas  = consultarTotalPreguntasEstaditicas("12", 1);
+        toReprobadas = consultarTotalPreguntasEstaditicas("12", 0);
+        toVistas    = getPreguntasTotal("12");
 
         inpLegislacionAprobadas.setText( String.valueOf(toAprobadas) );
         inpLegislacionReprobadas.setText( String.valueOf(toReprobadas) );
