@@ -942,7 +942,6 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1192, 401, ' 05 de febrero 1919 ', '0', 1), (1193, 401, ' 05 de febrero 1920 ', '0', 1),   (1194, 401, ' 05 de febrero 1915 ', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1195, 402, ' Famoso de la revolución. ', '0', 1), (1196, 402, ' Ninguno. ', '0', 1),   (1197, 402, ' Emiliano Zapata  ', '0', 1)");
 
-
         // Tabla de Preguntas - Revolución  - NIVEL Experto    -
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (403, 9, 4, 403, '¿ Quién dijo Tierra y Libertad ?', 'Emiliano Zapata', 'https://www.culturagenial.com/es/tierra-y-libertad/', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (404, 9, 4, 404, '¿ Nombre del líder agrario que encabezó la Revolución mexicana en el estado de Morelos ?', 'Emiliano Zapata', 'https://www.culturagenial.com/es/tierra-y-libertad/', '0', '0', 1)");
@@ -957,56 +956,60 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1207, 406, ' El 10 de abril de 1920 ', '0', 1), (1208, 406, ' El 10 de abril de 1915 ', '0', 1),   (1209, 406, 'El 10 de abril de 1910 ', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1210, 407, 'Ninguna  ', '0', 1), (1211, 407, 'Huelga a Muerte  ', '0', 1),   (1212, 407, 'Huelga por la Libertad ', '0', 1)");
 
-        // Tabla de Preguntas - Historial Actual  - NIVEL Basico    -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (408, 10, 1, 408, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (409, 10, 1, 409, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (410, 10, 1, 410, '¿  ?', ' ', ' ', '0', '0', 1)");
+        // Tabla de Preguntas - Historial Actual  - NIVEL Basico -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (408, 10, 1, 408, '¿ CUAL ES EL LEMA DE LA UNAM ?', 'Por mi raza hablará el espíritu', 'https://www.unam.mx/acerca-de-la-unam/identidad-unam/lema', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (409, 10, 1, 409, '¿ Quien fue el que dijo el lema por mi raza habla el espíritu ?', 'José Vasconcelos', 'https://www.facebook.com/UNAM.MX.Oficial/videos/recotrado-jos%C3%A9-vasconcelos/1720411651357777/', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (410, 10, 1, 410, '¿ Gobierno creo banco de Mexico en 1925 ?', 'Plutarco Elias Calles', 'http://www.anterior.banxico.org.mx/acerca-del-banco-de-mexico/semblanza-historica.html', '0', '0', 1)");
 
-        // Tabla de Opciones - Historial Actual  - NIVEL Basico    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1213, 408, ' ', '0', 1), (1214, 408, '  ', '0', 1),   (1215, 408, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1216, 409, ' ', '0', 1), (1217, 409, '  ', '0', 1),   (1218, 409, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1219, 410, ' ', '0', 1), (1220, 410, '  ', '0', 1),   (1221, 410, ' ', '0', 1)");
+        // Tabla de Opciones - Historial Actual  - NIVEL Basico  -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1213, 408, 'Por mi raza hablará el pueblo ', '0', 1), (1214, 408, 'Ninguna  ', '0', 1),   (1215, 408, 'Por mi espíritu hablara la raza ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1216, 409, 'Emiliano Zapata ', '0', 1), (1217, 409, 'Pancho Villa', '0', 1),   (1218, 409, 'Ninguno ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1219, 410, 'Victoriano Huerta', '0', 1), (1220, 410, 'Francisco Madero', '0', 1),   (1221, 410, 'Ninguno ', '0', 1)");
 
-        // Tabla de Preguntas - Historial Actual  - NIVEL MEDIO    -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (411, 10, 2, 411, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (412, 10, 2, 412, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (413, 10, 2, 413, '¿  ?', ' ', ' ', '0', '0', 1)");
+        // Tabla de Preguntas - Historial Actual  - NIVEL MEDIO  -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (411, 10, 2, 411, '¿ CUÁL FUE LA INSTITUCION QUE FUNDO LAZARO CARDENAS DEL RIO DESTINADA A LOS ESTUDIOS TECNICOS  ?', 'Instituto Politécnico Nacional (IPN) y el Colegio de México(ColMex)', 'https://www.poi.ipn.mx/Conocenos/Paginas/Historia.aspx', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (412, 10, 2, 412, '¿ El 18 de marzo de 1938 el presidente Lázaro Cárdenas ?', 'Expropió el petróleo ', 'https://www.laizquierdadiario.com/La-expropiacion-petrolera-de-1938', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (413, 10, 2, 413, '¿ Como participo Mexico en la segunda guerra mundial ?', 'Con el envío de fuerza aérea expedicionaria Escuadrón 201', 'https://www.excelsior.com.mx/nacional/2017/05/28/1166145', '0', '0', 1)");
 
         // Tabla de Opciones - Historial Actual  - NIVEL Medio    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1222, 411, ' ', '0', 1), (1223, 411, '  ', '0', 1),   (1224, 411, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1225, 412, ' ', '0', 1), (1226, 412, '  ', '0', 1),   (1227, 412, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1228, 413, ' ', '0', 1), (1229, 413, '  ', '0', 1),   (1230, 413, ' ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1222, 411, 'UNAM ', '0', 1), (1223, 411, 'CONALEP', '0', 1),   (1224, 411, 'Ninguna', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1225, 412, 'Ganos las elecciones ', '0', 1), (1226, 412, ' Firmo el tratado de Libre comercio ', '0', 1),   (1227, 412, 'Desarrollo económico ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1228, 413, 'Con materia prima.', '0', 1), (1229, 413, 'Con obreros', '0', 1),   (1230, 413, 'Con agricultura', '0', 1)");
 
         // Tabla de Preguntas - Historial Actual  - NIVEL AVANZADO    -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (414, 10, 3, 414, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (415, 10, 3, 415, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (416, 10, 3, 416, '¿  ?', ' ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (414, 10, 3, 414, '¿ Que Presidente inauguro Diana la Cazdora (1942) ?', 'Manuel Avila Camacho', 'https://www.chilango.com/ciudad/la-tormentosa-vida-de-la-diana-cazadora/', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (415, 10, 3, 415, '¿ Se decreta el derecho al voto de la mujer  ?', '17 de octubre de 1953', 'https://www.excelsior.com.mx/nacional/se-conmemoran-63-anos-del-voto-de-la-mujer-en-mexico/1249829', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (416, 10, 3, 416, '¿ Cuando fue la matanza de tlatelolco  ?', '2 de octubre de 1968', 'https://www.bbc.com/mundo/noticias-america-latina-45714908', '0', '0', 1)");
 
         // Tabla de Opciones - Historial Actual  - NIVEL AVANZADO    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1231, 414, ' ', '0', 1), (1232, 414, '  ', '0', 1),   (1233, 414, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1234, 415, ' ', '0', 1), (1235, 415, '  ', '0', 1),   (1236, 415, ' ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1231, 414, 'Pancho Villa ', '0', 1), (1232, 414, 'Victoriano Huerta', '0', 1),   (1233, 414, 'Francisco De Madero ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1234, 415, 'El 3 de julio de 1955', '0', 1), (1235, 415, '4 de diciembre de 1952', '0', 1),   (1236, 415, 'ninguna. ', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1237, 416, ' ', '0', 1), (1238, 416, '  ', '0', 1),   (1239, 416, ' ', '0', 1)");
 
         // Tabla de Preguntas - Historial Actual  - NIVEL EXperto    -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (417, 10, 4, 417, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (418, 10, 4, 418, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (419, 10, 4, 419, '¿  ?', ' ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (417, 10, 4, 417, '¿ Presidente cuando fue la matanza de Tlatelolco ?', 'Gustavo Díaz Ordaz', 'https://www.huffingtonpost.com.mx/2018/10/02/las-dos-horas-previas-a-la-matanza-del-2-de-octubre-de-1968_a_23548344/', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (418, 10, 4, 418, '¿ Creación del Colegio Nacional de Educación Profesional Técnica CONALEP?', 'José López Portillo', 'https://www.conalepmex.edu.mx/conocenos/que-es-conalep.html', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (419, 10, 4, 419, '¿ Presidente que estuvo durante el terremoto de 1985 y mundial 1986.  ?', 'Miguel de la Madrid', 'http://presidentes.mx/miguel-de-la-madrid // https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_1986', '0', '0', 1)");
 
         // Tabla de Opciones - Historial Actual  - NIVEL EXPERTO    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1240, 417, ' ', '0', 1), (1241, 417, '  ', '0', 1),   (1242, 417, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1243, 418, ' ', '0', 1), (1244, 418, '  ', '0', 1),   (1245, 418, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1246, 419, ' ', '0', 1), (1247, 419, '  ', '0', 1),   (1248, 419, ' ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1240, 417, 'Manuel Ávila Camacho', '0', 1), (1241, 417, 'Adolfo Ruiz Cortines', '0', 1),   (1242, 417, 'Adolfo López Mateos', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1243, 418, 'Manuel Ávila Camacho ', '0', 1), (1244, 418, 'Adolfo Ruiz Cortines ', '0', 1),   (1245, 418, 'Adolfo López Mateos', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1246, 419, 'Manuel Ávila Camacho', '0', 1), (1247, 419, 'Adolfo Ruiz Cortines ', '0', 1),   (1248, 419, 'Adolfo López Mateos', '0', 1)");
 
 
-        // Tabla de Preguntas - Historial Actual  - NIVEL EXperto    -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (420, 10, 5, 420, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (421, 10, 5, 421, '¿  ?', ' ', ' ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (422, 10, 5, 422, '¿  ?', ' ', ' ', '0', '0', 1)");
+        // Tabla de Preguntas - Historial Actual  - NIVEL Leyenda    -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (420, 10, 5, 420, '¿ Fecha del Apagón analógico y era de la tv digital ?', '31 diciembre del 2015 ', 'http://cienciauanl.uanl.mx/?p=3733', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (421, 10, 5, 421, '¿ Como se llamó el Movimiento Civil en Chiapas por subcomandante Marco en 1994 ?', 'Ejército zapatista de liberación nacional', 'https://es.wikipedia.org/wiki/Ej%C3%A9rcito_Zapatista_de_Liberaci%C3%B3n_Nacional ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (422, 10, 5, 422, '¿ AÑO DEL  SURGIMIENTO DEL TRATADO LIBRE COMERCIO ?', '14 de diciembre de 1992', 'https://es.wikipedia.org/wiki/Tratado_de_Libre_Comercio_de_Am%C3%A9rica_del_Norte', '0', '0', 1)");
 
-        // Tabla de Opciones - Historial Actual  - NIVEL EXPERTO    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1249, 420, ' ', '0', 1), (1250, 420, '  ', '0', 1),   (1251, 420, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1252, 421, ' ', '0', 1), (1253, 421, '  ', '0', 1),   (1254, 421, ' ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1255, 422, ' ', '0', 1), (1256, 422, '  ', '0', 1),   (1257, 422, ' ', '0', 1)");
+        // Tabla de Opciones - Historial Actual  - NIVEL Leyenda    -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1249, 420, '31 diciembre del 2016 ', '0', 1), (1250, 420, '31 diciembre del 2017  ', '0', 1),   (1251, 420, '31 diciembre del 2018 ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1252, 421, 'Ejército de liberación nacional ', '0', 1), (1253, 421, 'Ejército Revolucionario  ', '0', 1),   (1254, 421, 'Ninguna', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1255, 422, '14 de diciembre de 1993 ', '0', 1), (1256, 422, '14 de diciembre de 1994  ', '0', 1),   (1257, 422, 'Ninguna ', '0', 1)");
+
+
+
+
 
     }
 
