@@ -1032,7 +1032,78 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1281, 431, '  ', '0', 1), (1282, 431, '  ', '0', 1),   (1283, 431, '  ', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1284, 432, '  ', '0', 1), (1285, 432, '  ', '0', 1),   (1286, 432, '  ', '0', 1)");
 
+        // Tabla de Preguntas - Geografía   - NIVEL MEDIO     -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (433, 11, 2, 433, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (434, 11, 2, 434, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (435, 11, 2, 435, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (436, 11, 2, 436, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (437, 11, 2, 437, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (438, 11, 2, 438, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (439, 11, 2, 439, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (440, 11, 2, 440, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (441, 11, 2, 441, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (442, 11, 2, 442, '¿  ?', '  ', ' ', '0', '0', 1)");
 
+        // Tabla de Opciones - Geografía  - NIVEL MEDIO    -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1287, 433, '  ', '0', 1), (1288, 433, '  ', '0', 1),   (1289, 433, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1290, 434, '  ', '0', 1), (1291, 434, '  ', '0', 1),   (1292, 434, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1293, 435, '  ', '0', 1), (1294, 435, '  ', '0', 1),   (1295, 435, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1296, 436, '  ', '0', 1), (1297, 436, '  ', '0', 1),   (1298, 436, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1299, 437, '  ', '0', 1), (1300, 437, '  ', '0', 1),   (1301, 437, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1302, 438, '  ', '0', 1), (1303, 438, '  ', '0', 1),   (1304, 438, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1305, 439, '  ', '0', 1), (1306, 439, '  ', '0', 1),   (1307, 439, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1308, 440, '  ', '0', 1), (1309, 440, '  ', '0', 1),   (1310, 440, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1311, 441, '  ', '0', 1), (1312, 441, '  ', '0', 1),   (1313, 441, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1314, 442, '  ', '0', 1), (1315, 442, '  ', '0', 1),   (1316, 442, '  ', '0', 1)");
+
+        // Tabla de Preguntas - Geografía   - NIVEL Avanzado     -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (443, 11, 3, 443, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (444, 11, 3, 444, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (445, 11, 3, 445, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (446, 11, 3, 446, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (447, 11, 3, 447, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (448, 11, 3, 448, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (449, 11, 3, 449, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (450, 11, 3, 450, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (451, 11, 3, 451, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (452, 11, 3, 452, '¿  ?', '  ', ' ', '0', '0', 1)");
+
+        // Tabla de Opciones - Geografía  - NIVEL Avanzado    -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1317, 443, '  ', '0', 1), (1318, 443, '  ', '0', 1),   (1319, 443, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1320, 444, '  ', '0', 1), (1321, 444, '  ', '0', 1),   (1322, 444, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1323, 445, '  ', '0', 1), (1324, 445, '  ', '0', 1),   (1325, 445, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1326, 446, '  ', '0', 1), (1327, 446, '  ', '0', 1),   (1328, 446, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1329, 447, '  ', '0', 1), (1330, 447, '  ', '0', 1),   (1331, 447, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1332, 448, '  ', '0', 1), (1333, 448, '  ', '0', 1),   (1334, 448, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1335, 449, '  ', '0', 1), (1336, 449, '  ', '0', 1),   (1337, 449, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1338, 450, '  ', '0', 1), (1339, 450, '  ', '0', 1),   (1340, 450, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1341, 451, '  ', '0', 1), (1342, 451, '  ', '0', 1),   (1343, 451, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1344, 452, '  ', '0', 1), (1345, 452, '  ', '0', 1),   (1346, 452, '  ', '0', 1)");
+
+
+        // Tabla de Preguntas - Geografía   - NIVEL PROFESIONAL     -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (453, 11, 4, 453, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (454, 11, 4, 454, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (455, 11, 4, 455, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (456, 11, 4, 456, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (457, 11, 4, 457, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (458, 11, 4, 458, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (459, 11, 4, 459, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (460, 11, 4, 460, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (461, 11, 4, 461, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (462, 11, 4, 462, '¿  ?', '  ', ' ', '0', '0', 1)");
+
+        // Tabla de Opciones - Geografía  - NIVEL PROFESIONAL    -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1347, 453, '  ', '0', 1), (1348, 453, '  ', '0', 1),   (1349, 453, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1350, 454, '  ', '0', 1), (1351, 454, '  ', '0', 1),   (1352, 454, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1353, 455, '  ', '0', 1), (1354, 455, '  ', '0', 1),   (1355, 455, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1356, 456, '  ', '0', 1), (1357, 456, '  ', '0', 1),   (1358, 456, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1359, 457, '  ', '0', 1), (1360, 457, '  ', '0', 1),   (1361, 457, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1362, 458, '  ', '0', 1), (1363, 458, '  ', '0', 1),   (1364, 458, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1365, 459, '  ', '0', 1), (1366, 459, '  ', '0', 1),   (1367, 459, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1368, 460, '  ', '0', 1), (1369, 460, '  ', '0', 1),   (1370, 460, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1371, 461, '  ', '0', 1), (1372, 461, '  ', '0', 1),   (1373, 461, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1374, 462, '  ', '0', 1), (1375, 462, '  ', '0', 1),   (1376, 462, '  ', '0', 1)");
 
 
 
