@@ -1045,16 +1045,16 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (442, 11, 2, 442, '¿ Con cuales estados colinda el Rio Bravo ?', 'Chihuahua, Coahuila, Nuevo Leon y Tamaulipas  ', 'https://es.wikipedia.org/wiki/R%C3%ADo_Bravo', '0', '0', 1)");
 
         // Tabla de Opciones - Geografía  - NIVEL MEDIO    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1287, 433, '  ', '0', 1), (1288, 433, '  ', '0', 1),   (1289, 433, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1290, 434, '  ', '0', 1), (1291, 434, '  ', '0', 1),   (1292, 434, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1293, 435, '  ', '0', 1), (1294, 435, '  ', '0', 1),   (1295, 435, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1296, 436, '  ', '0', 1), (1297, 436, '  ', '0', 1),   (1298, 436, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1299, 437, '  ', '0', 1), (1300, 437, '  ', '0', 1),   (1301, 437, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1302, 438, '  ', '0', 1), (1303, 438, '  ', '0', 1),   (1304, 438, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1305, 439, '  ', '0', 1), (1306, 439, '  ', '0', 1),   (1307, 439, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1308, 440, '  ', '0', 1), (1309, 440, '  ', '0', 1),   (1310, 440, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1311, 441, '  ', '0', 1), (1312, 441, '  ', '0', 1),   (1313, 441, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1314, 442, '  ', '0', 1), (1315, 442, '  ', '0', 1),   (1316, 442, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1287, 433, ' Ninguna', '0', 1), (1288,   433, 'Peninsula de Paraguana', '0', 1),   (1289, 433, ' Peninsula de golfo. ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1290, 434, ' Ninguna ', '0', 1), (1291,  434, 'Volcán teuhtli  ', '0', 1),   (1292, 434, 'Volcán Guadalupe', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1293, 435, ' Ninguna', '0', 1), (1294,   435, ' Popocatépetl e Iztaccíhuatl ', '0', 1),   (1295, 435, 'No hay volcanes ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1296, 436, ' Teuhtli  ', '0', 1), (1297, 436, 'Tlaloc  ', '0', 1),   (1298, 436, 'Ninguno  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1299, 437, ' Teuhtli ', '0', 1), (1300,  437, ' Tlaloc ', '0', 1),   (1301, 437, ' Ninguno ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1302, 438, ' Citlaltépetl ', '0', 1), (1303, 438, ' Tlaloc ', '0', 1),   (1304, 438, 'Teuhtli  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1305, 439, ' Ninguno. ', '0', 1), (1306, 439, 'No hay puertos turisticos  ', '0', 1),   (1307, 439, 'Todos los estados.', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1308, 440, ' Volcán teuhtli ', '0', 1), (1309, 440, ' Volcán Tlaloc ', '0', 1),   (1310, 440, 'Volcán Guadalupe ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1311, 441, ' Río Nautla ', '0', 1), (1312, 441, 'Río Papaloapan', '0', 1),   (1313, 441, ' Río Nazas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1314, 442, ' Oaxaca ', '0', 1), (1315, 442, ' Veracruz ', '0', 1),   (1316, 442, 'Puebla  ', '0', 1)");
 
         // Tabla de Preguntas - Geografía   - NIVEL Avanzado     -
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (443, 11, 3, 443, '¿  ?', '  ', ' ', '0', '0', 1)");
