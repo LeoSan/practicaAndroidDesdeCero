@@ -1057,7 +1057,7 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1314, 442, ' Oaxaca ', '0', 1), (1315, 442, ' Veracruz ', '0', 1),   (1316, 442, 'Puebla  ', '0', 1)");
 
         // Tabla de Preguntas - Geografía   - NIVEL Avanzado     -
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (443, 11, 3, 443, '¿ Cuál es e Icono turistico de Monterrey ?', 'El Cerro de la Silla', 'https://es.wikipedia.org/wiki/Cerro_de_la_Silla', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (443, 11, 3, 443, '¿ Cuál es el Icono turistico de Monterrey ?', 'El Cerro de la Silla', 'https://es.wikipedia.org/wiki/Cerro_de_la_Silla', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (444, 11, 3, 444, '¿ Reserva natural de Sonora ?', ' Reserva del Pinacate ', 'https://es.wikipedia.org/wiki/Reserva_de_la_biosfera_El_Pinacate_y_Gran_Desierto_de_Altar', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (445, 11, 3, 445, '¿ Reserva natural del Golfo de Baja California ?', 'Parque Nacional Cabo Pulmo', 'https://es.wikipedia.org/wiki/Islas_y_%C3%A1reas_protegidas_del_Golfo_de_California', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (446, 11, 3, 446, '¿ Pueblos Mágicos, Cuántos hay ?', '121', 'https://www.mexicodesconocido.com.mx/pueblos-magicos-de-mexico.html', '0', '0', 1)");
@@ -1069,16 +1069,16 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (452, 11, 3, 452, '¿ Ciudades y monumentos patrimonio de humanidad (UNESCO) ?', 'Centro histórico de Oaxaca y zona arqueológica de Monte Albán, Oaxaca (19871) ', 'https://travesiasdigital.com/mexico/mexico-el-pais-con-mas-patrimonios-de-la-humanidad-en-america', '0', '0', 1)");
 
         // Tabla de Opciones - Geografía  - NIVEL Avanzado    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1317, 443, '  ', '0', 1), (1318, 443, ' ', '0', 1),   (1319, 443, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1320, 444, '  ', '0', 1), (1321, 444, '  ', '0', 1),   (1322, 444, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1323, 445, '  ', '0', 1), (1324, 445, '  ', '0', 1),   (1325, 445, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1326, 446, '  ', '0', 1), (1327, 446, '  ', '0', 1),   (1328, 446, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1329, 447, '  ', '0', 1), (1330, 447, '  ', '0', 1),   (1331, 447, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1332, 448, '  ', '0', 1), (1333, 448, '  ', '0', 1),   (1334, 448, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1335, 449, '  ', '0', 1), (1336, 449, '  ', '0', 1),   (1337, 449, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1338, 450, '  ', '0', 1), (1339, 450, '  ', '0', 1),   (1340, 450, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1341, 451, '  ', '0', 1), (1342, 451, '  ', '0', 1),   (1343, 451, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1344, 452, '  ', '0', 1), (1345, 452, '  ', '0', 1),   (1346, 452, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1317, 443, 'Ninguno', '0', 1), (1318, 443, 'No existe ', '0', 1),   (1319, 443, 'Piramides', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1320, 444, ' Reserva de la Biosfera Mariposa Monarca ', '0', 1), (1321, 444, ' Parque Nacional Iztaccihuatl-Popocatépetl ', '0', 1),   (1322, 444, 'Parque Nacional Bahía de Loreto', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1323, 445, ' Reserva de la Biosfera Mariposa Monarca ', '0', 1), (1324, 445, ' Parque Nacional Iztaccihuatl-Popocatépetl ', '0', 1),   (1325, 445, ' Ninguna', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1326, 446, ' 200 ', '0', 1), (1327, 446, ' 250 ', '0', 1),   (1328, 446, ' 122 ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1329, 447, ' Por decreto nacional ', '0', 1), (1330, 447, 'Por el Presidente  ', '0', 1),   (1331, 447, 'Para activar el turismo  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1332, 448, ' Cuetzalan ', '0', 1), (1333, 448, ' Mazatlan  ', '0', 1),   (1334, 448, ' Cholula ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1335, 449, ' Cuetzalan ', '0', 1), (1336, 449, ' Mazatlan ', '0', 1),   (1337, 449, ' Cholula ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1338, 450, ' Coba ', '0', 1), (1339, 450, ' Palenque  ', '0', 1),   (1340, 450, ' Ninguna. ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1341, 451, ' Ninguna  ', '0', 1), (1342, 451, ' No existe ', '0', 1),   (1343, 451, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1344, 452, ' Ninguna ', '0', 1), (1345, 452, ' No existe ', '0', 1),   (1346, 452, ' Sigue en reformas ', '0', 1)");
 
 
         // Tabla de Preguntas - Geografía   - NIVEL PROFESIONAL     -
@@ -1094,16 +1094,16 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (462, 11, 4, 462, '¿ Ciudades y monumentos patrimonio de humanidad (UNESCO) ?', 'Primeros monasterios del siglo XVI en las laderas del Popocatépetl (1994)', 'https://travesiasdigital.com/mexico/mexico-el-pais-con-mas-patrimonios-de-la-humanidad-en-america ', '0', '0', 1)");
 
         // Tabla de Opciones - Geografía  - NIVEL PROFESIONAL    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1347, 453, '  ', '0', 1), (1348, 453, '  ', '0', 1),   (1349, 453, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1350, 454, '  ', '0', 1), (1351, 454, '  ', '0', 1),   (1352, 454, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1353, 455, '  ', '0', 1), (1354, 455, '  ', '0', 1),   (1355, 455, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1356, 456, '  ', '0', 1), (1357, 456, '  ', '0', 1),   (1358, 456, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1359, 457, '  ', '0', 1), (1360, 457, '  ', '0', 1),   (1361, 457, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1362, 458, '  ', '0', 1), (1363, 458, '  ', '0', 1),   (1364, 458, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1365, 459, '  ', '0', 1), (1366, 459, '  ', '0', 1),   (1367, 459, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1368, 460, '  ', '0', 1), (1369, 460, '  ', '0', 1),   (1370, 460, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1371, 461, '  ', '0', 1), (1372, 461, '  ', '0', 1),   (1373, 461, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1374, 462, '  ', '0', 1), (1375, 462, '  ', '0', 1),   (1376, 462, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1347, 453, ' Ninguna ', '0', 1), (1348, 453, ' No existe ', '0', 1),   (1349, 453, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1350, 454, ' Ninguna ', '0', 1), (1351, 454, ' No existe ', '0', 1),   (1352, 454, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1353, 455, ' Ninguna ', '0', 1), (1354, 455, ' No existe ', '0', 1),   (1355, 455, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1356, 456, ' Ninguna ', '0', 1), (1357, 456, ' No existe ', '0', 1),   (1358, 456, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1359, 457, ' Ninguna ', '0', 1), (1360, 457, ' No existe ', '0', 1),   (1361, 457, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1362, 458, ' Ninguna ', '0', 1), (1363, 458, ' No existe ', '0', 1),   (1364, 458, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1365, 459, ' Ninguna ', '0', 1), (1366, 459, ' No existe ', '0', 1),   (1367, 459, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1368, 460, ' Ninguna ', '0', 1), (1369, 460, ' No existe ', '0', 1),   (1370, 460, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1371, 461, ' Ninguna ', '0', 1), (1372, 461, ' No existe ', '0', 1),   (1373, 461, ' Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1374, 462, ' Ninguna ', '0', 1), (1375, 462, ' No existe ', '0', 1),   (1376, 462, ' Sigue en reformas ', '0', 1)");
 
 
         // Tabla de Preguntas - Geografía   - NIVEL Leyenda     -
@@ -1119,16 +1119,16 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (472, 11, 5, 472, '¿ Ciudades y monumentos patrimonio de humanidad (UNESCO) ?', 'Casa-taller de Luis Barragán, CDMX (2004)', 'https://travesiasdigital.com/mexico/mexico-el-pais-con-mas-patrimonios-de-la-humanidad-en-america ', '0', '0', 1)");
 
         // Tabla de Opciones - Geografía  - NIVEL Leyenda    -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1377, 463, '  ', '0', 1), (1378, 463, '  ', '0', 1),   (1379, 463, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1380, 464, '  ', '0', 1), (1381, 464, '  ', '0', 1),   (1382, 464, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1383, 465, '  ', '0', 1), (1384, 465, '  ', '0', 1),   (1385, 465, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1386, 466, '  ', '0', 1), (1387, 466, '  ', '0', 1),   (1388, 466, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1389, 467, '  ', '0', 1), (1391, 467, '  ', '0', 1),   (1392, 467, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1393, 468, '  ', '0', 1), (1394, 468, '  ', '0', 1),   (1395, 468, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1396, 469, '  ', '0', 1), (1397, 469, '  ', '0', 1),   (1398, 469, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1399, 470, '  ', '0', 1), (1400, 470, '  ', '0', 1),   (1400, 470, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1401, 471, '  ', '0', 1), (1402, 471, '  ', '0', 1),   (1403, 471, '  ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1404, 472, '  ', '0', 1), (1405, 472, '  ', '0', 1),   (1406, 472, '  ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1377, 463, ' Ninguna ', '0', 1), (1378, 463, ' No existe ', '0', 1),   (1379, 463, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1380, 464, ' Ninguna ', '0', 1), (1381, 464, ' No existe ', '0', 1),   (1382, 464, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1383, 465, ' Ninguna ', '0', 1), (1384, 465, ' No existe ', '0', 1),   (1385, 465, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1386, 466, ' Ninguna ', '0', 1), (1387, 466, ' No existe ', '0', 1),   (1388, 466, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1389, 467, ' Ninguna ', '0', 1), (1390, 467, ' No existe ', '0', 1),   (1391, 467, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1392, 468, ' Ninguna ', '0', 1), (1393, 468, ' No existe ', '0', 1),   (1394, 468, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1395, 469, ' Ninguna ', '0', 1), (1396, 469, ' No existe ', '0', 1),   (1397, 469, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1398, 470, ' Ninguna ', '0', 1), (1399, 470, ' No existe ', '0', 1),   (1400, 470, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1401, 471, ' Ninguna ', '0', 1), (1402, 471, ' No existe ', '0', 1),   (1403, 471, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1404, 472, ' Ninguna ', '0', 1), (1405, 472, ' No existe ', '0', 1),   (1406, 472, '  Sigue en reformas ', '0', 1)");
 
 
     }
