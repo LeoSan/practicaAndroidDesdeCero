@@ -1131,6 +1131,156 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1404, 472, ' Ninguna ', '0', 1), (1405, 472, ' No existe ', '0', 1),   (1406, 472, '  Sigue en reformas ', '0', 1)");
 
 
+        // Tabla de Preguntas - Legislación poilitica    - NIVEL Basica     -
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (473, 12, 1, 473, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (474, 12, 1, 474, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (475, 12, 1, 475, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (476, 12, 1, 476, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (477, 12, 1, 477, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (478, 12, 1, 478, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (479, 12, 1, 479, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (480, 12, 1, 480, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (481, 12, 1, 481, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (482, 12, 1, 482, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (483, 12, 1, 483, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (484, 12, 1, 484, '¿  ?', '  ', '  ', '0', '0', 1)");
+
+        // Tabla de Opciones - Legislación poilitica  - NIVEL Basica    -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1407, 473, ' Ninguna ', '0', 1), (1408, 473, ' No existe ', '0', 1),   (1409, 473, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1410, 474, ' Ninguna ', '0', 1), (1411, 474, ' No existe ', '0', 1),   (1412, 474, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1413, 475, ' Ninguna ', '0', 1), (1414, 475, ' No existe ', '0', 1),   (1415, 475, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1416, 476, ' Ninguna ', '0', 1), (1417, 476, ' No existe ', '0', 1),   (1418, 476, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1419, 477, ' Ninguna ', '0', 1), (1420, 477, ' No existe ', '0', 1),   (1421, 477, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1422, 478, ' Ninguna ', '0', 1), (1423, 478, ' No existe ', '0', 1),   (1424, 478, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1425, 479, ' Ninguna ', '0', 1), (1426, 479, ' No existe ', '0', 1),   (1427, 479, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1428, 480, ' Ninguna ', '0', 1), (1429, 480, ' No existe ', '0', 1),   (1430, 480, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1431, 481, ' Ninguna ', '0', 1), (1432, 481, ' No existe ', '0', 1),   (1433, 481, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1434, 482, ' Ninguna ', '0', 1), (1435, 482, ' No existe ', '0', 1),   (1436, 482, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1437, 483, ' Ninguna ', '0', 1), (1438, 483, ' No existe ', '0', 1),   (1439, 483, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1440, 484, ' Ninguna ', '0', 1), (1441, 484, ' No existe ', '0', 1),   (1442, 484, '  Sigue en reformas ', '0', 1)");
+
+
+
+        // Tabla de Preguntas - Legislación poilitica    - NIVEL Medio      -
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (485, 12, 2, 485, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (486, 12, 2, 486, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (487, 12, 2, 487, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (488, 12, 2, 488, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (489, 12, 2, 489, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (490, 12, 2, 490, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (491, 12, 2, 491, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (492, 12, 2, 492, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (493, 12, 2, 493, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (494, 12, 2, 494, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (495, 12, 2, 495, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (496, 12, 2, 496, '¿  ?', ' ', '  ', '0', '0', 1)");
+
+        // Tabla de Opciones - Legislación poilitica  - NIVEL Medio     -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1443, 485, ' Ninguna ', '0', 1), (1444, 485, ' No existe ', '0', 1),   (1445, 485, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1446, 486, ' Ninguna ', '0', 1), (1447, 486, ' No existe ', '0', 1),   (1448, 486, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1449, 487, ' Ninguna ', '0', 1), (1450, 487, ' No existe ', '0', 1),   (1451, 487, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1452, 488, ' Ninguna ', '0', 1), (1453, 488, ' No existe ', '0', 1),   (1454, 488, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1455, 489, ' Ninguna ', '0', 1), (1456, 489, ' No existe ', '0', 1),   (1457, 489, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1458, 490, ' Ninguna ', '0', 1), (1459, 490, ' No existe ', '0', 1),   (1460, 490, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1461, 491, ' Ninguna ', '0', 1), (1462, 491, ' No existe ', '0', 1),   (1463, 491, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1464, 492, ' Ninguna ', '0', 1), (1465, 492, ' No existe ', '0', 1),   (1466, 492, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1467, 493, ' Ninguna ', '0', 1), (1468, 493, ' No existe ', '0', 1),   (1469, 493, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1470, 494, ' Ninguna ', '0', 1), (1471, 494, ' No existe ', '0', 1),   (1472, 494, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1473, 495, ' Ninguna ', '0', 1), (1474, 495, ' No existe ', '0', 1),   (1475, 495, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1476, 496, ' Ninguna ', '0', 1), (1477, 496, ' No existe ', '0', 1),   (1478, 496, '  Sigue en reformas ', '0', 1)");
+
+
+        // Tabla de Preguntas - Legislación poilitica    - NIVEL Avanzado      -
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (497, 12, 3, 497, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (498, 12, 3, 498, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (499, 12, 3, 499, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (500, 12, 3, 500, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (501, 12, 3, 501, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (502, 12, 3, 502, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (503, 12, 3, 503, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (504, 12, 3, 504, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (505, 12, 3, 505, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (506, 12, 3, 506, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (507, 12, 3, 507, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (508, 12, 3, 508, '¿  ?', ' ', '  ', '0', '0', 1)");
+
+        // Tabla de Opciones - Legislación poilitica  - NIVEL Avanzado     -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1479, 497, ' Ninguna ', '0', 1), (1480, 497, ' No existe ', '0', 1),   (1481, 497, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1482, 498, ' Ninguna ', '0', 1), (1483, 498, ' No existe ', '0', 1),   (1484, 498, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1485, 499, ' Ninguna ', '0', 1), (1486, 499, ' No existe ', '0', 1),   (1487, 499, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1488, 500, ' Ninguna ', '0', 1), (1489, 500, ' No existe ', '0', 1),   (1490, 500, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1491, 501, ' Ninguna ', '0', 1), (1492, 501, ' No existe ', '0', 1),   (1493, 501, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1494, 502, ' Ninguna ', '0', 1), (1495, 502, ' No existe ', '0', 1),   (1496, 502, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1497, 503, ' Ninguna ', '0', 1), (1498, 503, ' No existe ', '0', 1),   (1499, 503, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1500, 504, ' Ninguna ', '0', 1), (1501, 504, ' No existe ', '0', 1),   (1502, 504, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1503, 505, ' Ninguna ', '0', 1), (1504, 493, ' No existe ', '0', 1),   (1505, 493, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1506, 506, ' Ninguna ', '0', 1), (1507, 506, ' No existe ', '0', 1),   (1508, 506, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1509, 507, ' Ninguna ', '0', 1), (1510, 507, ' No existe ', '0', 1),   (1511, 507, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1512, 508, ' Ninguna ', '0', 1), (1513, 508, ' No existe ', '0', 1),   (1514, 508, '  Sigue en reformas ', '0', 1)");
+
+
+        // Tabla de Preguntas - Legislación poilitica    - NIVEL Profesional      -
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (509, 12, 4, 509, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (510, 12, 4, 510, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (511, 12, 4, 511, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (512, 12, 4, 512, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (513, 12, 4, 513, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (514, 12, 4, 514, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (515, 12, 4, 515, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (516, 12, 4, 516, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (517, 12, 4, 517, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (518, 12, 4, 518, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (519, 12, 4, 519, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (520, 12, 4, 520, '¿  ?', ' ', '  ', '0', '0', 1)");
+
+        // Tabla de Opciones - Legislación poilitica  - NIVEL Profesional     -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1515, 509, ' Ninguna ', '0', 1), (1516, 509, ' No existe ', '0', 1),   (1517, 509, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1518, 510, ' Ninguna ', '0', 1), (1519, 510, ' No existe ', '0', 1),   (1520, 510, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1521, 511, ' Ninguna ', '0', 1), (1522, 511, ' No existe ', '0', 1),   (1523, 511, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1524, 512, ' Ninguna ', '0', 1), (1525, 512, ' No existe ', '0', 1),   (1526, 512, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1527, 513, ' Ninguna ', '0', 1), (1528, 513, ' No existe ', '0', 1),   (1529, 513, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1530, 514, ' Ninguna ', '0', 1), (1531, 514, ' No existe ', '0', 1),   (1532, 514, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1533, 515, ' Ninguna ', '0', 1), (1534, 515, ' No existe ', '0', 1),   (1535, 515, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1536, 516, ' Ninguna ', '0', 1), (1537, 516, ' No existe ', '0', 1),   (1538, 516, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1539, 517, ' Ninguna ', '0', 1), (1540, 517, ' No existe ', '0', 1),   (1541, 517, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1542, 518, ' Ninguna ', '0', 1), (1543, 518, ' No existe ', '0', 1),   (1544, 518, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1545, 519, ' Ninguna ', '0', 1), (1546, 519, ' No existe ', '0', 1),   (1547, 519, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1548, 520, ' Ninguna ', '0', 1), (1549, 520, ' No existe ', '0', 1),   (1550, 520, '  Sigue en reformas ', '0', 1)");
+
+        // Tabla de Preguntas - Legislación poilitica    - NIVEL Leyenda      -
+
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (521, 12, 5, 521, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (522, 12, 5, 522, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (523, 12, 5, 523, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (524, 12, 5, 524, '¿  ?', ' ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (525, 12, 5, 525, '¿  ?', '  ', ' ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (526, 12, 5, 526, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (527, 12, 5, 527, '¿  ?', '   ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (528, 12, 5, 528, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (529, 12, 5, 529, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (530, 12, 5, 530, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (531, 12, 5, 531, '¿  ?', '  ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (532, 12, 5, 532, '¿  ?', ' ', '  ', '0', '0', 1)");
+
+        // Tabla de Opciones - Legislación poilitica  - NIVEL Leyenda     -
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1551, 521, ' Ninguna ', '0', 1), (1552, 521, ' No existe ', '0', 1),   (1553, 521, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1554, 522, ' Ninguna ', '0', 1), (1555, 522, ' No existe ', '0', 1),   (1556, 522, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1557, 523, ' Ninguna ', '0', 1), (1558, 523, ' No existe ', '0', 1),   (1559, 523, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1560, 524, ' Ninguna ', '0', 1), (1561, 524, ' No existe ', '0', 1),   (1562, 524, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1563, 525, ' Ninguna ', '0', 1), (1564, 525, ' No existe ', '0', 1),   (1565, 525, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1566, 526, ' Ninguna ', '0', 1), (1567, 526, ' No existe ', '0', 1),   (1568, 526, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1569, 527, ' Ninguna ', '0', 1), (1570, 527, ' No existe ', '0', 1),   (1571, 527, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1572, 528, ' Ninguna ', '0', 1), (1573, 528, ' No existe ', '0', 1),   (1574, 528, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1575, 529, ' Ninguna ', '0', 1), (1576, 529, ' No existe ', '0', 1),   (1577, 529, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1578, 530, ' Ninguna ', '0', 1), (1579, 530, ' No existe ', '0', 1),   (1580, 530, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1581, 531, ' Ninguna ', '0', 1), (1582, 531, ' No existe ', '0', 1),   (1583, 531, '  Sigue en reformas ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1584, 532, ' Ninguna ', '0', 1), (1585, 532, ' No existe ', '0', 1),   (1586, 532, '  Sigue en reformas ', '0', 1)");
+
+
+
     }
 
     @Override
