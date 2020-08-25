@@ -46,14 +46,15 @@
             android:layout_weight="1"
             android:background="@drawable/lightbulb"
             android:onClick="vistaApoyo"
-            android:text="@string/btnDescrip" />
+            android:text="@string/btnDescrip"
+            android:layout_marginBottom="300dp"/>
 
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/contScrollRetoSaber"
-        android:layout_width="331dp"
-        android:layout_height="527dp"
+        android:layout_width="353dp"
+        android:layout_height="462dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

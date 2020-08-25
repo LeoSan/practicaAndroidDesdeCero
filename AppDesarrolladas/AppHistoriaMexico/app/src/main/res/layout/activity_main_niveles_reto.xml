@@ -78,8 +78,8 @@
 
     <ScrollView
         android:id="@+id/contScrollNiveles"
-        android:layout_width="320dp"
-        android:layout_height="430dp"
+        android:layout_width="339dp"
+        android:layout_height="443dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
@@ -93,7 +93,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            tools:layout_marginBottom="250dp">
 
         </LinearLayout>
     </ScrollView>
