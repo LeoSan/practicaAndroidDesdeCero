@@ -1260,25 +1260,22 @@ public class AdmiSQLiteOpenHelper extends SQLiteOpenHelper {
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (528, 12, 5, 528, '¿ Se pone un presidente interino si hace falta el presidente de la republica ?', 'Art. 84 ', 'https://mexico.justia.com/federales/constitucion-politica-de-los-estados-unidos-mexicanos/', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (529, 12, 5, 529, '¿ Igualdad entre el hombre y la mujer ?', 'Art. 4', 'https://mexico.justia.com/federales/constitucion-politica-de-los-estados-unidos-mexicanos/', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (530, 12, 5, 530, '¿ Cuando se inicio el Movimiento Zapatista ?', '1994 ', '  ', '0', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (531, 12, 5, 531, '¿ Cuales fueron los presidentes de la epoca del neoliberalismo ?', ' Carlos Salinas de Gortari, Ernesto Zedillo, Vicente Fox ', '  ', '0', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (531, 12, 5, 531, '¿ Cuales fueron los presidentes de la epoca del neoliberalismo ?', 'Carlos Salinas de Gortari, Ernesto Zedillo, Vicente Fox ', '  ', '0', '0', 1)");
         BasesDeDatos.execSQL("INSERT INTO t_preguntas (id, co_categoria, co_nivel, co_respuesta, pregunta, respuesta, enlace_resp, imagen_pre, imagen_resp, activo) VALUES (532, 12, 5, 532, '¿ Cuando fue la matanza de tlatelolco ?', '2 de octubre de 1968 Presidente Gustavo Díaz Ordaz ', '  ', '0', '0', 1)");
 
         // Tabla de Opciones - Legislación poilitica  - NIVEL Leyenda     -
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1551, 521, ' Ninguna ', '0', 1), (1552, 521, ' No existe ', '0', 1),   (1553, 521, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1554, 522, ' Ninguna ', '0', 1), (1555, 522, ' No existe ', '0', 1),   (1556, 522, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1557, 523, ' Ninguna ', '0', 1), (1558, 523, ' No existe ', '0', 1),   (1559, 523, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1560, 524, ' Ninguna ', '0', 1), (1561, 524, ' No existe ', '0', 1),   (1562, 524, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1563, 525, ' Ninguna ', '0', 1), (1564, 525, ' No existe ', '0', 1),   (1565, 525, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1566, 526, ' Ninguna ', '0', 1), (1567, 526, ' No existe ', '0', 1),   (1568, 526, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1569, 527, ' Ninguna ', '0', 1), (1570, 527, ' No existe ', '0', 1),   (1571, 527, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1572, 528, ' Ninguna ', '0', 1), (1573, 528, ' No existe ', '0', 1),   (1574, 528, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1575, 529, ' Ninguna ', '0', 1), (1576, 529, ' No existe ', '0', 1),   (1577, 529, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1578, 530, ' Ninguna ', '0', 1), (1579, 530, ' No existe ', '0', 1),   (1580, 530, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1581, 531, ' Ninguna ', '0', 1), (1582, 531, ' No existe ', '0', 1),   (1583, 531, '  Sigue en reformas ', '0', 1)");
-        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1584, 532, ' Ninguna ', '0', 1), (1585, 532, ' No existe ', '0', 1),   (1586, 532, '  Sigue en reformas ', '0', 1)");
-
-
-
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1551, 521, ' Art. 10 ', '0', 1), (1552, 521, ' Art. 11 ', '0', 1),   (1553, 521, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1554, 522, ' Art. 10 ', '0', 1), (1555, 522, ' Art. 11 ', '0', 1),   (1556, 522, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1557, 523, ' Art. 10 ', '0', 1), (1558, 523, ' Art. 11 ', '0', 1),   (1559, 523, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1560, 524, ' Art. 10 ', '0', 1), (1561, 524, ' Art. 11 ', '0', 1),   (1562, 524, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1563, 525, ' Art. 10 ', '0', 1), (1564, 525, ' Art. 11 ', '0', 1),   (1565, 525, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1566, 526, ' Art. 10 ', '0', 1), (1567, 526, ' Art. 11 ', '0', 1),   (1568, 526, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1569, 527, ' Art. 10 ', '0', 1), (1570, 527, ' Art. 11 ', '0', 1),   (1571, 527, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1572, 528, ' Art. 10 ', '0', 1), (1573, 528, ' Art. 11 ', '0', 1),   (1574, 528, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1575, 529, ' Art. 10 ', '0', 1), (1576, 529, ' Art. 11 ', '0', 1),   (1577, 529, 'Art. 12', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1578, 530, ' 1995 ', '0', 1), (1579, 530, '1997', '0', 1),   (1580, 530, '1990', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1581, 531, ' Lopez Obrador ', '0', 1), (1582, 531, ' Enrique Peña ', '0', 1),   (1583, 531, '  Felipe Caldero ', '0', 1)");
+        BasesDeDatos.execSQL("INSERT INTO t_complemento (id, co_pregunta, complemento, imagen, activo) VALUES (1584, 532, ' 4 de octubre de 1968 ', '0', 1), (1585, 532, ' 8 de octubre de 1968 ', '0', 1),   (1586, 532, '10 de octubre de 1968', '0', 1)");
     }
 
     @Override
