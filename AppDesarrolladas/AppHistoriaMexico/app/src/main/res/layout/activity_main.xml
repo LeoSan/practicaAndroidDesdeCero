@@ -53,8 +53,8 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="375dp"
-        android:layout_height="599dp"
+        android:layout_width="386dp"
+        android:layout_height="524dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +99,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:text="@string/label_b" />
+
+            <Button
+                android:id="@+id/btnMapa"
+                style="@style/btnMenu"
+                android:layout_width="182dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:background="@drawable/mapa"
+                android:onClick="vistaMapa"
+                android:text="@string/btnDescrip" />
+
+            <TextView
+                android:id="@+id/labelMapa"
+                style="@style/labelBasico_Interfaz_A"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/label_c" />
 
         </LinearLayout>
     </ScrollView>

@@ -257,7 +257,7 @@ public class MainCuestionario extends AppCompatActivity {
 
                 insertEstadisticas( String.valueOf(iPregunta[Integer.parseInt( IndicePreg )]), IdNivel, IdCategoria );
 
-                // Transformo el textView en un enlace.
+                // Transformo el textView en un enlace aqui leo
                     SpannableString content = new SpannableString( labelEnlace.getText() );
 
                     content.setSpan(new UnderlineSpan(), 0, labelEnlace.length(), 0);

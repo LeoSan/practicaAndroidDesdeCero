@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">GuiApp</string>
     <string name="btnDescrip"> </string>
-    <string name="label_a"> Reto al saber </string>
-    <string name="label_b"> Alimenta tu curiosidad </string>
+    <string name="label_a"> Cuestionario </string>
+    <string name="label_b"> Respuestas </string>
+    <string name="label_c"> Mapa </string>
     <string name="labelCategorias"> Categorías </string>
     <string name="labelApoyo"> Apoyo </string>
     <string name="labelContacto"> Contacto </string>
@@ -76,6 +77,12 @@
     <string name="tabEstaditicas"> Estadísticas </string>
     <string name="tabConfiguracion"> Configuración </string>
     <string name="tabOtros"> Extras </string>
+
+
+    <!-- Label Interfaz Mapas   -->
+    <string name="labelEstado"> Estado </string>
+    <string name="labelCapital"> Capital  </string>
+    <string name="labelMapa"> Mapa  </string>
 
 
 </resources>

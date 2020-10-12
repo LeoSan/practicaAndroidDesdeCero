@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/ic_launcher_background"
+tools:context=".MainMapa">
+
+<LinearLayout
+    android:id="@+id/contBtnsOpcion"
+    style="@style/btnMenu"
+    android:layout_width="229dp"
+    android:layout_height="69dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.424"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <Button
+        android:id="@+id/btnCtegoria"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="@drawable/grade"
+        android:onClick="vistaPrincipal"
+        android:text="@string/btnDescrip" />
+
+    <Button
+        android:id="@+id/btnConatcto"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="@drawable/communication"
+        android:onClick="vistaContacto"
+        android:text="@string/btnDescrip" />
+
+    <Button
+        android:id="@+id/btnApoyo"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="@drawable/lightbulb"
+        android:onClick="vistaApoyo"
+        android:text="@string/btnDescrip" />
+</LinearLayout>
+
+<ScrollView
+    android:layout_width="386dp"
+    android:layout_height="524dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/contBtnsOpcion"
+    app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/TablaEstado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:paddingTop="40px"
+            android:theme="@style/AppTheme">
+
+            <TableRow
+                android:id="@+id/idtrtiulos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Orden"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/labelEstado"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/labelCapital"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/idtrtiulos01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <Button
+                    android:id="@+id/OrdenEstado01"
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
+                    android:text="01"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Aguascalientes"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Aguascalientes"
+                    android:textSize="15sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/idtrtiulos02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <Button
+                    android:id="@+id/OrdenEstado02"
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
+                    android:text="02"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Baja California"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Mexicali"
+                    android:textSize="15sp" />
+
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="03"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Baja California Sur"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="La Paz"
+                    android:textSize="15sp" />
+
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="04"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Campeche"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="San Francisco de Campeche"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow
+            android:id="@+id/idtrtiulos05"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10px"
+            android:paddingRight="10px">
+
+            <TextView
+                android:id="@+id/OrdenEstado05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="05"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/labelEstado05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="Chihuahua"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/labelCapital05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="Chihuahua"
+                android:textSize="15sp" />
+
+        </TableRow>
+
+            <TableRow
+                android:id="@+id/idtrtiulos06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="06"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Chiapas"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tuxtla Gutiérrez"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="08"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Coahuila"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Saltillo"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="08"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Colima"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Colima"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="09"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Durango"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Victoria de Durango"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="10"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Guanajuato"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Guanajuato"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="11"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Guerrero"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Chilpancingo de los Bravo"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="12"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Hidalgo"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Pachuca"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="13"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Jalisco"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Guadalajara"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="14"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="México"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Toluca de Lerdo"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="15"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Michoacán"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Morelia"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="16"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Morelos"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Cuernavaca"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/idtrtiulos17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="17"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Nayarit"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tepic"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/idtrtiulos18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="18"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Nuevo León"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Monterrey"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="19"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Oaxaca"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Oaxaca"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="20"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Puebla"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Puebla de Zaragoza"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="21"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Querétaro"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Santiago de Querétaro"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="22"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Quintana Roo"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Chetumal"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="23"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="San Luis Potosí"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="San Luis Potosí"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="24"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Sinaloa"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Culiacán Rosales"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="25"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Sonora"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Hermosillo"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="26"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tabasco"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Villahermosa"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="27"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tamaulipas"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Ciudad Victoria"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="28"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tlaxcala"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Tlaxcala de Xicohténcatl"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos29"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="29"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Veracruz"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Xalapa-Enríquez"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="30"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Yucatán"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Mérida"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/idtrtiulos31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
+
+                <TextView
+                    android:id="@+id/OrdenEstado31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="31"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelEstado31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Zacatecas"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/labelCapital31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="Zacatecas"
+                    android:textSize="15sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

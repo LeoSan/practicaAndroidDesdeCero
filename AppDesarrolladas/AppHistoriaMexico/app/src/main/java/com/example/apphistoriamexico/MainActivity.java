@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         //Metodos dinamicos
          reproducirMusicaIntro();
 
+        System.out.println("---------------- Estoy en MainActivity.java  -------------------------------");
+
 
     }//Fin del onCreate
 
@@ -95,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    //Apunta al Activity de Preguntas (Reto al Saber)
+    public void vistaMapa (View view){
+
+        stopReproducir();
+        Intent siguiente = new Intent(this, MainMapa.class);
+        startActivity(siguiente);
+        finish();
+    }
 
 
 }//fin de la clase

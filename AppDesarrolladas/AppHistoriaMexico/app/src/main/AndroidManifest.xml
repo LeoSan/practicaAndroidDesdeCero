@@ -13,22 +13,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainCuestionarioResul" android:screenOrientation="fullSensor"/>
-        <activity android:name=".MainEstadisticaConfiguracion" android:screenOrientation="nosensor" />
-        <activity android:name=".MainCuestionario" android:screenOrientation="fullSensor" />
-        <activity android:name=".MainResulRetoSaber" android:screenOrientation="nosensor" />
-        <activity android:name=".MainRetoSaber" android:screenOrientation="fullSensor" />
-        <activity android:name=".MainNivelesReto" android:screenOrientation="nosensor" />
-        <activity android:name=".MainContacto" android:screenOrientation="fullSensor" />
-        <activity android:name=".MainApoyo" android:screenOrientation="nosensor" />
-        <activity android:name=".Splash" android:screenOrientation="fullSensor" >
+        <activity android:name=".MainMapaDetalle"></activity>
+        <activity android:name=".MainMapa" />
+        <activity
+            android:name=".MainCuestionarioResul"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MainEstadisticaConfiguracion"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainCuestionario"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MainResulRetoSaber"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainRetoSaber"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MainNivelesReto"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainContacto"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MainApoyo"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainGuia" android:screenOrientation="fullSensor" />
-        <activity android:name=".MainActivity" android:screenOrientation="fullSensor"  />
+        <activity
+            android:name=".MainGuia"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="fullSensor" />
     </application>
 
 </manifest>

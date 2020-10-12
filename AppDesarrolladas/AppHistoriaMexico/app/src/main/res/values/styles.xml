@@ -159,6 +159,13 @@
         <item name="android:padding">10dp</item>
     </style>
 
+    <style name="BotonMapa">
+        <item name="android:cursorVisible">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+
 
 
 

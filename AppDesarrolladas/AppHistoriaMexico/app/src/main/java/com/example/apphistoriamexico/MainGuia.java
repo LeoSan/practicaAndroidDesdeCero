@@ -108,7 +108,7 @@ public class MainGuia extends AppCompatActivity {
     }
 
 
-    //OnClic -> Para el arbol de pensamientos
+    //OnClic -> fORMA DEANEXAR  UN EVENTO A UNBOTON MULTIPLE
     private View.OnClickListener interfazEstdudio = new View.OnClickListener(){
 
         public void onClick(View view){
