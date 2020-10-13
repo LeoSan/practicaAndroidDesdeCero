@@ -63,14 +63,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="700px"
+            android:orientation="vertical"
+            android:paddingBottom="300px">
 
             <Button
                 android:id="@+id/btnGuia"
                 style="@style/btnMenu"
-                android:layout_width="171dp"
-                android:layout_height="162dp"
+                android:layout_width="145dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:background="@drawable/grade"
                 android:onClick="vistaGuia"
@@ -86,8 +87,8 @@
             <Button
                 android:id="@+id/btnPregunta"
                 style="@style/btnMenu"
-                android:layout_width="182dp"
-                android:layout_height="163dp"
+                android:layout_width="145dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:background="@drawable/knowledge"
                 android:onClick="vistaPreguntas"
@@ -103,8 +104,8 @@
             <Button
                 android:id="@+id/btnMapa"
                 style="@style/btnMenu"
-                android:layout_width="182dp"
-                android:layout_height="163dp"
+                android:layout_width="145dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:background="@drawable/mapa"
                 android:onClick="vistaMapa"

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         //Metodos dinamicos
-         reproducirMusicaIntro();
+        // reproducirMusicaIntro();
 
         System.out.println("---------------- Estoy en MainActivity.java  -------------------------------");
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Guia (Cuestionario)
     public void vistaGuia (View view){
 
-        stopReproducir();
+//        stopReproducir();
 
         Intent siguiente = new Intent(this, MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Preguntas (Reto al Saber)
     public void vistaPreguntas (View view){
 
-        stopReproducir();
+       // stopReproducir();
 
         Intent siguiente = new Intent(this, MainGuia.class);
         //Metodo que me permite enviar variables a otro Activity
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Contacto (Enviar Correo)
     public void vistaContacto(View view){
 
-        stopReproducir();
+       // stopReproducir();
 
         Intent siguiente = new Intent(this, MainContacto.class);
         startActivity(siguiente);
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Redirect-> Redirecciona a la interfaz de Apoyo de memoria
     public void vistaApoyo (View view){
-        stopReproducir();
+      //  stopReproducir();
         Intent interfaz = new Intent(this, MainApoyo.class);
         startActivity(interfaz);
         finish();
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Preguntas (Reto al Saber)
     public void vistaEstaConfig (View view){
 
-        stopReproducir();
+      //  stopReproducir();
         Intent siguiente = new Intent(this, MainEstadisticaConfiguracion.class);
         startActivity(siguiente);
         finish();
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     //Apunta al Activity de Preguntas (Reto al Saber)
     public void vistaMapa (View view){
 
-        stopReproducir();
+      //  stopReproducir();
         Intent siguiente = new Intent(this, MainMapa.class);
         startActivity(siguiente);
         finish();

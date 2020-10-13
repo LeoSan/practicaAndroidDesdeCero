@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingBottom="300px">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,7 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="vistaInterfazPrincipal"
-                android:text="@string/labelBtns_continuar" />
+                android:text="@string/labelBtns_continuar"
+                android:paddingBottom="300px"/>
 
         </LinearLayout>
     </ScrollView>
