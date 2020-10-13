@@ -181,11 +181,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado03"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="03"
                     android:textSize="15sp" />
 
@@ -214,11 +214,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado04"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="04"
                     android:textSize="15sp" />
 
@@ -241,19 +241,19 @@ tools:context=".MainMapa">
             </TableRow>
 
             <TableRow
-            android:id="@+id/idtrtiulos05"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="10px"
-            android:paddingRight="10px">
+                android:id="@+id/idtrtiulos05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10px"
+                android:paddingRight="10px">
 
-            <TextView
-                android:id="@+id/OrdenEstado05"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:text="05"
-                android:textSize="15sp" />
+            <Button
+                    android:id="@+id/OrdenEstado05"
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
+                    android:text="05"
+                    android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/labelEstado05"
@@ -280,11 +280,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado06"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="06"
                     android:textSize="15sp" />
 
@@ -312,12 +312,12 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado07"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
-                    android:text="08"
+                    android:onClick="abrirMaps"
+                    android:text="07"
                     android:textSize="15sp" />
 
                 <TextView
@@ -344,13 +344,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado08"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="08"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado08"
@@ -376,11 +377,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado09"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="09"
                     android:textSize="15sp" />
 
@@ -408,11 +409,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="10"
                     android:textSize="15sp" />
 
@@ -440,11 +441,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="11"
                     android:textSize="15sp" />
 
@@ -472,13 +473,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="12"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado12"
@@ -504,13 +506,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="13"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado13"
@@ -536,13 +539,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="14"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado14"
@@ -568,13 +572,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="15"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado15"
@@ -599,11 +604,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="16"
                     android:textSize="15sp" />
 
@@ -631,11 +636,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="17"
                     android:textSize="15sp" />
 
@@ -663,11 +668,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="18"
                     android:textSize="15sp" />
 
@@ -694,11 +699,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="19"
                     android:textSize="15sp" />
 
@@ -725,11 +730,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="20"
                     android:textSize="15sp" />
 
@@ -756,11 +761,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="21"
                     android:textSize="15sp" />
 
@@ -787,13 +792,14 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="22"
                     android:textSize="15sp" />
+
 
                 <TextView
                     android:id="@+id/labelEstado22"
@@ -818,11 +824,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="23"
                     android:textSize="15sp" />
 
@@ -849,11 +855,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="24"
                     android:textSize="15sp" />
 
@@ -880,11 +886,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="25"
                     android:textSize="15sp" />
 
@@ -911,11 +917,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="26"
                     android:textSize="15sp" />
 
@@ -942,11 +948,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="27"
                     android:textSize="15sp" />
 
@@ -973,14 +979,13 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="28"
                     android:textSize="15sp" />
-
                 <TextView
                     android:id="@+id/labelEstado28"
                     android:layout_width="wrap_content"
@@ -1004,11 +1009,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="29"
                     android:textSize="15sp" />
 
@@ -1035,11 +1040,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="30"
                     android:textSize="15sp" />
 
@@ -1066,11 +1071,11 @@ tools:context=".MainMapa">
                 android:paddingLeft="10px"
                 android:paddingRight="10px">
 
-                <TextView
+                <Button
                     android:id="@+id/OrdenEstado31"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_marginEnd="15dp"
+                    android:onClick="abrirMaps"
                     android:text="31"
                     android:textSize="15sp" />
 

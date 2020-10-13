@@ -82,9 +82,9 @@ public class MainMapa extends AppCompatActivity {
         String urlEstado =   sEstadosMapas[  Integer.parseInt((String) OrdenEstado02.getText()) ] ;
 
         //Genero el enlace
-        Uri uri = Uri.parse(urlEstado);
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+       // Uri uri = Uri.parse(urlEstado);
+       // Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+       // startActivity(intent);
 
     }
 
