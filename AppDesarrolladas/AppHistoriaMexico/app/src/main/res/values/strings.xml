@@ -11,7 +11,7 @@
     <!-- Mensaje de ayuda o explicativos  -->
 
     <string name="labelInformacionApoyo"> Este apartado te resumo los tipos de métodos para aprender, sabemos que usamos nuestra memoria para entender y retener información, es importante para tu examen puedas usar todas las herramientas necesarias por la cantidad de información que se estudia. Se agradece atemano al canal de Youtube por su resumen https://www.youtube.com/watch?v=JysHlMS_Vjs  </string>
-    <string name="labelInformacionContacto"> En este apartado podras ayudar a la comunidad mandando sugerencias, observaciones o incluso si deseas agregar alguna pregunta que no este en este cuestionario, la información que nos suministres, será validada y nuestro equipo la validará y la anexara a la herramienta. </string>
+    <string name="labelInformacionContacto"> En este apartado podras ayudar a la comunidad sugiriendo observaciones. </string>
 
 
     <!-- Label Interfaz Apoyo -->

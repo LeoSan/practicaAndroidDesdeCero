@@ -82,8 +82,6 @@ public class MainContacto extends AppCompatActivity {
 
         //Variables constantes
         correo   = "cuenca623@hotmail.com";
-        password = "TuMamaCabezadeHuevo";
-
         //agregamos politicas
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);

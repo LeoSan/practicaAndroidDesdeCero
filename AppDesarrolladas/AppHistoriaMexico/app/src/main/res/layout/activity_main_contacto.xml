@@ -113,16 +113,14 @@
     <TextView
         android:id="@+id/labelInformacionContacto"
         style="@style/labelInformacion"
-        android:layout_width="324dp"
-        android:layout_height="178dp"
+        android:layout_width="504dp"
+        android:layout_height="71dp"
         android:layout_margin="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="50dp"
         android:text="@string/labelInformacionContacto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpMsjContacto"/>
+        app:layout_constraintTop_toBottomOf="@+id/inpMsjContacto" />
 
     <Button
         android:id="@+id/idEnviarCorreo"
