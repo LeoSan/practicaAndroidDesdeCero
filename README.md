@@ -12,6 +12,13 @@ Es una app sencilla donde almacenó en una base de datos sqlite todas las pregun
  
 </p>
 
+### Mejoras posibles y a mejorar GuiApp. 
+- Una interfaz para colocar un buscador.
+- Una Interfaz indicando los diferentes Dioses de la cultura Mexicana.  
+- Publicidad para monetizar. 
+- Un proceso que haga un modelado de examen de prueba.
+- Un Proceso chating para leer criticas.
+
 ## Android Desde Cero - Iniciativa personal de aprender a códificar en Android usando Android Studio
 
 
