@@ -25,7 +25,7 @@ Es una app sencilla donde almacenó en una base de datos sqlite todas las pregun
 
 <p align="center">
 <a href="https://github.com/LeoSan/practicaAndroidDesdeCero" target="_blank"><img src="https://i.blogs.es/6e0b73/android-studio/1366_2000.png" width="400" hight="250"></a>
-<a href="https://github.com/LeoSan/practicaAndroidDesdeCero" target="_blank"><img src="https://www.muycomputer.com/wp-content/uploads/2019/12/android.jpg" width="250"></a>
+<a href="https://github.com/LeoSan/practicaAndroidDesdeCero" target="_blank"><img src="https://www.muycomputer.com/wp-content/uploads/2019/12/android.jpg" width="285" hight="250"></a>
 </p>
 
 
