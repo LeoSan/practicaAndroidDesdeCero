@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdk 35
     defaultConfig {
         applicationId "com.example.apphistoriamexico"
-        minSdkVersion 22
-        targetSdkVersion 28
+        minSdkVersion 30
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 30
         versionCode 1
         versionName '1.2'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -16,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'com.example.apphistoriamexico'
 }
 
 dependencies {
